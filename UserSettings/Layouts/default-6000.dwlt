@@ -48,7 +48,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 37
+  controlID: 89
   draggingID: 0
 --- !u!114 &3
 MonoBehaviour:
@@ -326,7 +326,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Script
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -336,15 +336,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Script
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Zaqy Ulunnuha\My Games\Hology_8.0_IBZ
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: a4a70000
-    m_LastClickedID: 42916
+    m_SelectedIDs: 7ca90000
+    m_LastClickedID: 43388
     m_ExpandedIDs: 00000000a4a70000a6a70000a8a7000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -402,7 +402,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000f2ce000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -520,9 +520,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c4a60000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 20fbffff
+      m_SelectedIDs: 12a70000
+      m_LastClickedID: 42770
+      m_ExpandedIDs: 20fbffff0ea700006ea70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1140,9 +1140,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 16.220984, y: -17.234676, z: 15.219681}
+    m_Target: {x: -7.5722904, y: -1.9940882, z: 24.383842}
     speed: 2
-    m_Value: {x: 16.220984, y: -17.234676, z: 15.219681}
+    m_Value: {x: -7.5722904, y: -1.9940882, z: 24.383842}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1188,13 +1188,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.3254638, y: 0.31914973, z: -0.117749676, w: 0.8822779}
+    m_Target: {x: 0.16458867, y: -0.15408355, z: 0.026028719, w: 0.9739393}
     speed: 2
-    m_Value: {x: 0.32545364, y: 0.31913978, z: -0.117745996, w: 0.88225037}
+    m_Value: {x: 0.16458322, y: -0.15407844, z: 0.026027856, w: 0.97390705}
   m_Size:
-    m_Target: 17.06029
+    m_Target: 22.216934
     speed: 2
-    m_Value: 17.06029
+    m_Value: 22.216934
   m_Ortho:
     m_Target: 0
     speed: 2
