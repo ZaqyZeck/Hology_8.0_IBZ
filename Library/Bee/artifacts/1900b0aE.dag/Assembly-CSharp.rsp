@@ -426,6 +426,7 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Script/CameraControl.cs"
 "Assets/Script/InputManager.cs"
+"Assets/Script/ObjectDatabaseSO.cs"
 "Assets/Script/PlaceMentSystem.cs"
 "Assets/Script/RotationControl.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"

@@ -1,70 +1,76 @@
-﻿using UnityEngine;
+﻿//using System.Collections;
+using UnityEngine;
 
 public class RotationControl : MonoBehaviour
 {
-    public float duration = 1.5f; // waktu transisi putar
-    private float currentAngle;
-    private float startAngle;
-    private float targetAngle;
-    private float t;
-    private bool isRotating = false;
-    private bool atFirstAngle = false; // false = mulai di 225°
+    public float _duration = 1.5f; // waktu transisi putar
+    public float _currentAngle;
+    private float _startAngle;
+    private float _targetAngle;
+    private float _t;
+    public bool _isRotating = false;
 
-    private GameObject[] objects2D;
+    private GameObject[] _objects2D;
 
     void Start()
     {
-        // cari semua gameobject dengan tag "Object2D"
-        objects2D = GameObject.FindGameObjectsWithTag("Object2D");
+        get2dObject();
 
         // set semua ke 225° (awal)
-        foreach (GameObject obj in objects2D)
+        foreach (GameObject obj in _objects2D)
         {
             Vector3 euler = obj.transform.rotation.eulerAngles;
             obj.transform.rotation = Quaternion.Euler(euler.x, 225f, euler.z);
         }
-        currentAngle = 225f;
+        _currentAngle = 225f;
+    }
+
+    public void get2dObject()
+    {
+        _objects2D = GameObject.FindGameObjectsWithTag("Object2D");
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) // toggle
+        if (Input.GetKeyDown(KeyCode.Space) && !_isRotating)
         {
-            startAngle = currentAngle;
+            get2dObject();
+            _startAngle = _currentAngle;
 
-            if (atFirstAngle) // sedang di 45° → balik ke 225°
-            {
-                targetAngle = 225f;
-                if (targetAngle >= startAngle) targetAngle -= 360f; // paksa counter-clockwise
-            }
-            else // sedang di 225° → pindah ke 45°
-            {
-                targetAngle = 45f;
-                if (targetAngle >= startAngle) targetAngle -= 360f; // paksa counter-clockwise
-            }
+            // pindah 90° counter-clockwise (ubah ke +90f kalau mau clockwise)
+            _targetAngle = _startAngle - 90f;
 
-            atFirstAngle = !atFirstAngle;
-            t = 0f;
-            isRotating = true;
+            _t = 0f;
+            _isRotating = true;
         }
 
-        if (isRotating)
+        if (_isRotating)
         {
-            t += Time.deltaTime / duration;
-            currentAngle = Mathf.Lerp(startAngle, targetAngle, t);
+            _t += Time.deltaTime / _duration;
+            _currentAngle = Mathf.Lerp(_startAngle, _targetAngle, _t);
 
             // apply rotasi ke semua Object2D
-            foreach (GameObject obj in objects2D)
+            foreach (GameObject obj in _objects2D)
             {
                 Vector3 euler = obj.transform.rotation.eulerAngles;
-                obj.transform.rotation = Quaternion.Euler(euler.x, currentAngle, euler.z);
+                obj.transform.rotation = Quaternion.Euler(euler.x, _currentAngle, euler.z);
             }
 
-            if (t >= 1f)
+            if (_t >= 1f)
             {
-                currentAngle = (currentAngle % 360f + 360f) % 360f; // normalize 0–360
-                isRotating = false;
+                // normalisasi biar 0–360
+                _currentAngle = (_currentAngle % 360f + 360f) % 360f;
+                _isRotating = false;
+                //StartCoroutine(setIsRotating());
             }
         }
     }
+
+    //IEnumerator setIsRotating()
+    //{
+    //    yield return new WaitForSeconds(0.5f);
+    //    _isRotating = false;
+    //    yield return null;
+    //}
+
 }
