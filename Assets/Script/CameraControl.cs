@@ -24,15 +24,31 @@ public class CameraControl : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !_isMoving)
+        if (!_isMoving)
         {
-            _startAngle = _currentAngle;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                _startAngle = _currentAngle;
 
-            // geser 90° searah jarum jam
-            _targetAngle = _startAngle + 90f;
+                // geser 90° searah jarum jam
+                _targetAngle = _startAngle + 90f;
 
-            _t = 0f;
-            _isMoving = true;
+                _t = 0f;
+                _isMoving = true;
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                _startAngle = _currentAngle;
+
+                // geser 90° searah jarum jam
+                _targetAngle = _startAngle - 90f;
+
+                _t = 0f;
+                _isMoving = true;
+            }
+                
         }
 
         if (_isMoving)

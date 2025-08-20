@@ -28,20 +28,37 @@ public class RotationControl : MonoBehaviour
     public void get2dObject()
     {
         _objects2D = GameObject.FindGameObjectsWithTag("Object2D");
+
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !_isRotating)
+        if (!_isRotating)
         {
-            get2dObject();
-            _startAngle = _currentAngle;
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                get2dObject();
+                _startAngle = _currentAngle;
 
-            // pindah 90° counter-clockwise (ubah ke +90f kalau mau clockwise)
-            _targetAngle = _startAngle - 90f;
+                // pindah 90° counter-clockwise (ubah ke +90f kalau mau clockwise)
+                _targetAngle = _startAngle - 90f;
 
-            _t = 0f;
-            _isRotating = true;
+                _t = 0f;
+                _isRotating = true;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                get2dObject();
+                _startAngle = _currentAngle;
+
+                // pindah 90° counter-clockwise (ubah ke +90f kalau mau clockwise)
+                _targetAngle = _startAngle + 90f;
+
+                _t = 0f;
+                _isRotating = true;
+            }
+
         }
 
         if (_isRotating)

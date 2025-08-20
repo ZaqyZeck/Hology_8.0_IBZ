@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using UnityEngine;
 using System.Collections.Generic;
 using System;
@@ -18,6 +17,8 @@ public class ObjectData
     public int ID {  get; private set; }
     [field: SerializeField]
     public Vector2Int Size { get; private set; } = Vector2Int.one;
+    [field: SerializeField]
+    public Vector3 Location { get; private set; } = Vector3.one;
     [field: SerializeField] 
     public GameObject Prefab { get; private set; }
     
