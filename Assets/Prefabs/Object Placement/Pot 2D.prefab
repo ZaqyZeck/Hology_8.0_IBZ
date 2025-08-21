@@ -432,8 +432,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d27eb77196290745a00a441fe1cc8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  _ID: 0
+  _maxAge: 6
+  _age: 0
+  fertilized: 0
+  waterNeeded: 4
+  waterGot: 0
   _buttonObject: {fileID: 6535573061296581895}
+  _ps: {fileID: 0}
 --- !u!65 &5441509234009999339
 BoxCollider:
   m_ObjectHideFlags: 0

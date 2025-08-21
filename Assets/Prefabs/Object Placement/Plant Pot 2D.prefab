@@ -102,7 +102,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d27eb77196290745a00a441fe1cc8ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ID: 0
+  _ID: 0
+  _maxAge: 12
+  _age: 0
+  fertilized: 0
+  waterNeeded: 3
+  waterGot: 0
   _buttonObject: {fileID: 4974781887791285715}
   _ps: {fileID: 0}
 --- !u!65 &8933106911055218628

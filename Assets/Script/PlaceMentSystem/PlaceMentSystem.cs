@@ -22,6 +22,7 @@ public class PlaceMentSystem : MonoBehaviour
 
     private Renderer _previewRenderer;
     private GameObject _previewObject;
+    private InventorySystem _inventory;
 
     public bool isBuilding = false;
     //private List<GameObject> _placedGameObject = new();
@@ -32,6 +33,7 @@ public class PlaceMentSystem : MonoBehaviour
         
         _floorData = new();
         _furnitureData = new();
+        _inventory = FindAnyObjectByType<InventorySystem>();
 
     }
 
@@ -56,7 +58,7 @@ public class PlaceMentSystem : MonoBehaviour
 
     public void StartPlacement(int ID)
     {
-        if (_rotation._isRotating)
+        if (_rotation._isRotating || _inventory.inventory[ID].amount <= 0)
         {
             return;
         }
@@ -114,32 +116,39 @@ public class PlaceMentSystem : MonoBehaviour
         if (_placementValidity == false) return;
 
         ObjectData _data = _database._objectsData[_selectedObjectIndex];
+        int _inventoryIndex = _selectedObjectIndex + 1;
+        if (_inventory.inventory[_inventoryIndex].amount <= 0)
+        {
+            return;
+        }
+
+        _inventory.subtractInventoryFor(_inventoryIndex, 1);
 
         Vector3 _objectLocation = _grid.CellToWorld(_gridPosition) + _data.Location;
 
         int _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID); //
 
-        //GameObject _newObject = Instantiate(_data.Prefab);
-        //_newObject.transform.position = _grid.CellToWorld(_gridPosition);
-        //_newObject.transform.position += _data.Location;
-        //Vector3 euler = _newObject.transform.rotation.eulerAngles;
-        //_newObject.transform.rotation = Quaternion.Euler(euler.x, _rotation._currentAngle, euler.z);
-
-        //_placedGameObject.Add(_newObject);
-
         GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
         _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);
+
+        if (_inventory.inventory[_inventoryIndex].amount == 0)
+        {
+            StopPlacement();
+        }
     }
 
     public void RemoveStrcture(int ID)
     {
-        if (_inputManager.IsPointerOverUI() || _rotation._isRotating)
+        if (_rotation._isRotating)
         {
             return;
         }
 
         _objectList.RemoveObjectWith(ID);
         _furnitureData.RemoveObjectWith(ID);
+
+        int _inventoryIdIndex = ID / 1000;
+        _inventory.addOneTo(_inventoryIdIndex);
     }
 
     private bool CheckPlacementValidity(Vector3Int _gridPosition, int selectedObjectIndex)

@@ -15,7 +15,7 @@ public class DestroyButton : ButtonScript
     {
         if (Input.GetMouseButtonDown(0) && !_ps.isBuilding)
         {
-            _ps.RemoveStrcture(_obj.ID);
+            _ps.RemoveStrcture(_obj._ID);
             
         }
     }

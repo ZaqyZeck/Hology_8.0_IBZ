@@ -67,9 +67,12 @@
     <Compile Include="Assets\Script\Button Script\DestroyButton.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectDatabaseSO.cs" />
+    <Compile Include="Assets\Script\Object Script\PlantSystem.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectList.cs" />
     <Compile Include="Assets\Script\Object Script\PlantScript.cs" />
+    <Compile Include="Assets\Script\Object Script\InventorySystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\RotationControl.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\CameraControl.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonScript.cs" />

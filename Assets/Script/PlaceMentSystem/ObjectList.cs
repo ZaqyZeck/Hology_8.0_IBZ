@@ -21,7 +21,7 @@ public class ObjectList : MonoBehaviour
         _ID = GenerateNewID(_ID * 1000);
 
         if (_object != null)
-            _object.ID = _ID;
+            _object._ID = _ID;
 
         _objectData.Add(new Objek(_newObject, _extraLocation, _ID));
         return _ID;
