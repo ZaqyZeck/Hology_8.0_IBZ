@@ -4,19 +4,33 @@ using UnityEngine;
 public class PlantScript : MonoBehaviour
 {
     public int _ID;
+    public int _yieldsId;
+    public int _yieldsAmount;
     public int _maxAge;
     public int _age;
 
     public bool fertilized;
+    public bool harvestable;
     public float waterNeeded;
     public float waterGot;
 
+    public int _bonus = 0;
+
     [SerializeField] private GameObject _buttonObject;
-    [SerializeField] private PlaceMentSystem _ps;
+    private PlaceMentSystem _ps;
+    private InventorySystem _inventory;
+    [SerializeField] private LandLot _lot;
+
+    [SerializeField] private Sprite[] phaseSprite;
+    private SpriteRenderer _spriteRenderer;
+    private int _currentPhase;
 
     private void Awake()
     {
         _ps = FindAnyObjectByType<PlaceMentSystem>();
+        _lot = GetComponentInParent<LandLot>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _inventory = FindAnyObjectByType<InventorySystem>();
     }
     void OnMouseOver()
     {
@@ -43,7 +57,6 @@ public class PlantScript : MonoBehaviour
         {
             _ps.RemoveStrcture(_ID);
         }
-        int _bonus = 0;
         if (fertilized) _bonus += 6;
 
         if (waterGot / waterNeeded <= 0.5)
@@ -55,6 +68,29 @@ public class PlantScript : MonoBehaviour
             _age += _bonus + 6;
         }
 
-        if (_age > _maxAge) _age = _maxAge;
+        if (_age >= _maxAge)
+        {
+            _age = _maxAge;
+            harvestable = true;
+        }
+
+        _bonus = 0;
+
+
+        _currentPhase = _age / 6;
+        _spriteRenderer.sprite = phaseSprite[_currentPhase];
+
+    }
+
+    public void HarvestPlant()
+    {
+        _inventory.inventory[_yieldsId].amount += _yieldsAmount;
+        _lot = GetComponentInParent<LandLot>();
+        _lot.RemovePlant();
+    }
+
+    public void FertilizesPlant()
+    {
+        fertilized = true;
     }
 }

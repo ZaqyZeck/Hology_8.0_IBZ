@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07d49eb9ecdc55247b0a14c0702b6128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _landLot: {fileID: 0}
 --- !u!135 &1061654898431013366
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -132,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4538033205048983974}
   - component: {fileID: 4873356138841144999}
+  - component: {fileID: 1722482304228778207}
   m_Layer: 0
   m_Name: Fertilize Button
   m_TagString: Untagged
@@ -209,6 +211,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!135 &1722482304228778207
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209599837949003877}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: -0.00000011920929, y: 0.00000023841858, z: 0.000000059604645}
 --- !u!1 &3631482663963221105
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,8 +242,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5862977212589712092}
   - component: {fileID: 4365216054088104168}
+  - component: {fileID: 7851502458951290554}
+  - component: {fileID: 638734487249991445}
   m_Layer: 0
-  m_Name: 'Plant Seed Button '
+  m_Name: Harvest
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,6 +321,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &7851502458951290554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631482663963221105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6792fecfff8b934c80c8099653e9124, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!135 &638734487249991445
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3631482663963221105}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: -0.00000011920929, y: 0.00000023841858, z: 0.000000059604645}
 --- !u!1 &6535573061296581895
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +467,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1431711409, guid: ab1cf973d9acd804ba8798688fc26d4a, type: 3}
+  m_Sprite: {fileID: -1728202257, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -433,13 +491,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ID: 0
-  _maxAge: 6
+  _yieldsId: 2
+  _yieldsAmount: 5
+  _maxAge: 18
   _age: 0
   fertilized: 0
-  waterNeeded: 4
+  harvestable: 0
+  waterNeeded: 3
   waterGot: 0
+  _bonus: 0
   _buttonObject: {fileID: 6535573061296581895}
-  _ps: {fileID: 0}
+  phaseSprite:
+  - {fileID: -1728202257, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: -1917925887, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: -109818123, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: 1298219327, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
 --- !u!65 &5441509234009999339
 BoxCollider:
   m_ObjectHideFlags: 0

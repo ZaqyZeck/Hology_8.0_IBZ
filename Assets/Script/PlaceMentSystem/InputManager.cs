@@ -7,7 +7,7 @@ public class InputManager : MonoBehaviour
     [SerializeField] private Camera _sceneCamera;
     [SerializeField] private LayerMask _placementLayerMask;
     
-    private Vector3 _lastPosition = new Vector3(2f, 0f, 2f);
+    private Vector3 _lastPosition = new Vector3(0f, 0f, 0f);
 
     public event Action OnClicked, OnExit;
 

@@ -69,6 +69,7 @@ public class RotationControl : MonoBehaviour
             // apply rotasi ke semua Object2D
             foreach (GameObject obj in _objects2D)
             {
+                if (obj == null) continue;
                 Vector3 euler = obj.transform.rotation.eulerAngles;
                 obj.transform.rotation = Quaternion.Euler(euler.x, _currentAngle, euler.z);
             }

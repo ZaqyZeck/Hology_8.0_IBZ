@@ -137,6 +137,38 @@ public class PlaceMentSystem : MonoBehaviour
         }
     }
 
+    public void PlaceStructureById(int _id, Vector3Int _location)
+    {
+        if (_inputManager.IsPointerOverUI() || _rotation._isRotating)
+        {
+            return;
+        }
+
+        bool _placementValidity = CheckPlacementValidity(_location, _id);
+        if (_placementValidity == false) return;
+
+        ObjectData _data = _database._objectsData[_id];
+        int _inventoryIndex = _id;
+        if (_inventory.inventory[_id].amount <= 0)
+        {
+            return;
+        }
+
+        _inventory.subtractInventoryFor(_id, 1);
+
+        Vector3 _objectLocation = _grid.CellToWorld(_location) + _data.Location;
+
+        int _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID); //
+
+        GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
+        _selectedData.AddObjectAt(_location, _data.Size, _objekID);
+
+        if (_inventory.inventory[_inventoryIndex].amount == 0)
+        {
+            StopPlacement();
+        }
+    }
+
     public void RemoveStrcture(int ID)
     {
         if (_rotation._isRotating)
