@@ -1,0 +1,45 @@
+using UnityEngine;
+
+public class MachinePlacement : MonoBehaviour
+{
+    public GameObject signButton;
+    private RotationControl rotationControl;
+    public GameObject[] machine_prefabs;
+    public MachineScript machine;
+    public GameObject plantGrid;
+    private Collider signCollider;
+
+    private void Awake()
+    {
+        rotationControl = FindAnyObjectByType<RotationControl>();
+        signCollider = GetComponent<Collider>();
+    }
+
+    void OnMouseOver()
+    {
+        // Check if the right mouse button is clicked while the cursor is over this object
+        if (Input.GetMouseButtonDown(0) && !rotationControl._isRotating) // 1 = Right Mouse Button
+        {
+            signButton.SetActive(!signButton.activeSelf);
+            signButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
+        }
+    }
+
+    public void AddMachine(int prefab_index)
+    {
+        if (machine != null) return;
+        //machine = Instantiate(machine_prefabs[prefab_index]);
+        //machine.transform.SetParent(gameObject.transform);
+        MachineScript machineScript = new();
+        if(prefab_index == 0)
+        {
+            machineScript = plantGrid.AddComponent<UltraVioletMachine>();
+            machineScript.plantGrid = plantGrid;
+        }
+        machineScript.plantGrid = plantGrid;
+        machine = machineScript;
+
+        signCollider.enabled = false;
+        signButton.SetActive(false);
+    }
+}

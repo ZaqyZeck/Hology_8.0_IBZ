@@ -6,6 +6,7 @@ public class PlantScript : MonoBehaviour
     public int _ID;
     public int _yieldsId;
     public int _yieldsAmount;
+    public int _bonusYield;
     public int _maxAge;
     public int _age;
 
@@ -81,7 +82,6 @@ public class PlantScript : MonoBehaviour
 
         _bonus = 0;
 
-
         _currentPhase = _age / 6;
         _spriteRenderer.sprite = phaseSprite[_currentPhase];
 
@@ -89,7 +89,7 @@ public class PlantScript : MonoBehaviour
 
     public void HarvestPlant()
     {
-        _inventory.inventory[_yieldsId].amount += _yieldsAmount;
+        _inventory.inventory[_yieldsId].amount += _yieldsAmount + _bonusYield;
         _lot = GetComponentInParent<LandLot>();
         _lot.RemovePlant();
     }

@@ -516,6 +516,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 61194de17e935ef44aa896c5d0ea5ecd, type: 3}
+--- !u!1 &49976789 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4660533534032717282, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+  m_PrefabInstance: {fileID: 8420861871078124104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &75198046
 GameObject:
   m_ObjectHideFlags: 0
@@ -4010,7 +4015,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &773110930
 Transform:
   m_ObjectHideFlags: 0
@@ -6766,7 +6771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generators: []
-  machine: []
+  machines: []
   totalPower: 0
 --- !u!4 &1425305004 stripped
 Transform:
@@ -7113,7 +7118,7 @@ MonoBehaviour:
   - <prefab>k__BackingField: {fileID: 9173919297921113879, guid: 13a97a2338fa32d4fa14df3126eeba26, type: 3}
     <name>k__BackingField: Tomato Plant
     <ID>k__BackingField: 2
-    <amount>k__BackingField: 99
+    <amount>k__BackingField: 3
     <maxAmount>k__BackingField: 999
   - <prefab>k__BackingField: {fileID: 8842532762927342633, guid: a4aa7b3dc962fb549b35c3245cd93ab2, type: 3}
     <name>k__BackingField: Sapling
@@ -7136,9 +7141,9 @@ MonoBehaviour:
     <amount>k__BackingField: 3
     <maxAmount>k__BackingField: 999
   - <prefab>k__BackingField: {fileID: 8842532762927342633, guid: a4aa7b3dc962fb549b35c3245cd93ab2, type: 3}
-    <name>k__BackingField: Sapling
-    <ID>k__BackingField: 5
-    <amount>k__BackingField: 3
+    <name>k__BackingField: Generator_Listrik
+    <ID>k__BackingField: 6
+    <amount>k__BackingField: 1
     <maxAmount>k__BackingField: 999
   - <prefab>k__BackingField: {fileID: 8842532762927342633, guid: a4aa7b3dc962fb549b35c3245cd93ab2, type: 3}
     <name>k__BackingField: WindMill
@@ -7146,7 +7151,7 @@ MonoBehaviour:
     <amount>k__BackingField: 3
     <maxAmount>k__BackingField: 999
   - <prefab>k__BackingField: {fileID: 8842532762927342633, guid: a4aa7b3dc962fb549b35c3245cd93ab2, type: 3}
-    <name>k__BackingField: Sapling
+    <name>k__BackingField: SolarPanel
     <ID>k__BackingField: 5
     <amount>k__BackingField: 3
     <maxAmount>k__BackingField: 999
@@ -7542,7 +7547,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1735219563
 Transform:
   m_ObjectHideFlags: 0
@@ -8323,7 +8328,7 @@ MonoBehaviour:
   _cellIndicator: {fileID: 79855400}
   _inputManager: {fileID: 1343058120}
   _grid: {fileID: 1396743210}
-  _gridVisualization: {fileID: 1894603373}
+  _gridVisualization: {fileID: 1954005214}
   _database: {fileID: 11400000, guid: 802b8e1b141f7e043abf988eaa4f5ba6, type: 2}
   _objectPlacement: {fileID: 165432946}
   _selectedObjectIndex: -1
@@ -9565,6 +9570,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   day: 0
   _plantSystem: {fileID: 2000788148}
+  _powerStorage: {fileID: 1419066975}
 --- !u!4 &2064584326
 Transform:
   m_ObjectHideFlags: 0
@@ -9715,6 +9721,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5bb0bd82a0ecfc4d9652110267c3f0d, type: 3}
+--- !u!1001 &1475344619047710888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3721770134845647617, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_Name
+      value: Machine Ultra violet
+      objectReference: {fileID: 0}
+    - target: {fileID: 3721770134845647617, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6365785753623323128, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
 --- !u!1001 &8028623338470243883
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9804,6 +9871,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 556506923}
     m_Modifications:
+    - target: {fileID: 4660533534032717282, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480168464747634951, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
       propertyPath: m_Name
       value: Sign Lot
@@ -9848,6 +9919,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: plantGrid
+      value: 
+      objectReference: {fileID: 131681993}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: signButton
+      value: 
+      objectReference: {fileID: 49976789}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: machine_prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: 'machine_prefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3721770134845647617, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9857,6 +9944,7 @@ PrefabInstance:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 2064584326}
   - {fileID: 330585546}
   - {fileID: 832575519}
   - {fileID: 2024605204}
@@ -9868,7 +9956,7 @@ SceneRoots:
   - {fileID: 1419066974}
   - {fileID: 2000788147}
   - {fileID: 1622041465}
-  - {fileID: 2064584326}
   - {fileID: 1753823084}
   - {fileID: 252411774}
   - {fileID: 556506923}
+  - {fileID: 1475344619047710888}

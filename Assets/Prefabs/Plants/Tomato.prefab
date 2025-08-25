@@ -492,7 +492,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _ID: 0
   _yieldsId: 2
-  _yieldsAmount: 5
+  _yieldsAmount: 1
+  _bonusYield: 0
   _maxAge: 18
   _age: 0
   fertilized: 0
@@ -501,6 +502,7 @@ MonoBehaviour:
   waterGot: 0
   _bonus: 0
   _buttonObject: {fileID: 6535573061296581895}
+  _lot: {fileID: 0}
   phaseSprite:
   - {fileID: -1728202257, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   - {fileID: -1917925887, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}

@@ -3,7 +3,7 @@ using UnityEngine;
 public class PowerStorage : MonoBehaviour
 {
     public GeneratorScript[] generators;
-    public MachineScript[] machine;
+    public MachineScript[] machines;
     public int totalPower;
 
     void getGenerator()
@@ -16,15 +16,20 @@ public class PowerStorage : MonoBehaviour
         getGenerator();
         foreach (GeneratorScript generator in generators)
         {
-            generator.GeneratePower();
+            totalPower += generator.GeneratePower();
         }
+    }
+
+    public void GetMachines()
+    {
+        machines = FindObjectsByType<MachineScript>(FindObjectsSortMode.None);
     }
 
     public void GiveEnergy()
     {
         GetEnergy();
-        machine = FindObjectsByType<MachineScript>(FindObjectsSortMode.None);
-        foreach (MachineScript machine in machine)
+        GetMachines();
+        foreach (MachineScript machine in machines)
         {
             int powerneeded = machine.powerNeed;
             if (totalPower > powerneeded)
@@ -38,6 +43,15 @@ public class PowerStorage : MonoBehaviour
                 totalPower = 0;
             }
             else break;
+        }
+    }
+
+    public void BuffAllPlant()
+    {
+        GetMachines();
+        foreach (MachineScript machine in machines)
+        {
+            machine.BuffPlants();
         }
     }
 }
