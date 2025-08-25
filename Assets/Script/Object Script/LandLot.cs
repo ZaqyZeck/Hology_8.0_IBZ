@@ -8,7 +8,7 @@ public class LandLot : MonoBehaviour
 
     public GameObject _buttonObject;
     private GameObject _plant;
-    private PlaceMentSystem _ps;
+    private RotationControl rotationControl;
     private InventorySystem _inventory;
     private Collider _lotCollider;
 
@@ -16,7 +16,7 @@ public class LandLot : MonoBehaviour
 
     private void Awake()
     {
-        _ps = FindAnyObjectByType<PlaceMentSystem>();
+        rotationControl = FindAnyObjectByType<RotationControl>();
         _inventory = FindAnyObjectByType<InventorySystem>();
         _lotCollider = GetComponent<Collider>();
     }
@@ -28,15 +28,17 @@ public class LandLot : MonoBehaviour
     void OnMouseOver()
     {
         // Check if the right mouse button is clicked while the cursor is over this object
-        if (Input.GetMouseButtonDown(0) && !_ps.isBuilding) // 1 = Right Mouse Button
+        if (Input.GetMouseButtonDown(0) && !rotationControl._isRotating) // 1 = Right Mouse Button
         {
             _buttonObject.SetActive(!_buttonObject.activeSelf);
+            _buttonObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
         }
     }
 
     public void PlacePlantBy(int _id)
     {
-        if (_plant != null)
+        //Debug.Log(_inventory.inventory[_id].name);
+        if (_plant != null || _inventory.inventory[_id].amount <= 0)
         {
             Debug.LogError("terdapat tanaman " + _plant);
             return;
@@ -45,7 +47,8 @@ public class LandLot : MonoBehaviour
         _plant = Instantiate(_database._objectsData[_plantId].Prefab);
         _plant.transform.SetParent(gameObject.transform);
         _plant.transform.position = _location + _database._objectsData[_plantId].Location;
-
+        _plant.GetComponent<PlantScript>()._ID = _id;
+        _inventory.subtractOneTo(_id);
         _havePlant = true;
         _lotCollider.enabled = false;
         _buttonObject.SetActive(!_buttonObject.activeSelf);

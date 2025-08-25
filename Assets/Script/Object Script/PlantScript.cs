@@ -24,6 +24,7 @@ public class PlantScript : MonoBehaviour
     [SerializeField] private Sprite[] phaseSprite;
     private SpriteRenderer _spriteRenderer;
     private int _currentPhase;
+    private RotationControl rotationControl;
 
     private void Awake()
     {
@@ -31,6 +32,8 @@ public class PlantScript : MonoBehaviour
         _lot = GetComponentInParent<LandLot>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _inventory = FindAnyObjectByType<InventorySystem>();
+        rotationControl = FindAnyObjectByType<RotationControl>();
+        gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
     }
     void OnMouseOver()
     {
@@ -56,6 +59,8 @@ public class PlantScript : MonoBehaviour
         if (waterGot / waterNeeded < 0.3)
         {
             _ps.RemoveStrcture(_ID);
+            // _lot.RemovePlant();
+            return;
         }
         if (fertilized) _bonus += 6;
 

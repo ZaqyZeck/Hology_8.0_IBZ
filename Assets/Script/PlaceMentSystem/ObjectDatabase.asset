@@ -18,7 +18,7 @@ MonoBehaviour:
     <Size>k__BackingField: {x: 1, y: 1}
     <Location>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
     <Prefab>k__BackingField: {fileID: 2152834547085221925, guid: 17b2578af92599a45bac0b03f79ae528, type: 3}
-  - <Name>k__BackingField: Pot
+  - <Name>k__BackingField: Tomato
     <ID>k__BackingField: 2
     <Size>k__BackingField: {x: 1, y: 1}
     <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
@@ -28,3 +28,28 @@ MonoBehaviour:
     <Size>k__BackingField: {x: 2, y: 2}
     <Location>k__BackingField: {x: 0.55, y: 0.3, z: 0.55}
     <Prefab>k__BackingField: {fileID: 8842532762927342633, guid: a4aa7b3dc962fb549b35c3245cd93ab2, type: 3}
+  - <Name>k__BackingField: Cucumber
+    <ID>k__BackingField: 4
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
+    <Prefab>k__BackingField: {fileID: 9173919297921113879, guid: c380573c50cef4146a69b49c6906e571, type: 3}
+  - <Name>k__BackingField: Strawbery
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
+    <Prefab>k__BackingField: {fileID: 9173919297921113879, guid: 069395751ec28e24990947722cd5c9e8, type: 3}
+  - <Name>k__BackingField: Generator_Listrik
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
+    <Prefab>k__BackingField: {fileID: 7943962074975089485, guid: d5bb0bd82a0ecfc4d9652110267c3f0d, type: 3}
+  - <Name>k__BackingField: WindMill
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
+    <Prefab>k__BackingField: {fileID: 7943962074975089485, guid: d5bb0bd82a0ecfc4d9652110267c3f0d, type: 3}
+  - <Name>k__BackingField: SolarPanel
+    <ID>k__BackingField: 8
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
+    <Prefab>k__BackingField: {fileID: 7943962074975089485, guid: d5bb0bd82a0ecfc4d9652110267c3f0d, type: 3}

@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761baf0eafba2314b82856d20c30b22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plantId: 1
+  _plantId: 5
 --- !u!212 &7254581741515390043
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -382,7 +382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761baf0eafba2314b82856d20c30b22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plantId: 1
+  _plantId: 2
 --- !u!135 &9099107017165748516
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -522,7 +522,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 761baf0eafba2314b82856d20c30b22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _plantId: 1
+  _plantId: 4
 --- !u!212 &5895941383204955374
 SpriteRenderer:
   m_ObjectHideFlags: 0

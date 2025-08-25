@@ -3,40 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|c:\\users\\zaqy ulunnuha\\my games\\hology_8.0_ibz\\assets\\script\\placementsystem\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\placementsystem\\inputmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\placementsystem\\placementsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\placementsystem\\placementsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|c:\\users\\zaqy ulunnuha\\my games\\hology_8.0_ibz\\assets\\script\\ui script\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui script\\uicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|c:\\users\\zaqy ulunnuha\\my games\\hology_8.0_ibz\\assets\\script\\ui script\\basebuildingscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\ui script\\basebuildingscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\button script\\destroyplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\button script\\destroyplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\object script\\plantscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\plantscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\button script\\harvestplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\button script\\harvestplant.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|c:\\users\\zaqy ulunnuha\\my games\\hology_8.0_ibz\\assets\\script\\object script\\machineplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\machineplacement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\object script\\landlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\landlot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\object script\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\machine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\placementsystem\\rotationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\placementsystem\\rotationcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\object script\\machinescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\machinescript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\object script\\powerstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\powerstorage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\placementsystem\\placementsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\placementsystem\\placementsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\assets\\script\\object script\\generatorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A7296CD5-3FEE-6326-6937-B810BB6570E7}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\object script\\generatorscript.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -51,115 +43,87 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "InputManager.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\PlaceMentSystem\\InputManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\PlaceMentSystem\\InputManager.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\PlaceMentSystem\\InputManager.cs",
-              "RelativeToolTip": "Assets\\Script\\PlaceMentSystem\\InputManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA5AAAAAAAAAA==",
+              "Title": "MachinePlacement.cs",
+              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\MachinePlacement.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\MachinePlacement.cs",
+              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\MachinePlacement.cs",
+              "RelativeToolTip": "Assets\\Script\\Object Script\\MachinePlacement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T04:03:21.08Z",
+              "WhenOpened": "2025-08-25T09:10:15.78Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UiController.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\UI Script\\UiController.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UI Script\\UiController.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\UI Script\\UiController.cs",
-              "RelativeToolTip": "Assets\\Script\\UI Script\\UiController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T01:17:16.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BaseBuildingScript.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\UI Script\\BaseBuildingScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\UI Script\\BaseBuildingScript.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\UI Script\\BaseBuildingScript.cs",
-              "RelativeToolTip": "Assets\\Script\\UI Script\\BaseBuildingScript.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAxwA4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-24T01:17:12.567Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DestroyPlant.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Button Script\\DestroyPlant.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Button Script\\DestroyPlant.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Button Script\\DestroyPlant.cs",
-              "RelativeToolTip": "Assets\\Script\\Button Script\\DestroyPlant.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAwBAAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:04:04.985Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HarvestPlant.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Button Script\\HarvestPlant.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Button Script\\HarvestPlant.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Button Script\\HarvestPlant.cs",
-              "RelativeToolTip": "Assets\\Script\\Button Script\\HarvestPlant.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T15:03:21.816Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Machine.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\Machine.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\Machine.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\Machine.cs",
-              "RelativeToolTip": "Assets\\Script\\Object Script\\Machine.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwBYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T08:13:35.062Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "PlantScript.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\PlantScript.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\PlantScript.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\PlantScript.cs",
-              "RelativeToolTip": "Assets\\Script\\Object Script\\PlantScript.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAWwFgAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T04:01:14.359Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "LandLot.cs",
-              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\LandLot.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\LandLot.cs",
-              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\LandLot.cs",
-              "RelativeToolTip": "Assets\\Script\\Object Script\\LandLot.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAgwDoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-23T03:06:27.725Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PlaceMentSystem.cs",
               "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\PlaceMentSystem\\PlaceMentSystem.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\PlaceMentSystem\\PlaceMentSystem.cs",
               "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\PlaceMentSystem\\PlaceMentSystem.cs",
               "RelativeToolTip": "Assets\\Script\\PlaceMentSystem\\PlaceMentSystem.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAkAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-21T02:55:47.658Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-25T08:27:47.247Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LandLot.cs",
+              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\LandLot.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\LandLot.cs",
+              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\LandLot.cs",
+              "RelativeToolTip": "Assets\\Script\\Object Script\\LandLot.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwBsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T07:33:57.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PowerStorage.cs",
+              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\PowerStorage.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\PowerStorage.cs",
+              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\PowerStorage.cs",
+              "RelativeToolTip": "Assets\\Script\\Object Script\\PowerStorage.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwCYAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T00:44:29.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GeneratorScript.cs",
+              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\GeneratorScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\GeneratorScript.cs",
+              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\GeneratorScript.cs",
+              "RelativeToolTip": "Assets\\Script\\Object Script\\GeneratorScript.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-25T00:21:55.578Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RotationControl.cs",
+              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\PlaceMentSystem\\RotationControl.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\PlaceMentSystem\\RotationControl.cs",
+              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\PlaceMentSystem\\RotationControl.cs",
+              "RelativeToolTip": "Assets\\Script\\PlaceMentSystem\\RotationControl.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAuwF4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-24T08:06:41.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MachineScript.cs",
+              "DocumentMoniker": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\MachineScript.cs",
+              "RelativeDocumentMoniker": "Assets\\Script\\Object Script\\MachineScript.cs",
+              "ToolTip": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Assets\\Script\\Object Script\\MachineScript.cs",
+              "RelativeToolTip": "Assets\\Script\\Object Script\\MachineScript.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-23T08:13:35.062Z"
             }
           ]
         }
