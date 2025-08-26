@@ -63,9 +63,12 @@
   <ItemGroup>
     <Compile Include="Assets\Script\PlaceMentSystem\PlacementState.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\GridData.cs" />
+    <Compile Include="Assets\Script\Save System\LandLotDatabase.cs" />
+    <Compile Include="Assets\Script\Save System\Data.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlaceMentSystem.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachinePlacement.cs" />
     <Compile Include="Assets\Script\UI Script\UiController.cs" />
+    <Compile Include="Assets\Script\Save System\MainSaveSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyPlant.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachineScript.cs" />
@@ -85,12 +88,18 @@
     <Compile Include="Assets\Script\Object Script\InventorySystem.cs" />
     <Compile Include="Assets\Script\Button Script\HarvestPlant.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\RotationControl.cs" />
+    <Compile Include="Assets\Script\GlobarWarmingSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\CameraControl.cs" />
+    <Compile Include="Assets\Script\Save System\InventoryData.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyMachineButton.cs" />
     <Compile Include="Assets\Script\Object Script\PowerStorage.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\ElectricTractorMachine.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonScript.cs" />
     <Compile Include="Assets\Script\Object Script\Land.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
+    <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

@@ -5,6 +5,7 @@ public class LandLot : MonoBehaviour
     public Vector3Int _location;
     public bool _havePlant;
     public int _plantId;
+    public int lotId;
 
     public GameObject _buttonObject;
     private GameObject _plant;

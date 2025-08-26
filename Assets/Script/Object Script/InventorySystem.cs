@@ -58,6 +58,29 @@ public class InventorySystem : MonoBehaviour
             }
         }
     }
+
+    public void SaveInventory()
+    {
+        MainSaveSystem.SaveInventoryData(inventory);
+    }
+    public void LoadInventoryData()
+    {
+        InventoryData inventoryData = MainSaveSystem.LoadInventory();
+        if(inventoryData == null)
+        {
+            Debug.LogError("Tidak ada data");
+            return;
+        }
+        foreach (InventoryObject inventory in inventory)
+        {
+            if (inventory.ID != inventoryData.InventoryID[inventory.ID])
+            {
+                Debug.LogError("id tidak sesuai");
+                break;
+            }
+            inventory.amount = inventoryData.InventoryAmount[inventory.ID];
+        }
+    }
 }
 
 [Serializable]

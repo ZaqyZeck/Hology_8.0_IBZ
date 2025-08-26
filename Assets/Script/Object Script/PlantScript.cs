@@ -1,21 +1,26 @@
-using System.IO;
 using UnityEngine;
 
 public class PlantScript : MonoBehaviour
 {
     public int _ID;
+    public int _LotID;
+    public int _age;
+    public int _bonusYield;
+    public float waterGot;
+    public bool fertilized;
+    public int _bonus = 0;
+    public int _currentPhase;
+
     public int _yieldsId;
     public int _yieldsAmount;
-    public int _bonusYield;
+    
     public int _maxAge;
-    public int _age;
-
-    public bool fertilized;
+    
     public bool harvestable;
     public float waterNeeded;
-    public float waterGot;
-
-    public int _bonus = 0;
+    
+    public int tallPhase, middlePhase;
+    
 
     [SerializeField] private GameObject _buttonObject;
     private PlaceMentSystem _ps;
@@ -24,8 +29,8 @@ public class PlantScript : MonoBehaviour
 
     [SerializeField] private Sprite[] phaseSprite;
     private SpriteRenderer _spriteRenderer;
-    private int _currentPhase;
     private RotationControl rotationControl;
+    private BoxCollider _collider;
 
     private void Awake()
     {
@@ -35,6 +40,11 @@ public class PlantScript : MonoBehaviour
         _inventory = FindAnyObjectByType<InventorySystem>();
         rotationControl = FindAnyObjectByType<RotationControl>();
         gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
+        _collider = GetComponent<BoxCollider>();
+
+        _spriteRenderer.sprite = phaseSprite[_currentPhase];
+        if (_age == _maxAge) harvestable = true;
+        _LotID = _lot.lotId;
     }
     void OnMouseOver()
     {
@@ -85,6 +95,24 @@ public class PlantScript : MonoBehaviour
         _currentPhase = _age / 6;
         _spriteRenderer.sprite = phaseSprite[_currentPhase];
 
+        if (_currentPhase >= tallPhase)
+        {
+            Vector3 c = _collider.center;
+            c.y = 0.5f;
+            _collider.center = c;
+        }
+        else if (_currentPhase >= middlePhase)
+        {
+            Vector3 c = _collider.center;
+            c.y = 0.25f;
+            _collider.center = c;
+        }
+        else
+        {
+            Vector3 c = _collider.center;
+            c.y = 0f;
+            _collider.center = c;
+        }
     }
 
     public void HarvestPlant()

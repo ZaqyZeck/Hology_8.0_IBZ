@@ -7,14 +7,17 @@ public class GeneratorScript : MonoBehaviour
     public int globalWarm;
     public string type;
     private Vector3 _originalScale;
+    private GlobarWarmingSystem GW_system;
 
-    private void Start()
+    private void Awake()
     {
         _originalScale = transform.localScale;
+        GW_system = FindAnyObjectByType<GlobarWarmingSystem>();
     }
 
     public int GeneratePower()
     {
+        GW_system.lowerTheLevelBy(globalWarm);
         return producePower;
     }
 
@@ -35,6 +38,14 @@ public class GeneratorScript : MonoBehaviour
                 scaleY,
                 _originalScale.z
             );
+        }
+        return;
+        if(type == "Wind")
+        {
+            // aku mau object berputar dengan arah z dan titik pivot ada di tengah object, jadi kaya kincir angin;
+            Vector3 center = GetComponent<Renderer>().bounds.center;
+
+            transform.RotateAround(center, Vector3.forward, 100f * Time.deltaTime);
         }
     }
 }

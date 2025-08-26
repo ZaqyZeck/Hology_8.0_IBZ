@@ -467,7 +467,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1179494506, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  m_Sprite: {fileID: 1343016452, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -491,8 +491,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ID: 0
-  _yieldsId: 4
+  _yieldsId: 5
   _yieldsAmount: 5
+  _bonusYield: 0
   _maxAge: 36
   _age: 0
   fertilized: 0
@@ -500,15 +501,18 @@ MonoBehaviour:
   waterNeeded: 5
   waterGot: 0
   _bonus: 0
+  tallPhase: 5
+  middlePhase: 3
+  _currentPhase: 0
   _buttonObject: {fileID: 6535573061296581895}
   _lot: {fileID: 0}
   phaseSprite:
   - {fileID: -1179494506, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   - {fileID: -349503502, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   - {fileID: 1034013530, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: -1457849738, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: -1457849738, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   - {fileID: -695478254, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: -1457849738, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: -1457849738, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
   - {fileID: -872222459, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
 --- !u!65 &5441509234009999339
 BoxCollider:
@@ -529,5 +533,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7536678, y: 0.78724563, z: 0.14016953}
-  m_Center: {x: 0.011034907, y: 0.070997134, z: -0.029916022}
+  m_Size: {x: 0.7536678, y: 1, z: 0.14016953}
+  m_Center: {x: 0.011034907, y: 0, z: -0.029916022}

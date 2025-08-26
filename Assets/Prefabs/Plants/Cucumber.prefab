@@ -493,6 +493,7 @@ MonoBehaviour:
   _ID: 0
   _yieldsId: 4
   _yieldsAmount: 5
+  _bonusYield: 0
   _maxAge: 24
   _age: 0
   fertilized: 0
@@ -500,6 +501,8 @@ MonoBehaviour:
   waterNeeded: 5
   waterGot: 0
   _bonus: 0
+  tallPhase: 3
+  middlePhase: 2
   _buttonObject: {fileID: 6535573061296581895}
   _lot: {fileID: 0}
   phaseSprite:
@@ -527,5 +530,5 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.7536678, y: 0.78724563, z: 0.14016953}
-  m_Center: {x: 0.011034907, y: 0.070997134, z: -0.029916022}
+  m_Size: {x: 0.7536678, y: 1, z: 0.14016953}
+  m_Center: {x: 0.011034907, y: -0.1, z: -0.029916022}
