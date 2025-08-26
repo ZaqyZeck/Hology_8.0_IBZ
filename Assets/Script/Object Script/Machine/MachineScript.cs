@@ -26,7 +26,12 @@ public class MachineScript : MonoBehaviour
         GetAllPlant();
         foreach (PlantScript plant in _plantScript)
         {
-            if (type == "speed") plant._bonus += bonus;
+            if (type == "speed")
+            {
+                plant._bonus += bonus;
+                continue;
+                plant._bonusYield = 0;
+            }   
             else plant._bonusYield = bonus;
         }
     }

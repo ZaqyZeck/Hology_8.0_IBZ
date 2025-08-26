@@ -5821,6 +5821,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: plantGrid
+      value: 
+      objectReference: {fileID: 429177987}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: machine_prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: 'machine_prefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3721770134845647617, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7005,6 +7017,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: plantGrid
+      value: 
+      objectReference: {fileID: 590205377}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: machine_prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: 'machine_prefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3721770134845647617, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7685,6 +7709,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: plantGrid
+      value: 
+      objectReference: {fileID: 1664866103}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: machine_prefabs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7977568352244569943, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: 'machine_prefabs.Array.data[0]'
+      value: 
+      objectReference: {fileID: 3721770134845647617, guid: f3f5249f51a206c4b8ccaa9b9a7071b3, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

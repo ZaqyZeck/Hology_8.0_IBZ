@@ -14,8 +14,14 @@ public class PowerStorage : MonoBehaviour
     public void GetEnergy()
     {
         getGenerator();
+        totalPower = 0;
         foreach (GeneratorScript generator in generators)
         {
+            if (generator.gameObject.name.Contains("Preview"))
+            {
+                continue;
+            }
+                
             totalPower += generator.GeneratePower();
         }
     }

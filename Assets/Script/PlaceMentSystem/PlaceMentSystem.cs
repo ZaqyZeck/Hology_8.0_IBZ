@@ -58,7 +58,7 @@ public class PlaceMentSystem : MonoBehaviour
 
     public void StartPlacement(int ID)
     {
-        if (_rotation._isRotating || _inventory.inventory[ID].amount <= 0)
+        if (_rotation._isRotating || _inventory.inventory[ID + 1].amount <= 0)
         {
             return;
         }
@@ -117,7 +117,7 @@ public class PlaceMentSystem : MonoBehaviour
 
         ObjectData _data = _database._objectsData[_selectedObjectIndex];
         int _inventoryIndex = _selectedObjectIndex + 1;
-        if (_inventory.inventory[_inventoryIndex].amount <= 0)
+        if (_inventory.inventory[_inventoryIndex + 1].amount <= 0)
         {
             return;
         }
@@ -131,7 +131,7 @@ public class PlaceMentSystem : MonoBehaviour
         GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
         _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);
 
-        if (_inventory.inventory[_inventoryIndex].amount == 0)
+        if (_inventory.inventory[_inventoryIndex + 1].amount == 0)
         {
             StopPlacement();
         }
@@ -163,7 +163,7 @@ public class PlaceMentSystem : MonoBehaviour
         GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
         _selectedData.AddObjectAt(_location, _data.Size, _objekID);
 
-        if (_inventory.inventory[_inventoryIndex].amount == 0)
+        if (_inventory.inventory[_inventoryIndex + 1].amount == 0)
         {
             StopPlacement();
         }
