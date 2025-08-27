@@ -211,4 +211,20 @@ public class PlaceMentSystem : MonoBehaviour
             _previewObject.transform.position = _cellIndicator.transform.position + _database._objectsData[_selectedObjectIndex].Location;
         }
     }
+
+    public void PlaceStructureByLocation(Vector3 location, int id)
+    {
+        Vector3Int _gridPosition = _grid.WorldToCell(location);
+        Debug.Log($"posisi input : {location} dan posisi grid : {_gridPosition}");
+
+        ObjectData _data = _database._objectsData[id];
+        Debug.Log(_data.Name);
+
+        Vector3 _objectLocation = _grid.CellToWorld(_gridPosition) + _data.Location;
+
+        int _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID); //
+
+        GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
+        _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);
+    }
 }

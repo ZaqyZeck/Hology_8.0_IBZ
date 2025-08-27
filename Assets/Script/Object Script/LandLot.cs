@@ -31,7 +31,8 @@ public class LandLot : MonoBehaviour
         // Check if the right mouse button is clicked while the cursor is over this object
         if (Input.GetMouseButtonDown(0) && !rotationControl._isRotating) // 1 = Right Mouse Button
         {
-            _buttonObject.SetActive(!_buttonObject.activeSelf);
+            //_buttonObject.SetActive(!_buttonObject.activeSelf);
+            ButtonStorage.changeButton(_buttonObject);
             _buttonObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
         }
     }
@@ -53,6 +54,35 @@ public class LandLot : MonoBehaviour
         _havePlant = true;
         _lotCollider.enabled = false;
         _buttonObject.SetActive(!_buttonObject.activeSelf);
+
+        PlantScript plantScript = _plant.GetComponent<PlantScript>();
+        plantScript._lot = GetComponent<LandLot>();
+        plantScript.load();
+    }
+
+    public PlantScript LoadPlantBy(int _id)
+    {
+        //Debug.Log(_inventory.inventory[_id].name);
+        if (_plant != null)
+        {
+            Debug.LogError("terdapat tanaman " + _plant);
+            return null;
+        }
+        FindIdInDB(_id);
+        //Debug.Log(_plantId + " dan " + _id);
+        _plant = Instantiate(_database._objectsData[_plantId].Prefab);
+        _plant.transform.SetParent(gameObject.transform);
+        _plant.transform.position = _location + _database._objectsData[_plantId].Location;
+        //_plant.GetComponent<PlantScript>()._ID = _id;
+
+        PlantScript plantScript = _plant.GetComponent<PlantScript>();
+        plantScript._lot = GetComponent<LandLot>();
+        plantScript.load();
+        //_inventory.subtractOneTo(_id);
+        _havePlant = true;
+        _lotCollider.enabled = false;
+        _buttonObject.SetActive(false);
+        return plantScript;
     }
 
     public void RemovePlant()

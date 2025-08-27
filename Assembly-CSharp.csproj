@@ -67,7 +67,9 @@
     <Compile Include="Assets\Script\Save System\Data.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlaceMentSystem.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachinePlacement.cs" />
+    <Compile Include="Assets\Script\Button Script\ButtonStorage.cs" />
     <Compile Include="Assets\Script\UI Script\UiController.cs" />
+    <Compile Include="Assets\Script\Save System\GeneratorData.cs" />
     <Compile Include="Assets\Script\Save System\MainSaveSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyPlant.cs" />
@@ -79,6 +81,7 @@
     <Compile Include="Assets\Script\Object Script\PlantSystem.cs" />
     <Compile Include="Assets\Script\Button Script\PlaceMachine.cs" />
     <Compile Include="Assets\Script\UI Script\BaseBuildingScript.cs" />
+    <Compile Include="Assets\Script\Save System\PlantsData.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectList.cs" />
@@ -94,6 +97,7 @@
     <Compile Include="Assets\Script\Button Script\DestroyMachineButton.cs" />
     <Compile Include="Assets\Script\Object Script\PowerStorage.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\ElectricTractorMachine.cs" />
+    <Compile Include="Assets\Script\Save System\MachineData.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonScript.cs" />
     <Compile Include="Assets\Script\Object Script\Land.cs" />
   </ItemGroup>

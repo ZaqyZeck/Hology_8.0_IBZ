@@ -3,6 +3,9 @@ using UnityEngine;
 public class GeneratorScript : MonoBehaviour
 {
     public int id;
+    public Vector3 location;
+    public bool havefuel;
+
     public int producePower;
     public int globalWarm;
     public string type;
@@ -13,6 +16,12 @@ public class GeneratorScript : MonoBehaviour
     {
         _originalScale = transform.localScale;
         GW_system = FindAnyObjectByType<GlobarWarmingSystem>();
+        //location = transform.localPosition;
+    }
+
+    public void setGeneratorLocation()
+    {
+        location = transform.localPosition;
     }
 
     public int GeneratePower()

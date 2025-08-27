@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlantSystem : MonoBehaviour
 {
     public PlantScript[] _plantList;
+    public LandLot[] LandLots;
+    public GameObject[] Plants_Prefab;
     public float _water;
     public float _maxWater;
     //private InventorySystem _inventory;
@@ -73,6 +75,40 @@ public class PlantSystem : MonoBehaviour
         foreach (var plant in _plantList)
         {
             plant.GrowThePlant();
+        }
+    }
+
+    public void SavePlantsData()
+    {
+        GetAllPlant();
+        List<PlantScript> plantList = new List<PlantScript>();
+        foreach (PlantScript plant in _plantList)
+        {
+            plantList.Add(plant);
+        }
+        MainSaveSystem.SavePlantsData(plantList);
+    }
+
+    public void LoadPlantsData()
+    {
+        PlantsData plantsData = MainSaveSystem.LoadPlants();
+
+        foreach (int plantLotId in plantsData.lotId)
+        {
+            if (!plantsData.notNull[plantLotId]) continue;
+            Debug.Log(LandLots[plantLotId].name + " and " + plantsData.typeId[plantLotId]);
+            LandLot lot = LandLots[plantLotId];
+            PlantScript plantScript = lot.LoadPlantBy(plantsData.typeId[plantLotId]);
+
+            plantScript._ID = plantsData.typeId[plantLotId];
+            plantScript._LotID = plantsData.lotId[plantLotId];
+            plantScript._age = plantsData.age[plantLotId];
+            plantScript._bonusYield = plantsData.bonusYield[plantLotId];
+            plantScript.waterGot = plantsData.waterGot[plantLotId];
+            plantScript.fertilized = plantsData.fertilized[plantLotId];
+            plantScript._bonus = plantsData.bonus[plantLotId];
+            plantScript._currentPhase = plantsData.currentPhase[plantLotId];
+            plantScript.load();
         }
     }
 }

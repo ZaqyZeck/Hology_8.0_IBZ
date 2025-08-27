@@ -3,6 +3,7 @@ using UnityEngine;
 public class MachinePlacement : MonoBehaviour
 {
     public bool haveMachine;
+    public int signId;
 
     public GameObject signButton, machineButton;
     private RotationControl rotationControl;
@@ -24,12 +25,15 @@ public class MachinePlacement : MonoBehaviour
         {
             if (!haveMachine)
             {
-                signButton.SetActive(!signButton.activeSelf);
+                //signButton.SetActive(!signButton.activeSelf);
+                ButtonStorage.changeButton(signButton);
                 signButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
             }
             else
             {
-                machineButton.SetActive(!machineButton.activeSelf);
+
+                //machineButton.SetActive(!machineButton.activeSelf);
+                ButtonStorage.changeButton(machineButton);
                 machineButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
             }
          }
@@ -53,6 +57,8 @@ public class MachinePlacement : MonoBehaviour
             machineScript = plantGrid.AddComponent<ElectricTractorMachine>();
             machineScript.plantGrid = plantGrid;
         }
+        machineScript.id = prefab_index;
+        machineScript.signId = signId;
         machineScript.plantGrid = plantGrid;
         machine = machineScript;
 

@@ -25,7 +25,7 @@ public class PlantScript : MonoBehaviour
     [SerializeField] private GameObject _buttonObject;
     private PlaceMentSystem _ps;
     private InventorySystem _inventory;
-    [SerializeField] private LandLot _lot;
+    public LandLot _lot;
 
     [SerializeField] private Sprite[] phaseSprite;
     private SpriteRenderer _spriteRenderer;
@@ -41,7 +41,18 @@ public class PlantScript : MonoBehaviour
         rotationControl = FindAnyObjectByType<RotationControl>();
         gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
         _collider = GetComponent<BoxCollider>();
+        //_lot = GetComponentInParent<LandLot>();
 
+        //_spriteRenderer.sprite = phaseSprite[_currentPhase];
+        //if (_age == _maxAge) harvestable = true;
+        //_LotID = _lot.lotId;
+        //load();
+    }
+
+    public void load()
+    {
+        //_lot = GetComponentInParent<LandLot>();
+        //Debug.Log(_lot.name);
         _spriteRenderer.sprite = phaseSprite[_currentPhase];
         if (_age == _maxAge) harvestable = true;
         _LotID = _lot.lotId;
@@ -51,7 +62,8 @@ public class PlantScript : MonoBehaviour
         // Check if the right mouse button is clicked while the cursor is over this object
         if (Input.GetMouseButtonDown(0) && !_ps.isBuilding) // 1 = Right Mouse Button
         {
-            _buttonObject.SetActive(!_buttonObject.activeSelf);
+            //_buttonObject.SetActive(!_buttonObject.activeSelf);
+            ButtonStorage.changeButton(_buttonObject);
         }
     }
 
@@ -118,7 +130,6 @@ public class PlantScript : MonoBehaviour
     public void HarvestPlant()
     {
         _inventory.inventory[_yieldsId].amount += _yieldsAmount + _bonusYield;
-        _lot = GetComponentInParent<LandLot>();
         _lot.RemovePlant();
     }
 

@@ -2,8 +2,11 @@ using UnityEngine;
 
 public class MachineScript : MonoBehaviour
 {
-    public int powerNeed;
+    public int id;
+    public int signId;
     public int powerGot;
+    
+    public int powerNeed;
     public int bonus;
     public string type; // strength = memperbanyak hasil panen. speed = mempercepat pertumbuhan
     protected PlantScript[] _plantScript;
