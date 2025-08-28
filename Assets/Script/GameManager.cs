@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,8 +7,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private PlantSystem plantSystem;
     [SerializeField] private PowerStorage powerStorage;
     [SerializeField] private InventorySystem inventory;
+    [SerializeField] private QuestSystem questSystem;
+
+    [SerializeField] private UiController ui;
     public void skipDays()
     {
+        questSystem.autoComplete();
+        questSystem.CekQuest();
         day += 6;
         plantSystem.GetAllPlant();
         plantSystem.ResetAll();
@@ -15,6 +21,8 @@ public class GameManager : MonoBehaviour
         plantSystem.GrowAll();
         powerStorage.GiveEnergy();
         powerStorage.BuffAllPlant();
+
+        ui.countDate(day);
     }
 
     public void saveAllData()
@@ -32,4 +40,10 @@ public class GameManager : MonoBehaviour
         powerStorage.LoadGenerators();
         powerStorage.LoadMachines();
     }
+
+    public void GameOver()
+    {
+        Debug.LogError("Game selesai");
+    }
+
 }

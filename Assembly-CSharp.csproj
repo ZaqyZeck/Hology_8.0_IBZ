@@ -61,12 +61,14 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Quest &amp; NPC Script\ShopSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlacementState.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\GridData.cs" />
     <Compile Include="Assets\Script\Save System\LandLotDatabase.cs" />
     <Compile Include="Assets\Script\Save System\Data.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlaceMentSystem.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachinePlacement.cs" />
+    <Compile Include="Assets\Script\Quest &amp; NPC Script\QuestSystem.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonStorage.cs" />
     <Compile Include="Assets\Script\UI Script\UiController.cs" />
     <Compile Include="Assets\Script\Save System\GeneratorData.cs" />

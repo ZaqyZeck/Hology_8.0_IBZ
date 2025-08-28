@@ -15,7 +15,7 @@ C:/Users/Zaqy Ulunnuha/My Games/Hology_8.0_IBZ
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54367
+56289
 -job-worker-count
 7
 -background-job-worker-count
@@ -59,12 +59,12 @@ C:/Users/Zaqy Ulunnuha/My Games/Hology_8.0_IBZ
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [32516]  Target information:
+Player connection [26272]  Target information:
 
-Player connection [32516]  * "[IP] 10.200.161.253 [Port] 0 [Flags] 2 [Guid] 2033326341 [EditorId] 2033326341 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QLJO0AA7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [26272]  * "[IP] 10.200.161.95 [Port] 0 [Flags] 2 [Guid] 1574552871 [EditorId] 1574552871 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-QLJO0AA7) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [32516] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [32516] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [26272] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [26272] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -76,7 +76,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 2.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 4.47 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.49f1 (840e0a9776d9)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/Resources/UnitySubsystems
@@ -92,43 +92,43 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003579 seconds.
-- Loaded All Assemblies, in  0.478 seconds
+Registered in 0.027458 seconds.
+- Loaded All Assemblies, in  0.754 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.442 seconds
-Domain Reload Profiling: 916ms
-	BeginReloadAssembly (158ms)
+- Finished resetting the current domain, in  0.658 seconds
+Domain Reload Profiling: 1410ms
+	BeginReloadAssembly (249ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (59ms)
-	LoadAllAssembliesAndSetupDomain (193ms)
-		LoadAssemblies (156ms)
+		CreateAndSetChildDomain (2ms)
+	RebuildCommonClasses (75ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (106ms)
+	LoadAllAssembliesAndSetupDomain (303ms)
+		LoadAssemblies (245ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (190ms)
-			TypeCache.Refresh (188ms)
-				TypeCache.ScanAssembly (173ms)
+		AnalyzeDomain (299ms)
+			TypeCache.Refresh (296ms)
+				TypeCache.ScanAssembly (278ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (1ms)
-	FinalizeReload (442ms)
+	FinalizeReload (659ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (384ms)
+		SetupLoadedEditorAssemblies (582ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (24ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (82ms)
-			ProcessInitializeOnLoadAttributes (206ms)
-			ProcessInitializeOnLoadMethodAttributes (67ms)
+			InitializePlatformSupportModulesInManaged (34ms)
+			SetLoadedEditorAssemblies (8ms)
+			BeforeProcessingInitializeOnLoad (127ms)
+			ProcessInitializeOnLoadAttributes (315ms)
+			ProcessInitializeOnLoadMethodAttributes (98ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -137,352 +137,492 @@ Domain Reload Profiling: 916ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.161 seconds
-Refreshing native plugins compatible for Editor in 2.54 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.937 seconds
+Refreshing native plugins compatible for Editor in 1.63 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.320 seconds
-Domain Reload Profiling: 2474ms
-	BeginReloadAssembly (279ms)
+- Finished resetting the current domain, in  1.556 seconds
+Domain Reload Profiling: 3485ms
+	BeginReloadAssembly (426ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
+		DisableScriptedObjects (13ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (56ms)
-	RebuildCommonClasses (62ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (63ms)
-	LoadAllAssembliesAndSetupDomain (729ms)
-		LoadAssemblies (553ms)
+		CreateAndSetChildDomain (64ms)
+	RebuildCommonClasses (94ms)
+	RebuildNativeTypeToScriptingClass (35ms)
+	initialDomainReloadingComplete (109ms)
+	LoadAllAssembliesAndSetupDomain (1263ms)
+		LoadAssemblies (1010ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (329ms)
-			TypeCache.Refresh (253ms)
-				TypeCache.ScanAssembly (234ms)
-			BuildScriptInfoCaches (58ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1321ms)
+		AnalyzeDomain (521ms)
+			TypeCache.Refresh (381ms)
+				TypeCache.ScanAssembly (354ms)
+			BuildScriptInfoCaches (109ms)
+			ResolveRequiredComponents (25ms)
+	FinalizeReload (1557ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1011ms)
+		SetupLoadedEditorAssemblies (1187ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (160ms)
-			ProcessInitializeOnLoadAttributes (736ms)
-			ProcessInitializeOnLoadMethodAttributes (93ms)
-			AfterProcessingInitializeOnLoad (11ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (188ms)
+			ProcessInitializeOnLoadAttributes (897ms)
+			ProcessInitializeOnLoadMethodAttributes (83ms)
+			AfterProcessingInitializeOnLoad (9ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (7ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
-Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (9ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 2.08 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 199 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6148 unused Assets / (6.1 MB). Loaded Objects now: 6808.
-Memory consumption went from 154.8 MB to 148.7 MB.
-Total: 11.344900 ms (FindLiveObjects: 1.106400 ms CreateObjectMapping: 0.628400 ms MarkObjects: 6.275600 ms  DeleteObjects: 3.332800 ms)
+Unloading 6150 unused Assets / (6.3 MB). Loaded Objects now: 6810.
+Memory consumption went from 162.8 MB to 156.5 MB.
+Total: 14.202000 ms (FindLiveObjects: 0.992300 ms CreateObjectMapping: 0.615200 ms MarkObjects: 6.981400 ms  DeleteObjects: 5.610900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 40479.160315 seconds.
+  path: Assets/ZaqyArt/3d Model/BASE_TEXTURE.png
+  artifactKey: Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/BASE_TEXTURE.png using Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '215f74469e4fbfdfa481418d96ed351e') in 0.1200599 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.797176 seconds.
+  path: Assets/ZaqyArt/3d Model/BASE_TEXTURE.png
+  artifactKey: Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/BASE_TEXTURE.png using Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '565b5eec31cf6c9155db2f6114c7341f') in 0.0125434 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 249.039143 seconds.
+  path: Assets/ZaqyArt/3d Model/BASE_TEXTURE.png
+  artifactKey: Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/BASE_TEXTURE.png using Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e2ed338d025e089cd592bf45eb7a28d3') in 0.0304189 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.739239 seconds.
+  path: Assets/ZaqyArt/3d Model/BASE_TEXTURE.png
+  artifactKey: Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/BASE_TEXTURE.png using Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c25f7b42327a4d8f9f19a65458d57dbc') in 0.0473963 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.509202 seconds.
+  path: Assets/ZaqyArt/3d Model/BASE_TEXTURE.png
+  artifactKey: Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/BASE_TEXTURE.png using Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c223b43fa33154011bb9634dda08798') in 0.2964316 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 233.240403 seconds.
+  path: Assets/ZaqyArt/3d Model/BASE_TEXTURE.png
+  artifactKey: Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/BASE_TEXTURE.png using Guid(c6d08c2d11a9e0747a440960cef7d836) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4dbdfef4df0da8a57cbcc67fbaf8a6c4') in 0.1487369 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.355 seconds
-Refreshing native plugins compatible for Editor in 2.51 ms, found 3 plugins.
+- Loaded All Assemblies, in  1.323 seconds
+Refreshing native plugins compatible for Editor in 2.20 ms, found 3 plugins.
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.347 seconds
-Domain Reload Profiling: 2694ms
-	BeginReloadAssembly (362ms)
+- Finished resetting the current domain, in  1.268 seconds
+Domain Reload Profiling: 2590ms
+	BeginReloadAssembly (369ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (12ms)
+		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (78ms)
-	RebuildCommonClasses (74ms)
-	RebuildNativeTypeToScriptingClass (27ms)
-	initialDomainReloadingComplete (60ms)
-	LoadAllAssembliesAndSetupDomain (823ms)
-		LoadAssemblies (662ms)
+		CreateAndSetChildDomain (94ms)
+	RebuildCommonClasses (63ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (51ms)
+	LoadAllAssembliesAndSetupDomain (819ms)
+		LoadAssemblies (733ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (352ms)
-			TypeCache.Refresh (12ms)
+		AnalyzeDomain (265ms)
+			TypeCache.Refresh (10ms)
 				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (316ms)
-			ResolveRequiredComponents (18ms)
-	FinalizeReload (1348ms)
+			BuildScriptInfoCaches (234ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (1269ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (1071ms)
+		SetupLoadedEditorAssemblies (997ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (4ms)
 			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (207ms)
-			ProcessInitializeOnLoadAttributes (767ms)
-			ProcessInitializeOnLoadMethodAttributes (81ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (20ms)
-Refreshing native plugins compatible for Editor in 1.59 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 39 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6144 unused Assets / (6.5 MB). Loaded Objects now: 6823.
-Memory consumption went from 143.7 MB to 137.3 MB.
-Total: 14.004400 ms (FindLiveObjects: 1.030200 ms CreateObjectMapping: 1.108600 ms MarkObjects: 7.363200 ms  DeleteObjects: 4.500500 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 2834870.934128 seconds.
-  path: Assets/Script/Object Script/Machine/MachinePlacement.cs
-  artifactKey: Guid(d491aada56381014489a35d9430e4ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/Object Script/Machine/MachinePlacement.cs using Guid(d491aada56381014489a35d9430e4ebe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '922f82fe05653381206163cc864fbe07') in 0.0143469 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.992 seconds
-Refreshing native plugins compatible for Editor in 1.44 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.031 seconds
-Domain Reload Profiling: 2020ms
-	BeginReloadAssembly (280ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (62ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (606ms)
-		LoadAssemblies (513ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (235ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (208ms)
-			ResolveRequiredComponents (11ms)
-	FinalizeReload (1031ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (849ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (161ms)
-			ProcessInitializeOnLoadAttributes (614ms)
-			ProcessInitializeOnLoadMethodAttributes (62ms)
-			AfterProcessingInitializeOnLoad (4ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (15ms)
-Refreshing native plugins compatible for Editor in 1.77 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6144 unused Assets / (6.9 MB). Loaded Objects now: 6827.
-Memory consumption went from 142.6 MB to 135.7 MB.
-Total: 14.691900 ms (FindLiveObjects: 0.886600 ms CreateObjectMapping: 1.004400 ms MarkObjects: 7.218200 ms  DeleteObjects: 5.581200 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Import Request.
-  Time since last request: 1135.598723 seconds.
-  path: Assets/Script/Object Script/Machine/MachineScript.cs
-  artifactKey: Guid(382d1a9e8986be14190b106992a9cdc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Script/Object Script/Machine/MachineScript.cs using Guid(382d1a9e8986be14190b106992a9cdc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b5df81de838b3762d06e13e868ec003c') in 0.040754 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.998 seconds
-Refreshing native plugins compatible for Editor in 1.13 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.907 seconds
-Domain Reload Profiling: 1906ms
-	BeginReloadAssembly (298ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (90ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (19ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (592ms)
-		LoadAssemblies (448ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (277ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (249ms)
-			ResolveRequiredComponents (15ms)
-	FinalizeReload (907ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (728ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (139ms)
-			ProcessInitializeOnLoadAttributes (518ms)
-			ProcessInitializeOnLoadMethodAttributes (57ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 1.31 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6144 unused Assets / (6.7 MB). Loaded Objects now: 6829.
-Memory consumption went from 142.6 MB to 136.0 MB.
-Total: 14.017800 ms (FindLiveObjects: 0.858900 ms CreateObjectMapping: 1.016500 ms MarkObjects: 7.211400 ms  DeleteObjects: 4.929000 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.034 seconds
-Refreshing native plugins compatible for Editor in 1.92 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.192 seconds
-Domain Reload Profiling: 2226ms
-	BeginReloadAssembly (318ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (77ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (39ms)
-	LoadAllAssembliesAndSetupDomain (610ms)
-		LoadAssemblies (513ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (241ms)
-			TypeCache.Refresh (8ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (211ms)
-			ResolveRequiredComponents (17ms)
-	FinalizeReload (1193ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (987ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (7ms)
-			BeforeProcessingInitializeOnLoad (263ms)
-			ProcessInitializeOnLoadAttributes (634ms)
-			ProcessInitializeOnLoadMethodAttributes (75ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (24ms)
-Refreshing native plugins compatible for Editor in 1.60 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6144 unused Assets / (6.6 MB). Loaded Objects now: 6831.
-Memory consumption went from 142.7 MB to 136.1 MB.
-Total: 13.346000 ms (FindLiveObjects: 0.785100 ms CreateObjectMapping: 1.262300 ms MarkObjects: 6.745000 ms  DeleteObjects: 4.552300 ms)
-
-Prepare: number of updated asset objects reloaded= 0
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.240 seconds
-Refreshing native plugins compatible for Editor in 1.14 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.175 seconds
-Domain Reload Profiling: 2417ms
-	BeginReloadAssembly (320ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (9ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (74ms)
-	RebuildCommonClasses (148ms)
-	RebuildNativeTypeToScriptingClass (20ms)
-	initialDomainReloadingComplete (52ms)
-	LoadAllAssembliesAndSetupDomain (700ms)
-		LoadAssemblies (613ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (256ms)
-			TypeCache.Refresh (9ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (229ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (1177ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (939ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			SetLoadedEditorAssemblies (8ms)
-			BeforeProcessingInitializeOnLoad (152ms)
-			ProcessInitializeOnLoadAttributes (626ms)
-			ProcessInitializeOnLoadMethodAttributes (140ms)
+			BeforeProcessingInitializeOnLoad (203ms)
+			ProcessInitializeOnLoadAttributes (697ms)
+			ProcessInitializeOnLoadMethodAttributes (78ms)
 			AfterProcessingInitializeOnLoad (8ms)
-			EditorAssembliesLoaded (1ms)
+			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (37ms)
-Refreshing native plugins compatible for Editor in 1.70 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (28ms)
+Refreshing native plugins compatible for Editor in 1.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6144 unused Assets / (6.8 MB). Loaded Objects now: 6833.
-Memory consumption went from 142.8 MB to 135.9 MB.
-Total: 19.457400 ms (FindLiveObjects: 0.913400 ms CreateObjectMapping: 0.922700 ms MarkObjects: 8.981300 ms  DeleteObjects: 8.637400 ms)
+Unloading 40 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 6146 unused Assets / (6.7 MB). Loaded Objects now: 6855.
+Memory consumption went from 154.6 MB to 147.9 MB.
+Total: 13.838000 ms (FindLiveObjects: 0.829500 ms CreateObjectMapping: 0.933000 ms MarkObjects: 6.581800 ms  DeleteObjects: 5.492200 ms)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  1.056 seconds
-Refreshing native plugins compatible for Editor in 1.09 ms, found 3 plugins.
-Native extension for WindowsStandalone target not found
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.166 seconds
-Domain Reload Profiling: 2224ms
-	BeginReloadAssembly (387ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (8ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (128ms)
-	RebuildCommonClasses (54ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (41ms)
-	LoadAllAssembliesAndSetupDomain (559ms)
-		LoadAssemblies (478ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (224ms)
-			TypeCache.Refresh (7ms)
-				TypeCache.ScanAssembly (0ms)
-			BuildScriptInfoCaches (200ms)
-			ResolveRequiredComponents (12ms)
-	FinalizeReload (1167ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (965ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (6ms)
-			BeforeProcessingInitializeOnLoad (146ms)
-			ProcessInitializeOnLoadAttributes (727ms)
-			ProcessInitializeOnLoadMethodAttributes (77ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 1.89 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 6144 unused Assets / (6.7 MB). Loaded Objects now: 6835.
-Memory consumption went from 142.8 MB to 136.1 MB.
-Total: 15.866200 ms (FindLiveObjects: 0.915600 ms CreateObjectMapping: 1.174300 ms MarkObjects: 8.014800 ms  DeleteObjects: 5.758400 ms)
+Received Import Request.
+  Time since last request: 5453.006874 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm
+  artifactKey: Guid(a17a3eeff73db3f4893eb91f24a5b159) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm using Guid(a17a3eeff73db3f4893eb91f24a5b159) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a7215a48b5df37f907543cfb95ee1c7') in 0.032947 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.632148 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj
+  artifactKey: Guid(172891b64bc41bb4098ee96768eebf72) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj using Guid(172891b64bc41bb4098ee96768eebf72) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b7262df343ccf518676e7f237d8f347b') in 0.0008762 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.037279 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-0-windmill_roof.obj
+  artifactKey: Guid(db1475f7f03458e4881d84cd61e95c09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-0-windmill_roof.obj using Guid(db1475f7f03458e4881d84cd61e95c09) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a72725c97fb123fc0bdf1576fe03f249') in 1.1159214 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-7-seed_tomato.png
+  artifactKey: Guid(9628b59c7f35d0d48be8d1e88d7359af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-7-seed_tomato.png using Guid(9628b59c7f35d0d48be8d1e88d7359af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cd8a63396e81b168e884ccfb9106aa14') in 0.0260655 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000250 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-9-root_growth0.png
+  artifactKey: Guid(1fc9eabdf601fa043886beb25d9a3118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-9-root_growth0.png using Guid(1fc9eabdf601fa043886beb25d9a3118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1821f5a68cd41c7196109e817ccf3a9f') in 0.0117254 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-1-windmill_blade.png
+  artifactKey: Guid(81646ade1df38b141a9e36bab9502df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-1-windmill_blade.png using Guid(81646ade1df38b141a9e36bab9502df6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6eb1c4964cd2c0eccf29f2f389bb2a9a') in 0.010612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-3-coop_fence.png
+  artifactKey: Guid(56c062f4d72b2bb4d8158e02fba12208) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-3-coop_fence.png using Guid(56c062f4d72b2bb4d8158e02fba12208) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '915a3944fcaa4db690abebaa35f1c246') in 0.0105641 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-5-seed_beet.png
+  artifactKey: Guid(c8a1b1800bbbe994e880fc06aeb42e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-5-seed_beet.png using Guid(c8a1b1800bbbe994e880fc06aeb42e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4ff641a7b2afbe0405cc4f233644cc4f') in 0.0108439 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-8-tomato_growth0.obj
+  artifactKey: Guid(da1fdd18e960f344da56908c8a6665a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-8-tomato_growth0.obj using Guid(da1fdd18e960f344da56908c8a6665a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6fb121b1c6d4a48dcb8a1f7ccd71ae6c') in 0.0591362 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-2-windmill.png
+  artifactKey: Guid(58f39f7a841b66a49945859a91e26af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-2-windmill.png using Guid(58f39f7a841b66a49945859a91e26af2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd90083aeec3519ee53f45d9d1799308f') in 0.010709 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-7-seed_tomato.obj
+  artifactKey: Guid(ff832a6e40d14864ea106eb4cbe1187e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-7-seed_tomato.obj using Guid(ff832a6e40d14864ea106eb4cbe1187e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a675f3036631b70132e45f0ba747d79c') in 0.0577797 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000059 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-4-bucket.obj
+  artifactKey: Guid(dd884ef831ce0164fba2f945a3acdafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-4-bucket.obj using Guid(dd884ef831ce0164fba2f945a3acdafa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '929279c0f8fa3369692d26ef569db895') in 0.058473 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-2-windmill.obj
+  artifactKey: Guid(8f20ebd416a4570429dcdf118b9be281) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-2-windmill.obj using Guid(8f20ebd416a4570429dcdf118b9be281) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6b7813c5f03a8bda2421a17b3c3f01e2') in 0.0677153 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-1-windmill_blade.obj
+  artifactKey: Guid(a195ee227843f354d90c011b67137e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-1-windmill_blade.obj using Guid(a195ee227843f354d90c011b67137e64) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15003a91e334b1dcf1aca2bb652ac59a') in 0.0559169 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-3-coop_fence.obj
+  artifactKey: Guid(298ad1f87a84ae24c83f8149fc39a6eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-3-coop_fence.obj using Guid(298ad1f87a84ae24c83f8149fc39a6eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8faf1b14444c1a7cfb41209a6cae183') in 0.0551653 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-6-seed_corn.obj
+  artifactKey: Guid(7db7112740f51a34991fd5afe194b093) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-6-seed_corn.obj using Guid(7db7112740f51a34991fd5afe194b093) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0da4c432763a568541a52261fb52f6e1') in 0.0600768 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-14-beet_growth4.png
+  artifactKey: Guid(2f3e7ac1e556029459b854c9c13c2c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-14-beet_growth4.png using Guid(2f3e7ac1e556029459b854c9c13c2c3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '22ec1c4e912de9701f3b1fd0e809a57d') in 0.0423935 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-11-corn_growth0.obj
+  artifactKey: Guid(14ccab8e7da874c4089b775fb1419cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-11-corn_growth0.obj using Guid(14ccab8e7da874c4089b775fb1419cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e31d98c155396d850feb4a1fc88959c') in 0.0581816 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.500465 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-15-hoe.obj
+  artifactKey: Guid(68ce5b1363d4a8244b986b19a412aa3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-15-hoe.obj using Guid(68ce5b1363d4a8244b986b19a412aa3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c665e3e7fe87154b8800d54c987bda1b') in 0.0893109 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-18-pitchfork.obj
+  artifactKey: Guid(1d2cfa332eb5537478828943e6719c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-18-pitchfork.obj using Guid(1d2cfa332eb5537478828943e6719c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c9d2055d79b412114c41ae00f82c6f39') in 0.0916448 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.688593 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-19-cow_br.png
+  artifactKey: Guid(8083487450b3e564aaea912dd14941c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-19-cow_br.png using Guid(8083487450b3e564aaea912dd14941c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5179f73ff76c02b63e0aa754882a2a12') in 0.0113399 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000060 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-22-butterchurn.png
+  artifactKey: Guid(0d3069f26e9f0b24692ba3152b80b7ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-22-butterchurn.png using Guid(0d3069f26e9f0b24692ba3152b80b7ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '50ee89a26c3baf5d1c5dc8a66968def3') in 0.012769 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-24-sheep_black.obj
+  artifactKey: Guid(68c01dfaab95e454991689c68a9bf20e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-24-sheep_black.obj using Guid(68c01dfaab95e454991689c68a9bf20e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd5292cd4cf10b8dad864987ff4984498') in 0.0983799 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-23-cow_bw.png
+  artifactKey: Guid(71aec642e4944a6458117e14d2ee4be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-23-cow_bw.png using Guid(71aec642e4944a6458117e14d2ee4be2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6dd981cb8e84852fa1f66691c4c95df4') in 0.0150614 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-22-butterchurn.obj
+  artifactKey: Guid(d3ee3c6c073aef145b642d50cbf1636e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-22-butterchurn.obj using Guid(d3ee3c6c073aef145b642d50cbf1636e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8c9d74f9786e718d2b45c8babf39f7a') in 0.0487278 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.429677 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-26-tomato_growth1.obj
+  artifactKey: Guid(109b8d4fdc0b6af4f8beee21caa888eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-26-tomato_growth1.obj using Guid(109b8d4fdc0b6af4f8beee21caa888eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '42c3c968dcbff2ecc21ee97407426312') in 0.0586544 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-33-cauliflower_growth4.obj
+  artifactKey: Guid(524d1938aa2017140a49d1686b5f29aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-33-cauliflower_growth4.obj using Guid(524d1938aa2017140a49d1686b5f29aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4cf9c879a8cd61d88ff9c7d3f5ca6108') in 0.080283 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-30-corn_growth2.png
+  artifactKey: Guid(b5e13d4aabf1fee42b86940a36b0cf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-30-corn_growth2.png using Guid(b5e13d4aabf1fee42b86940a36b0cf2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '12f5f3ff348380260b447f146df8c01e') in 0.0100468 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-29-corn_growth1.png
+  artifactKey: Guid(6647727c0c2cfe04fb719e75bb9ea1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-29-corn_growth1.png using Guid(6647727c0c2cfe04fb719e75bb9ea1e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '71a296e0c02aef1fe0b2f45e17e0579a') in 0.0402075 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000052 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-29-corn_growth1.obj
+  artifactKey: Guid(b0326c85488fd784cb91a4eeb2b3f3be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-29-corn_growth1.obj using Guid(b0326c85488fd784cb91a4eeb2b3f3be) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd37cc13c3006e45950645033576d234e') in 0.0794971 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.606473 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-34-cauliflower_growth3.obj
+  artifactKey: Guid(85dd287bd4f9b8a4f8f5b947669ad2f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-34-cauliflower_growth3.obj using Guid(85dd287bd4f9b8a4f8f5b947669ad2f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a243aa5262cca4244e0145c524c0cd9') in 0.0575705 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-39-carrot_growth3.png
+  artifactKey: Guid(805b69f1b1947074f993c331b6f9b702) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-39-carrot_growth3.png using Guid(805b69f1b1947074f993c331b6f9b702) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8ed0e0a23ee2db6ab9a04c7383e549b7') in 0.0110833 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-38-root_growth2.png
+  artifactKey: Guid(6e527ba4f102dc5479d99d8b06d5fb08) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-38-root_growth2.png using Guid(6e527ba4f102dc5479d99d8b06d5fb08) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'acc783c5cbe07305a0166504972ad028') in 0.0097186 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.971756 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-41-turnip_growth3.png
+  artifactKey: Guid(270dd1e414b4c624f9321ed868ee217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-41-turnip_growth3.png using Guid(270dd1e414b4c624f9321ed868ee217b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '83245316ee2d129a0f5a8a8f0b8e2976') in 0.0188736 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-42-turnip_growth4.png
+  artifactKey: Guid(59dea2329bbf0174f8eff8bc03885bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-42-turnip_growth4.png using Guid(59dea2329bbf0174f8eff8bc03885bea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4513d03d0f6c9f79b1587dbcbb6e0f5c') in 0.0115366 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.055421 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-45-chicken_yellow.obj
+  artifactKey: Guid(dd1bc4ec4aa13b84389aff7436988e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-45-chicken_yellow.obj using Guid(dd1bc4ec4aa13b84389aff7436988e9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9d7a8a4615a58eaabcedddb285371617') in 0.0554637 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-47-watertrough_S.png
+  artifactKey: Guid(d495a92e8b5efb14f8a42f2309ae23d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-47-watertrough_S.png using Guid(d495a92e8b5efb14f8a42f2309ae23d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aef703edaf3583c12a5b98d8b0831bf4') in 0.0093316 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.669448 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-48.png
+  artifactKey: Guid(fe785b3c744d9764eb9e7a2f154227b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-48.png using Guid(fe785b3c744d9764eb9e7a2f154227b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '62b1540327aad9ec4539b4cef5dd4e6f') in 0.0198267 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-51.obj
+  artifactKey: Guid(1d7e74458df3e5548bcb5e58acc31df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-51.obj using Guid(1d7e74458df3e5548bcb5e58acc31df8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '780f400ceb9288b4b10ff320fc8c8037') in 0.0631732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.731474 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-52-seed_carrot.obj
+  artifactKey: Guid(18f9d61f9f3ce1941acebca5a9aa75d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-52-seed_carrot.obj using Guid(18f9d61f9f3ce1941acebca5a9aa75d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b87769592a3f915a215b03d8add70c6d') in 0.0937704 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-57-crop_end.png
+  artifactKey: Guid(c5b22a6081a1142499151842e60f3a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-57-crop_end.png using Guid(c5b22a6081a1142499151842e60f3a3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c72deb47195c403b5771c3326a6ae0da') in 0.0406682 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-56-crop_mid.png
+  artifactKey: Guid(7b3cc74d6d538bd4093f96c07c2e1de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-56-crop_mid.png using Guid(7b3cc74d6d538bd4093f96c07c2e1de1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '58b43df23de8ee39daef79081621dffc') in 0.0096804 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/ZaqyArt/3d Model/Farm/obj/farm-58-crop_base.png
+  artifactKey: Guid(e1bb6659e70b36d498f91620caca2884) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/ZaqyArt/3d Model/Farm/obj/farm-58-crop_base.png using Guid(e1bb6659e70b36d498f91620caca2884) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '41dc7389fddb82603ed43dfa9ffd172c') in 0.0090875 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

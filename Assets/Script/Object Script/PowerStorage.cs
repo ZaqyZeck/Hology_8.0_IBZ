@@ -12,7 +12,7 @@ public class PowerStorage : MonoBehaviour
         PlaceMentSystem = FindAnyObjectByType<PlaceMentSystem>();
     }
 
-    void getGenerator()
+    public void getGenerator()
     {
         generators = FindObjectsByType<GeneratorScript>(FindObjectsSortMode.None);
     }

@@ -491,19 +491,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _ID: 0
-  _yieldsId: 2
-  _yieldsAmount: 1
-  _bonusYield: 0
-  _maxAge: 18
+  _LotID: 0
   _age: 0
+  _bonusYield: 0
+  waterGot: 0
   fertilized: 0
+  _bonus: 0
+  _currentPhase: 0
+  _yieldsId: 10
+  _yieldsAmount: 1
+  _maxAge: 18
   harvestable: 0
   waterNeeded: 3
-  waterGot: 0
-  _bonus: 0
   tallPhase: 2
   middlePhase: 2
-  _currentPhase: 0
   _buttonObject: {fileID: 6535573061296581895}
   _lot: {fileID: 0}
   phaseSprite:

@@ -453,6 +453,8 @@
 "Assets/Script/PlaceMentSystem/PlacementState.cs"
 "Assets/Script/PlaceMentSystem/PlaceMentSystem.cs"
 "Assets/Script/PlaceMentSystem/RotationControl.cs"
+"Assets/Script/Quest & NPC Script/QuestSystem.cs"
+"Assets/Script/Quest & NPC Script/ShopSystem.cs"
 "Assets/Script/Save System/Data.cs"
 "Assets/Script/Save System/GeneratorData.cs"
 "Assets/Script/Save System/InventoryData.cs"

@@ -5,8 +5,18 @@ using UnityEngine;
 
 public class InventorySystem : MonoBehaviour
 {
+    public long coins;
     public List<InventoryObject> inventory = new();
+    
 
+    public InventoryObject GetInventoryObjectBy(int id)
+    {
+        foreach (InventoryObject obj in inventory)
+        {
+            if(obj.ID == id) return obj;
+        }
+        return null;
+    }
     public void addOneTo(int ID)
     {
         foreach (var _obj in inventory)
@@ -96,6 +106,8 @@ public class InventoryObject
     public int amount { get; set; }
     [field: SerializeField]
     public int maxAmount { get; private set; }
+    [field: SerializeField]
+    public int price { get; set; }
     public InventoryObject()
     {
     }
