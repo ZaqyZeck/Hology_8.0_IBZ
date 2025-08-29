@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using TMPro;
 using UnityEngine;
 
 public class PlantSystem : MonoBehaviour
@@ -9,7 +10,22 @@ public class PlantSystem : MonoBehaviour
     public GameObject[] Plants_Prefab;
     public float _water;
     public float _maxWater;
-    //private InventorySystem _inventory;
+
+    [SerializeField]private InventorySystem inventory;
+    [SerializeField]private GameObject upgradeButton;
+    [SerializeField] private TextMeshPro waterCounter;
+
+    //new
+    public int waterTankLevel;
+
+    private static readonly int[] upgradeCost = { 200, 500, 1000 };
+
+    private int[][] waterStorage =
+    {
+    new int[] { 250,  upgradeCost[0] },
+    new int[] { 600,  upgradeCost[1] },
+    new int[] { 1000, upgradeCost[2] }
+};
 
     private void Awake()
     {
@@ -43,6 +59,8 @@ public class PlantSystem : MonoBehaviour
             if (plant.waterGot >= plant.waterNeeded) continue;
 
             waterNeed = plant.waterNeeded - plant.waterGot;
+            if (plant.extraWater > 0) waterNeed += plant.waterNeeded / plant.extraWater;
+
             if (_water >= waterNeed)
             {
                 plant.WaterThePlant(waterNeed);
@@ -77,6 +95,27 @@ public class PlantSystem : MonoBehaviour
             plant.GrowThePlant();
         }
     }
+
+    public void updateWaterCounter()
+    {
+        waterCounter.text = $"Water Storage\n{_water} / {_maxWater}";
+    }
+
+    public void UpgradeWaterTank()
+    {
+        int price = waterStorage[waterTankLevel][1];
+        if (inventory.coins < price) return;
+        inventory.coins -= price;
+
+        _maxWater = waterStorage[waterTankLevel][0];
+        waterTankLevel++;
+        updateWaterCounter();
+        if(waterTankLevel >= 3)
+        {
+            upgradeButton.SetActive(false);
+        }
+    }
+
 
     public void SavePlantsData()
     {

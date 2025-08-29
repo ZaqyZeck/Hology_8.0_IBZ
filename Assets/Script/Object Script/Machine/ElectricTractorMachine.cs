@@ -6,7 +6,8 @@ public class ElectricTractorMachine : MachineScript
     {
         powerNeed = 5;
         powerGot = 0;
-        bonus = 2;
+        bonus = 1;
         type = "strength"; // strength = memperbanyak hasil panen, speed = mempercepat pertumbuhan
+        extraWater = 10;
     }
 }

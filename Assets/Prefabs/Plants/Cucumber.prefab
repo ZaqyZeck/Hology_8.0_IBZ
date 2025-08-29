@@ -498,11 +498,12 @@ MonoBehaviour:
   fertilized: 0
   _bonus: 0
   _currentPhase: 0
+  extraWater: 0
   _yieldsId: 11
   _yieldsAmount: 5
   _maxAge: 24
   harvestable: 0
-  waterNeeded: 5
+  waterNeeded: 50
   tallPhase: 3
   middlePhase: 2
   _buttonObject: {fileID: 6535573061296581895}

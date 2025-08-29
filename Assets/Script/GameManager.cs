@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
         powerStorage.BuffAllPlant();
 
         ui.countDate(day);
+
+        saveAllData();
     }
 
     public void saveAllData()

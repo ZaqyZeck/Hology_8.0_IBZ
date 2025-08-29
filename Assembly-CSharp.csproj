@@ -66,14 +66,18 @@
     <Compile Include="Assets\Script\PlaceMentSystem\GridData.cs" />
     <Compile Include="Assets\Script\Save System\LandLotDatabase.cs" />
     <Compile Include="Assets\Script\Save System\Data.cs" />
+    <Compile Include="Assets\Script\Object Script\WaterTank.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlaceMentSystem.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachinePlacement.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\QuestSystem.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonStorage.cs" />
+    <Compile Include="Assets\Script\Button Script\UpgradeMachineButton.cs" />
     <Compile Include="Assets\Script\UI Script\UiController.cs" />
     <Compile Include="Assets\Script\Save System\GeneratorData.cs" />
+    <Compile Include="Assets\Script\UI Script\ShopUI.cs" />
     <Compile Include="Assets\Script\Save System\MainSaveSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
+    <Compile Include="Assets\Script\Quest &amp; NPC Script\RegulerItemScript.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyPlant.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachineScript.cs" />
     <Compile Include="Assets\Script\Object Script\LandLot.cs" />
@@ -86,6 +90,7 @@
     <Compile Include="Assets\Script\Save System\PlantsData.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\Button Script\UpgradeWaterTank.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectList.cs" />
     <Compile Include="Assets\Script\Object Script\GeneratorRotation.cs" />
     <Compile Include="Assets\Script\Object Script\GeneratorScript.cs" />
@@ -104,8 +109,31 @@
     <Compile Include="Assets\Script\Object Script\Land.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile-2-Pass.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\Fantasy Skybox FREE\Readme.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
     <None Include="Assets\Fantasy Skybox FREE\ReleaseNotes.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\SDFFunctions.hlsl" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+    <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
@@ -1278,6 +1306,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{C237DE51-6812-D8A7-0DE3-ECA45F080D16}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

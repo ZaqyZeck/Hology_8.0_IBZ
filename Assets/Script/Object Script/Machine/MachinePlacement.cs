@@ -5,11 +5,13 @@ public class MachinePlacement : MonoBehaviour
     public bool haveMachine;
     public int signId;
 
-    public GameObject signButton, machineButton;
+    public GameObject signButton, machineButton, upgradeButton;
     private RotationControl rotationControl;
     public GameObject[] machine_prefabs;
     public MachineScript machine;
     public GameObject plantGrid;
+
+    [SerializeField] private InventorySystem inventory;
     //private Collider signCollider;
 
     private void Awake()
@@ -34,7 +36,7 @@ public class MachinePlacement : MonoBehaviour
 
                 //machineButton.SetActive(!machineButton.activeSelf);
                 ButtonStorage.changeButton(machineButton);
-                machineButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
+                machineButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z); 
             }
          }
     }
@@ -78,5 +80,19 @@ public class MachinePlacement : MonoBehaviour
         machine = null;
         haveMachine = false;
         machineButton.SetActive(false);
+    }
+
+    public void upgradeMachine()
+    {
+        if (!haveMachine) return;
+
+        int price = 1000 + (machine.upgradeLevel * machine.upgradePrice);
+        if (inventory.coins < price) return;
+
+        inventory.coins -= price;
+        machine.UpgradeMachine();
+
+        if (machine.upgradeLevel >= 2) upgradeButton.SetActive(false);
+        ButtonStorage.changeButton(machineButton);
     }
 }

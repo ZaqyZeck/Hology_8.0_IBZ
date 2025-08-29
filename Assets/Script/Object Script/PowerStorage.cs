@@ -64,6 +64,7 @@ public class PowerStorage : MonoBehaviour
         foreach (MachineScript machine in machines)
         {
             machine.BuffPlants();
+            machine.DebuffPlants();
         }
     }
 

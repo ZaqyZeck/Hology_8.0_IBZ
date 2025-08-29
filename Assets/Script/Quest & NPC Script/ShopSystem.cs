@@ -23,10 +23,10 @@ public class ShopSystem : MonoBehaviour
         }
         if (inventoryObject.amount < amount) return;
         inventorySystem.coins += inventoryObject.price * amount;
-
+        inventoryObject.amount -= amount;
     }
 
-    public void buyRegulerItemBy(int id)
+    public void buyRegulerItemBy(int id, int amount)
     {
         InventoryObject inventoryObject = inventorySystem.GetInventoryObjectBy(id);
         if (inventoryObject == null)
@@ -35,10 +35,11 @@ public class ShopSystem : MonoBehaviour
             return;
         }
 
-        if (inventoryObject.price > inventorySystem.coins) return;
+        int price = inventoryObject.price * amount;
+        if (price > inventorySystem.coins) return;
 
-        inventorySystem.coins -= inventoryObject.price;
-        inventoryObject.amount++;
+        inventorySystem.coins -= price;
+        inventoryObject.amount += amount;
     }
 
     public void buyGenerator(int id)

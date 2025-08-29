@@ -11,6 +11,9 @@ public class PlantScript : MonoBehaviour
     public int _bonus = 0;
     public int _currentPhase;
 
+    // new save data
+    public int extraWater;
+
     public int _yieldsId;
     public int _yieldsAmount;
     
