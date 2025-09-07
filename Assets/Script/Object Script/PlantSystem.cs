@@ -107,13 +107,28 @@ public class PlantSystem : MonoBehaviour
         if (inventory.coins < price) return;
         inventory.coins -= price;
 
-        _maxWater = waterStorage[waterTankLevel][0];
         waterTankLevel++;
+        _maxWater = waterStorage[waterTankLevel - 1][0];
+        
         updateWaterCounter();
         if(waterTankLevel >= 3)
         {
             upgradeButton.SetActive(false);
         }
+    }
+
+    public void SaveWaterTank()
+    {
+        MainSaveSystem.SaveWaterTankData(waterTankLevel);
+    }
+
+    public void LoadWaterTank()
+    {
+        WaterTankData data = MainSaveSystem.LoadWaterTank();
+        waterTankLevel = data.waterTankLevel;
+        if (waterTankLevel == 0) return;
+        _maxWater = waterStorage[waterTankLevel - 1][0];
+        updateWaterCounter();
     }
 
 
@@ -147,6 +162,9 @@ public class PlantSystem : MonoBehaviour
             plantScript.fertilized = plantsData.fertilized[plantLotId];
             plantScript._bonus = plantsData.bonus[plantLotId];
             plantScript._currentPhase = plantsData.currentPhase[plantLotId];
+
+            plantScript.extraWater = plantsData.extraWater[plantLotId];
+
             plantScript.load();
         }
     }

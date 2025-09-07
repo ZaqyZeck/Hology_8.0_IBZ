@@ -75,6 +75,7 @@
     <Compile Include="Assets\Script\UI Script\UiController.cs" />
     <Compile Include="Assets\Script\Save System\GeneratorData.cs" />
     <Compile Include="Assets\Script\UI Script\ShopUI.cs" />
+    <Compile Include="Assets\Script\Save System\WaterTankData.cs" />
     <Compile Include="Assets\Script\Save System\MainSaveSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\RegulerItemScript.cs" />

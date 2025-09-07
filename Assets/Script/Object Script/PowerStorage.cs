@@ -111,6 +111,9 @@ public class PowerStorage : MonoBehaviour
         {
             if (!machineData.notNull[index]) continue;
             machinePlacements[index].AddMachine(machineData.id[index]);
+            machinePlacements[index].machine.upgradeLevel = machineData.upgradeLevel[index];
+            machinePlacements[index].machine.LoadLevel();
+            machinePlacements[index].deAcvtivateUpgradeButton();
         }
     }
 }

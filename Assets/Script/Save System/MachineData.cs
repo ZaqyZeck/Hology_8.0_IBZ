@@ -7,6 +7,11 @@ public class MachineData : Data
     public int[] signId = new int[4];
     public int[] powerGot = new int[4];
     public bool[] notNull = new bool[4];
+
+    //new data
+
+    public int[] upgradeLevel = new int[4];
+    public int[] extraWater = new int[4];
     public MachineData(MachineScript[] machineScripts)
     {
         foreach (MachineScript script in machineScripts)
@@ -15,6 +20,10 @@ public class MachineData : Data
             id[index] = script.id;
             signId[index] = script.signId;
             powerGot[index] = script.powerGot;
+
+            upgradeLevel[index] = script.upgradeLevel;
+            extraWater[index] = script.extraWater;
+
             notNull[index] = true;
         }
     }

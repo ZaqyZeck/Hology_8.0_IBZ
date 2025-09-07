@@ -14,11 +14,14 @@ public class GameManager : MonoBehaviour
     {
         questSystem.autoComplete();
         questSystem.CekQuest();
+
         day += 6;
+
         plantSystem.GetAllPlant();
         plantSystem.ResetAll();
         plantSystem.WaterAll();
         plantSystem.GrowAll();
+
         powerStorage.GiveEnergy();
         powerStorage.BuffAllPlant();
 
@@ -29,6 +32,8 @@ public class GameManager : MonoBehaviour
 
     public void saveAllData()
     {
+        plantSystem.SaveWaterTank();
+
         plantSystem.SavePlantsData();
         inventory.SaveInventory();
         powerStorage.SaveAllGenerators();
@@ -37,6 +42,8 @@ public class GameManager : MonoBehaviour
 
     public void loadAllData()
     {
+        plantSystem.LoadWaterTank();
+
         plantSystem.LoadPlantsData();
         inventory.LoadInventoryData();
         powerStorage.LoadGenerators();

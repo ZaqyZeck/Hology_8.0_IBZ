@@ -95,4 +95,9 @@ public class MachinePlacement : MonoBehaviour
         if (machine.upgradeLevel >= 2) upgradeButton.SetActive(false);
         ButtonStorage.changeButton(machineButton);
     }
+
+    public void deAcvtivateUpgradeButton()
+    {
+        if (machine.upgradeLevel >= 2) upgradeButton.SetActive(false);
+    }
 }

@@ -64,13 +64,17 @@ public class MachineScript : MonoBehaviour
 
     public void UpgradeMachine()
     {
-        if (type == "speed") bonus += 2;
-        else 
-        {
-            bonus += 1;
-            extraWater += 10;
-        } 
-
         upgradeLevel++;
+        LoadLevel();
+    }
+
+    public void LoadLevel()
+    {
+        if (type == "speed") bonus = 2 + (2 * upgradeLevel);
+        else
+        {
+            bonus = 1 + (1 * upgradeLevel);
+            extraWater = 10 + (1 * upgradeLevel);
+        }
     }
 }

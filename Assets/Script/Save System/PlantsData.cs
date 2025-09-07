@@ -15,6 +15,10 @@ public class PlantsData : Data
     public int[] currentPhase = new int[36];
     public bool[] notNull = new bool[36];
 
+    //new data
+
+    public int[] extraWater = new int[36];
+
     public PlantsData(List<PlantScript> plants)
     {
         int i = 0;
@@ -34,6 +38,9 @@ public class PlantsData : Data
             waterGot[index] = plant.waterGot;
             fertilized[index] = plant.fertilized;
             currentPhase[index] = plant._currentPhase;
+
+            extraWater[index] = plant.extraWater;
+
             notNull[index] = true;
             i++;
         }

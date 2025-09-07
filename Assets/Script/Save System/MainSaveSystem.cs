@@ -133,4 +133,36 @@ public static class MainSaveSystem
             return null;
         }
     }
+
+    public static void SaveWaterTankData(int waterTankLevel)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/WaterTank.dt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        WaterTankData waterTankData = new WaterTankData(waterTankLevel);
+
+        formatter.Serialize(stream, waterTankData);
+        stream.Close();
+    }
+
+    public static WaterTankData LoadWaterTank()
+    {
+        string path = Application.persistentDataPath + "/WaterTank.dt";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            WaterTankData WaterTankData = formatter.Deserialize(stream) as WaterTankData;
+
+            stream.Close();
+            return WaterTankData;
+        }
+        else
+        {
+            Debug.LogError("not found in " + path);
+            return null;
+        }
+    }
 }
