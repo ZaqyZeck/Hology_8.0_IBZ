@@ -2,15 +2,43 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraControl
+    - DestroyMachineButton
+    - DestroyPlant
+    - GameManager
+    - GeneratorRotation
+    - GeneratorScript
+    - GlobarWarmingSystem
+    - HarvestPlant
     - InputManager
+    - InventorySystem
+    - LandLot
+    - MachinePlacement
+    - MachineScript
+    - ObjectDatabaseSO
+    - ObjectList
+    - PlaceMachine
     - PlaceMentSystem
-    - Readme
+    - PlacePlantButton
+    - PlantScript
+    - PlantSystem
+    - PowerStorage
+    - QuestSystem
+    - RegulerItemScript
     - RotationControl
+    - ShopSystem
+    - ShopUI
+    - UiController
+    - UpgradeGeneratorButton
+    - UpgradeMachineButton
+    - UpgradeWaterTank
+    - WaterTank
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
+    - UnityEngine.InputSystem.InputActionReference
     - UnityEngine.InputSystem.InputSettings
     - UnityEngine.InputSystem.InputSystemObject
     - UnityEngine.InputSystem.RemoteInputPlayerConnection
+    - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -81,6 +109,20 @@ ScriptsOnlyBuild:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.ShaderGraph.Editor.dll:
     - UnityEditor.ShaderGraph.Drawing.MaterialGraphEditWindow
+    Unity.TextMeshPro:
+    - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
+    Unity.TextMeshPro.dll:
+    - TMPro.TMP_FontAsset
+    - TMPro.TextMeshPro
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.CommandLineTest.RunData
@@ -101,7 +143,19 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.UI.Button
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.HorizontalLayoutGroup
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
   serializedClasses:
+    Assembly-CSharp:
+    - InventoryObject
+    - ObjectData
+    - Quest
     Unity.InputSystem:
     - UnityEngine.InputSystem.InputAction
     - UnityEngine.InputSystem.InputActionMap
@@ -173,6 +227,18 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeTextures
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineRuntimeXRResources
     - UnityEngine.Rendering.Universal.UniversalRendererResources
+    Unity.TextMeshPro:
+    - TMPro.FaceInfo_Legacy
+    - TMPro.FontAssetCreationSettings
+    - TMPro.KerningTable
+    - TMPro.TMP_Character
+    - TMPro.TMP_FontFeatureTable
+    - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_Sprite
+    - TMPro.TMP_SpriteCharacter
+    - TMPro.TMP_SpriteGlyph
+    - TMPro.TMP_Style
+    - TMPro.VertexGradient
     UnityEngine.CoreModule:
     - UnityEngine.Bounds
     - UnityEngine.Events.ArgumentCache
@@ -180,6 +246,14 @@ ScriptsOnlyBuild:
     - UnityEngine.Events.PersistentListenerMode
     - UnityEngine.RectOffset
     - UnityEngine.Rendering.RenderPipelineGraphicsSettingsCollection
+    UnityEngine.TextCoreFontEngineModule:
+    - UnityEngine.TextCore.FaceInfo
+    - UnityEngine.TextCore.Glyph
+    - UnityEngine.TextCore.GlyphMetrics
+    - UnityEngine.TextCore.GlyphRect
+    - UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord
+    - UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord
+    - UnityEngine.TextCore.LowLevel.GlyphValueRecord
     UnityEngine.UI:
     - UnityEngine.EventSystems.EventTrigger/Entry
     - UnityEngine.EventSystems.EventTrigger/TriggerEvent
@@ -194,6 +268,72 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: loadAllData
+  - assembly: Assembly-CSharp
+    fullTypeName: PowerStorage
+    methodName: SaveMachines
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: increaseAmount
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: skipDays
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: decreaseAmount
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: skipDays
+  - assembly: Assembly-CSharp
+    fullTypeName: PowerStorage
+    methodName: LoadMachines
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: saveAllData
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: buyItem
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySystem
+    methodName: SaveInventory
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: UiController
+    methodName: countCoin
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySystem
+    methodName: LoadInventoryData
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -271,123 +411,195 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14300}
     - Class: 114
-      Script: {instanceID: 14598}
+      Script: {instanceID: 14584}
     - Class: 114
-      Script: {instanceID: 14974}
+      Script: {instanceID: 14830}
     - Class: 114
-      Script: {instanceID: 15040}
+      Script: {instanceID: 14874}
     - Class: 114
-      Script: {instanceID: 15098}
+      Script: {instanceID: 15050}
     - Class: 114
-      Script: {instanceID: 15202}
+      Script: {instanceID: 15064}
     - Class: 114
-      Script: {instanceID: 15292}
+      Script: {instanceID: 15212}
     - Class: 114
-      Script: {instanceID: 15312}
+      Script: {instanceID: 15278}
     - Class: 114
-      Script: {instanceID: 15428}
+      Script: {instanceID: 15336}
     - Class: 114
-      Script: {instanceID: 15684}
+      Script: {instanceID: 15442}
     - Class: 114
-      Script: {instanceID: 16230}
+      Script: {instanceID: 15534}
     - Class: 114
-      Script: {instanceID: 16288}
+      Script: {instanceID: 15554}
     - Class: 114
-      Script: {instanceID: 16352}
+      Script: {instanceID: 15630}
     - Class: 114
-      Script: {instanceID: 16444}
+      Script: {instanceID: 15674}
     - Class: 114
-      Script: {instanceID: 16666}
+      Script: {instanceID: 15932}
     - Class: 114
-      Script: {instanceID: 16752}
+      Script: {instanceID: 16132}
     - Class: 114
-      Script: {instanceID: 16790}
+      Script: {instanceID: 16166}
     - Class: 114
-      Script: {instanceID: 16844}
+      Script: {instanceID: 16482}
     - Class: 114
-      Script: {instanceID: 16876}
+      Script: {instanceID: 16540}
     - Class: 114
-      Script: {instanceID: 16908}
+      Script: {instanceID: 16604}
     - Class: 114
-      Script: {instanceID: 17758}
+      Script: {instanceID: 16700}
     - Class: 114
-      Script: {instanceID: 18066}
+      Script: {instanceID: 16734}
     - Class: 114
-      Script: {instanceID: 18472}
+      Script: {instanceID: 16928}
     - Class: 114
-      Script: {instanceID: 18702}
+      Script: {instanceID: 17014}
+    - Class: 114
+      Script: {instanceID: 17052}
+    - Class: 114
+      Script: {instanceID: 17108}
+    - Class: 114
+      Script: {instanceID: 17142}
+    - Class: 114
+      Script: {instanceID: 17174}
+    - Class: 114
+      Script: {instanceID: 17236}
+    - Class: 114
+      Script: {instanceID: 17488}
+    - Class: 114
+      Script: {instanceID: 18038}
+    - Class: 114
+      Script: {instanceID: 18252}
+    - Class: 114
+      Script: {instanceID: 18338}
+    - Class: 114
+      Script: {instanceID: 18344}
+    - Class: 114
+      Script: {instanceID: 18608}
     - Class: 114
       Script: {instanceID: 18760}
     - Class: 114
-      Script: {instanceID: 18798}
+      Script: {instanceID: 18988}
     - Class: 114
-      Script: {instanceID: 18828}
+      Script: {instanceID: 18992}
     - Class: 114
-      Script: {instanceID: 19066}
+      Script: {instanceID: 19050}
     - Class: 114
-      Script: {instanceID: 19184}
+      Script: {instanceID: 19084}
     - Class: 114
-      Script: {instanceID: 19214}
+      Script: {instanceID: 19090}
     - Class: 114
-      Script: {instanceID: 19290}
+      Script: {instanceID: 19120}
     - Class: 114
-      Script: {instanceID: 19370}
+      Script: {instanceID: 19246}
     - Class: 114
-      Script: {instanceID: 19478}
+      Script: {instanceID: 19360}
     - Class: 114
-      Script: {instanceID: 20066}
+      Script: {instanceID: 19450}
     - Class: 114
-      Script: {instanceID: 20252}
+      Script: {instanceID: 19480}
     - Class: 114
-      Script: {instanceID: 20350}
+      Script: {instanceID: 19510}
     - Class: 114
-      Script: {instanceID: 20352}
+      Script: {instanceID: 19588}
     - Class: 114
-      Script: {instanceID: 20594}
+      Script: {instanceID: 19668}
     - Class: 114
-      Script: {instanceID: 21316}
+      Script: {instanceID: 19776}
     - Class: 114
-      Script: {instanceID: 21750}
+      Script: {instanceID: 19840}
     - Class: 114
-      Script: {instanceID: 21870}
+      Script: {instanceID: 19980}
     - Class: 114
-      Script: {instanceID: 21894}
+      Script: {instanceID: 20372}
     - Class: 114
-      Script: {instanceID: 22868}
+      Script: {instanceID: 20376}
     - Class: 114
-      Script: {instanceID: 22874}
+      Script: {instanceID: 20396}
     - Class: 114
-      Script: {instanceID: 23288}
+      Script: {instanceID: 20566}
     - Class: 114
-      Script: {instanceID: 23340}
+      Script: {instanceID: 20666}
     - Class: 114
-      Script: {instanceID: 23622}
+      Script: {instanceID: 20668}
     - Class: 114
-      Script: {instanceID: 23694}
+      Script: {instanceID: 20728}
     - Class: 114
-      Script: {instanceID: 23784}
+      Script: {instanceID: 20912}
     - Class: 114
-      Script: {instanceID: 24314}
+      Script: {instanceID: 21208}
     - Class: 114
-      Script: {instanceID: 24424}
+      Script: {instanceID: 21654}
     - Class: 114
-      Script: {instanceID: 24480}
+      Script: {instanceID: 21690}
     - Class: 114
-      Script: {instanceID: 24556}
+      Script: {instanceID: 22094}
     - Class: 114
-      Script: {instanceID: 24642}
+      Script: {instanceID: 22116}
     - Class: 114
-      Script: {instanceID: 24672}
+      Script: {instanceID: 22218}
     - Class: 114
-      Script: {instanceID: 24824}
+      Script: {instanceID: 22244}
     - Class: 114
-      Script: {instanceID: 25066}
+      Script: {instanceID: 22280}
     - Class: 114
-      Script: {instanceID: 25368}
+      Script: {instanceID: 22348}
     - Class: 114
-      Script: {instanceID: 25536}
+      Script: {instanceID: 22510}
+    - Class: 114
+      Script: {instanceID: 22658}
+    - Class: 114
+      Script: {instanceID: 23234}
+    - Class: 114
+      Script: {instanceID: 23240}
+    - Class: 114
+      Script: {instanceID: 23654}
+    - Class: 114
+      Script: {instanceID: 23706}
+    - Class: 114
+      Script: {instanceID: 23998}
+    - Class: 114
+      Script: {instanceID: 24070}
+    - Class: 114
+      Script: {instanceID: 24160}
+    - Class: 114
+      Script: {instanceID: 24170}
+    - Class: 114
+      Script: {instanceID: 24592}
+    - Class: 114
+      Script: {instanceID: 24700}
+    - Class: 114
+      Script: {instanceID: 24702}
+    - Class: 114
+      Script: {instanceID: 24812}
+    - Class: 114
+      Script: {instanceID: 24868}
+    - Class: 114
+      Script: {instanceID: 24944}
+    - Class: 114
+      Script: {instanceID: 25030}
+    - Class: 114
+      Script: {instanceID: 25060}
+    - Class: 114
+      Script: {instanceID: 25214}
+    - Class: 114
+      Script: {instanceID: 25462}
+    - Class: 114
+      Script: {instanceID: 25544}
+    - Class: 114
+      Script: {instanceID: 25764}
+    - Class: 114
+      Script: {instanceID: 25790}
+    - Class: 114
+      Script: {instanceID: 25836}
+    - Class: 114
+      Script: {instanceID: 25938}
+    - Class: 114
+      Script: {instanceID: 67750}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -423,6 +635,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: DepthOfField
+  - hash:
+      serializedVersion: 2
+      Hash: 2fcb1334e281b31bb13c9cd2e34ab5c3
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: InventorySystem
   - hash:
       serializedVersion: 2
       Hash: b2d2a01a2a85d9ed12e80cb33a9a6044
@@ -519,6 +737,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: UniversalRenderPipelineGlobalSettings
+  - hash:
+      serializedVersion: 2
+      Hash: e955c1d2cd09926db3a38d0b75899d34
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ObjectDatabaseSO
+  - hash:
+      serializedVersion: 2
+      Hash: 6e3a930da63db412b1b4bf107d4937da
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList
+    className: ListBox
   - hash:
       serializedVersion: 2
       Hash: 682dfc653b22feea53b38adb3bc66414
@@ -629,10 +859,22 @@ ScriptsOnlyBuild:
     className: InputManager
   - hash:
       serializedVersion: 2
+      Hash: dcbbc22c309d52bf438c42bdbf32fd8e
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: LateInitialization
+  - hash:
+      serializedVersion: 2
       Hash: ee34255e3e86289bde9bad5e07b84cbc
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnScrollRectValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 91fdb6e76da57260c32cebab778153eb
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UiController
   - hash:
       serializedVersion: 2
       Hash: dd9dda1dfd39e605c49e72003342ef5d
@@ -705,6 +947,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 1d9b840d940fda83889ecc24c7460327
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShopUI
   - hash:
       serializedVersion: 2
       Hash: 0bc7ef1b7516f21320ec49bfd31eef2e
@@ -791,10 +1039,28 @@ ScriptsOnlyBuild:
     className: Bloom
   - hash:
       serializedVersion: 2
+      Hash: 8e62362f7ed1c8d13c6a12331a6b3d5e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UltraVioletMachine
+  - hash:
+      serializedVersion: 2
       Hash: c0a2b4d13675f08bfb211e044c334e68
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerIntField
+  - hash:
+      serializedVersion: 2
+      Hash: c67170c9f3ae5a1dce9d7a8132ab4461
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: ListIteration
+  - hash:
+      serializedVersion: 2
+      Hash: 97bb21634cbb167fd0f8a60b8c310e9f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: HarvestPlant
   - hash:
       serializedVersion: 2
       Hash: e63fe08659e7e4647a51098c666f8845
@@ -857,6 +1123,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerHBox
   - hash:
       serializedVersion: 2
+      Hash: 0ee1842253821ea98c7168136affe4c3
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: StringStarListBank
+  - hash:
+      serializedVersion: 2
       Hash: 423a204f105739da55558e8e0d136a67
     assemblyName: Unity.AI.Navigation
     namespaceName: Unity.AI.Navigation
@@ -899,6 +1171,12 @@ ScriptsOnlyBuild:
     className: PaniniProjection
   - hash:
       serializedVersion: 2
+      Hash: 254355d731702ec7b50c36ff3b2d21ea
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MachinePlacement
+  - hash:
+      serializedVersion: 2
       Hash: a9a9985bc600ab81586355efc506ee17
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -909,6 +1187,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: MacroScriptableObject
+  - hash:
+      serializedVersion: 2
+      Hash: 817669f7f468a94c5cb95e508833bb15
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WaterTank
   - hash:
       serializedVersion: 2
       Hash: 4f353524ce6564e40764f1ea080b2d85
@@ -947,6 +1231,12 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAnimator
   - hash:
       serializedVersion: 2
+      Hash: ec98b62b473e1fd1115cad9b571f80c9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ElectricTractorMachine
+  - hash:
+      serializedVersion: 2
       Hash: c6369b4cc3be620d6c9300e920bc3d52
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -975,6 +1265,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
     className: ProbeVolumesOptions
+  - hash:
+      serializedVersion: 2
+      Hash: 26a5f344efbe2260729ee056dcd31d64
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: IntListBox
   - hash:
       serializedVersion: 2
       Hash: 8dff8e9853297d341afa0c11f9091b59
@@ -1011,6 +1307,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 9134679212682ece460b06022c8b1739
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlantSystem
   - hash:
       serializedVersion: 2
       Hash: bf0842d88681628b29beb00b5e2ab785
@@ -1055,6 +1357,12 @@ ScriptsOnlyBuild:
     className: UnityOnTransformParentChangedMessageListener
   - hash:
       serializedVersion: 2
+      Hash: f0bc6cdc3f8f0f56349e1c06fb0f0417
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PowerStorage
+  - hash:
+      serializedVersion: 2
       Hash: 6cf63e9dc888f92a3672d2e4db631c8e
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
@@ -1067,7 +1375,7 @@ ScriptsOnlyBuild:
     className: InputActionAssetEditor
   - hash:
       serializedVersion: 2
-      Hash: c320ce0996797a7a5332d9ea3e56c560
+      Hash: 4c3c962d60be8e42ffbd06c4577eb10b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraControl
@@ -1089,6 +1397,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionDebuggerWindow
+  - hash:
+      serializedVersion: 2
+      Hash: dae1956917a29ec759a72d50981814b5
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DestroyPlant
   - hash:
       serializedVersion: 2
       Hash: 919dc7ec08f773fcae2d21a1e018bd99
@@ -1115,6 +1429,12 @@ ScriptsOnlyBuild:
     className: ColorCurves
   - hash:
       serializedVersion: 2
+      Hash: 308f6a7e171df0fb2ad8de9889dcaf70
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GeneratorRotation
+  - hash:
+      serializedVersion: 2
       Hash: 47f78e94e3df8d612cefa1307a19e2ce
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1137,6 +1457,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 310b72771736edd789d9b1a39967fc68
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UpgradeWaterTank
   - hash:
       serializedVersion: 2
       Hash: 8d7ab1303b1c14da5fdd62bf96ca6e89
@@ -1205,6 +1531,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerFloatField
   - hash:
       serializedVersion: 2
+      Hash: ede729ff783f553003971f0a424c70a1
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: SpriteStringListBank
+  - hash:
+      serializedVersion: 2
       Hash: a908b098f2284663c0b9130e88844772
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1235,6 +1567,12 @@ ScriptsOnlyBuild:
     className: UnityOnSelectMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 9634675d8eafa86ab329d9d6a77e4f1c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ObjectList
+  - hash:
+      serializedVersion: 2
       Hash: a9f0153fc675e1f4ade818b83e4ff0c1
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering
@@ -1245,6 +1583,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: e436915ced3a0ac900507dede0863c5a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlaceMachine
   - hash:
       serializedVersion: 2
       Hash: 0f5a086d4d028363983ba6ca30a01397
@@ -1259,10 +1603,22 @@ ScriptsOnlyBuild:
     className: ScreenSpaceAmbientOcclusion
   - hash:
       serializedVersion: 2
+      Hash: 61ebc74cde8aaea9b85ba176674e10c1
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: SpriteStringListBox
+  - hash:
+      serializedVersion: 2
       Hash: e23d2210701e34e6850023cabe554c1f
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnInputFieldEndEditMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: e295965b1b90fd5f7916fae866bde50a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: ColorStrListBank
   - hash:
       serializedVersion: 2
       Hash: fd4cc9037d66a0b564a5bf23671a88e7
@@ -1271,10 +1627,28 @@ ScriptsOnlyBuild:
     className: ForwardRendererData
   - hash:
       serializedVersion: 2
+      Hash: 8786487f69bf64be3207f68b098500b1
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ShopSystem
+  - hash:
+      serializedVersion: 2
       Hash: a90f6a00b23520788be7d89ee3b0773d
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: c711f4d815cdcefc37965ea9879b05a9
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GlobarWarmingSystem
+  - hash:
+      serializedVersion: 2
+      Hash: ec22cdbe7dce240193de271e6acf9376
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: ColorStrListBox
   - hash:
       serializedVersion: 2
       Hash: f5df081962c06a171f380eb236cd1f3c
@@ -1299,6 +1673,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
     className: DebugUIHandlerPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 80d68ddf837d05ef3f11d4f842ccee57
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RegulerItemScript
   - hash:
       serializedVersion: 2
       Hash: e8d390bd9ecacc453a7500b90d0c0292
@@ -1343,6 +1723,12 @@ ScriptsOnlyBuild:
     className: PlayerInputEditor
   - hash:
       serializedVersion: 2
+      Hash: 58e234d85a429cbb14652b5fc7fd8df6
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: FPSLimiter
+  - hash:
+      serializedVersion: 2
       Hash: 568292fb7ea6c4f7a667e5ff76bc7e85
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1353,6 +1739,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UIElements
     className: PanelRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: ab50e1ef077155b785090a42584ea26b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlacePlantButton
   - hash:
       serializedVersion: 2
       Hash: 7e12302f66e3c8ed5bcfea4ce65fccea
@@ -1385,10 +1777,22 @@ ScriptsOnlyBuild:
     className: UnityOnMouseExitMessageListener
   - hash:
       serializedVersion: 2
+      Hash: f3eb82a502a99ce349cfec2475c3203a
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: ListEventDemo
+  - hash:
+      serializedVersion: 2
       Hash: 1f83eef13a79f436d9b929359da21ab6
     assemblyName: Unity.RenderPipelines.Universal.2D.Runtime
     namespaceName: UnityEngine.Rendering.Universal
     className: ShadowCaster2D
+  - hash:
+      serializedVersion: 2
+      Hash: a3ad3f40ccb157500329aed586c1d84c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList
+    className: CircularScrollingList
   - hash:
       serializedVersion: 2
       Hash: d4c7cb9e46d192844a5b295d6a3f8dc5
@@ -1413,6 +1817,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 317e6af4dbe5ee5c66b55a84f0bded5b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: DestroyMachineButton
   - hash:
       serializedVersion: 2
       Hash: 5a25c7516fadef3552c99f55215749d0
@@ -1451,6 +1861,12 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
+      Hash: fa4c3438b4907ec3997e15ed8ab30c09
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: PlantScript
+  - hash:
+      serializedVersion: 2
       Hash: 2f43860e745f8edade7bd381809e537b
     assemblyName: Unity.RenderPipelines.Universal.Runtime
     namespaceName: UnityEngine.Rendering.Universal
@@ -1473,6 +1889,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem
     className: PlayerInput
+  - hash:
+      serializedVersion: 2
+      Hash: 25ffcaa858cdfe4bb581a1804a5410fd
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UpgradeMachineButton
+  - hash:
+      serializedVersion: 2
+      Hash: 9625ee05ec209e995f016bfabde39b07
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: QuestSystem
   - hash:
       serializedVersion: 2
       Hash: d7c8092511063e0dae8106bfc8ed63dd
@@ -1499,10 +1927,28 @@ ScriptsOnlyBuild:
     className: UnityOnTriggerStayMessageListener
   - hash:
       serializedVersion: 2
+      Hash: 8c84e3e01ad3368e7002fe9321261ff6
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GeneratorScript
+  - hash:
+      serializedVersion: 2
+      Hash: 62cf1098774a6b7493565c99c7831b87
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: IntListBank
+  - hash:
+      serializedVersion: 2
       Hash: ff5172bc81dc2da4c7de2a8bf56dc4b8
     assemblyName: Unity.InputSystem
     namespaceName: UnityEngine.InputSystem.Editor
     className: InputActionsEditorWindow
+  - hash:
+      serializedVersion: 2
+      Hash: 87ba6163a37d6faf58309bdb2fc39575
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LandLot
   - hash:
       serializedVersion: 2
       Hash: 64756cee21909a7a459d5e05844baa97
@@ -1559,7 +2005,7 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
-      Hash: 7db113c9b85cac3f1015f73d311a9e0c
+      Hash: 782610496d5d2d02e211344f72805e51
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlaceMentSystem
@@ -1661,6 +2107,18 @@ ScriptsOnlyBuild:
     className: LightAnchor
   - hash:
       serializedVersion: 2
+      Hash: e81dab610c4296ed099273e9dcaf5861
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: ListInteraction
+  - hash:
+      serializedVersion: 2
+      Hash: e2d83f15b1b93029ce7fff0de8035f93
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LandLotDatabase
+  - hash:
+      serializedVersion: 2
       Hash: 5dc51b0140815ee83ba613dce32f5b12
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1677,6 +2135,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 5dd9b0af9fba51bd3cdf888e0146f836
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MachineScript
+  - hash:
+      serializedVersion: 2
+      Hash: 9cfacb432c8595f86097bcd7ed015975
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: AdjustableStringListBank
   - hash:
       serializedVersion: 2
       Hash: f45600bcc886206dd55a3208474aad61
@@ -1805,6 +2275,12 @@ ScriptsOnlyBuild:
     className: NavMeshSurface
   - hash:
       serializedVersion: 2
+      Hash: ae5d9a44a710fc88fbae0f7bbd362a3a
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: Land
+  - hash:
+      serializedVersion: 2
       Hash: 540882762544409cc4530e60db00e951
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1823,7 +2299,7 @@ ScriptsOnlyBuild:
     className: UnityOnPointerEnterMessageListener
   - hash:
       serializedVersion: 2
-      Hash: afc98f3a0e4503ac3413e53b8ec5f2cd
+      Hash: bbe55df524777bdbca055d2be91c801f
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RotationControl
@@ -1877,6 +2353,12 @@ ScriptsOnlyBuild:
     className: SplitToning
   - hash:
       serializedVersion: 2
+      Hash: 3232ccd084371d2b63899bd65ba4dc9c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ButtonScript
+  - hash:
+      serializedVersion: 2
       Hash: b747f5d40674055dd70e18552f1b0447
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
@@ -1901,10 +2383,22 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerToggle
   - hash:
       serializedVersion: 2
+      Hash: c820cf14a1fff5cd67096277c35a075f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GameManager
+  - hash:
+      serializedVersion: 2
       Hash: db6133687572f9dc24f1fd4238ef9b83
     assemblyName: Unity.TextMeshPro
     namespaceName: TMPro
     className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 42538ec6c49112e9ecdc48d5c156e27c
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: StringStarListBox
   - hash:
       serializedVersion: 2
       Hash: 10c17b309bdca62b4d7fbaf113ed4ca0
@@ -1931,10 +2425,22 @@ ScriptsOnlyBuild:
     className: UnityOnJointBreakMessageListener
   - hash:
       serializedVersion: 2
+      Hash: a7cf03481da84cf400a70834aaeb6495
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList.Demo
+    className: StringListBox
+  - hash:
+      serializedVersion: 2
       Hash: a1ac4c50e55874de16eee3db71aa9784
     assemblyName: UnityEngine.UI
     namespaceName: UnityEngine.UI
     className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: f59426bd92b645c38b0dc75e4aabc32e
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: BaseBuildingScript
   - hash:
       serializedVersion: 2
       Hash: 6478d2d26af607a418623e4c8dbce3c6
@@ -1971,7 +2477,19 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 524e49263d856a2e09704da0bd816dd8
+    assemblyName: Assembly-CSharp-firstpass
+    namespaceName: AirFishLab.ScrollingList
+    className: ListBank
+  - hash:
+      serializedVersion: 2
+      Hash: e294147da8a6ab1b008212306d31bf52
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UpgradeGeneratorButton
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Zaqy Ulunnuha/My Games/Hology_8.0_IBZ.exe
+  playerPath: C:/Users/Zaqy Ulunnuha/My Games/Game Build/Hology_8.0_IBZ.exe

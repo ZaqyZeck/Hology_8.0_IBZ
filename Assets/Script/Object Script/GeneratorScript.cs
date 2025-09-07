@@ -12,11 +12,24 @@ public class GeneratorScript : MonoBehaviour
     private Vector3 _originalScale;
     private GlobarWarmingSystem GW_system;
 
+    [SerializeField] private GameObject machineButton, upgradeButton;
+    private RotationControl rotationControl;
+    private InventorySystem inventorySystem;
+    [SerializeField] private int[] upgradesPrice, upgradePower;
+
+    // new data
+    public int machineLevel;
+
+    public bool haveLoaded;
+
     private void Awake()
     {
         _originalScale = transform.localScale;
         GW_system = FindAnyObjectByType<GlobarWarmingSystem>();
+        rotationControl = FindAnyObjectByType<RotationControl>();
+        inventorySystem = FindAnyObjectByType<InventorySystem>();
         //location = transform.localPosition;
+
     }
 
     public void setGeneratorLocation()
@@ -36,7 +49,7 @@ public class GeneratorScript : MonoBehaviour
     {
         if (type == "Diesel")
         {
-            // frekuensi (kecepatan goyang) & amplitudo (seberapa tinggi goyang)
+            // membuat mesin bergerak
             float frequency = 3f; // makin besar makin cepat
             float amplitude = 0.1f; // makin besar makin terlihat goyang
 
@@ -56,5 +69,33 @@ public class GeneratorScript : MonoBehaviour
 
             transform.RotateAround(center, Vector3.forward, 100f * Time.deltaTime);
         }
+    }
+
+    private void OnMouseOver()
+    {
+        if (Input.GetMouseButtonDown(0) && !rotationControl._isRotating)
+        {
+            ButtonStorage.changeButton(machineButton);
+        }
+    }
+
+    public void UpgradeMachine()
+    {
+        if (machineLevel >= 2) return;
+
+        int price = upgradesPrice[machineLevel];
+
+        if (inventorySystem.coins < price) return;
+
+        inventorySystem.coins -= price;
+        machineLevel++;
+
+        LoadLevel();
+    }
+
+    public void LoadLevel()
+    {
+        producePower = upgradePower[machineLevel];
+        if (machineLevel >= 2) upgradeButton.SetActive(false);
     }
 }

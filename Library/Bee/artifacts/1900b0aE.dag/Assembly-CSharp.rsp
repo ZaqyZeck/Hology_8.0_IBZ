@@ -432,6 +432,7 @@
 "Assets/Script/Button Script/HarvestPlant.cs"
 "Assets/Script/Button Script/PlaceMachine.cs"
 "Assets/Script/Button Script/PlacePlantButton.cs"
+"Assets/Script/Button Script/UpgradeGeneratorButton.cs"
 "Assets/Script/Button Script/UpgradeMachineButton.cs"
 "Assets/Script/Button Script/UpgradeWaterTank.cs"
 "Assets/Script/GameManager.cs"

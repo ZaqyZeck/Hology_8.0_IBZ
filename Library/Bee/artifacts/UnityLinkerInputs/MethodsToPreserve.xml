@@ -1,4 +1,38 @@
 <linker>
+	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="GameManager">
+			<method name="loadAllData"/>
+			<method name="saveAllData"/>
+			<method name="skipDays"/>
+			<method name="skipDays"/>
+		</type>
+		<type fullname="InventorySystem">
+			<method name="LoadInventoryData"/>
+			<method name="SaveInventory"/>
+		</type>
+		<type fullname="PlaceMentSystem">
+			<method name="StartPlacement"/>
+			<method name="StartPlacement"/>
+		</type>
+		<type fullname="PowerStorage">
+			<method name="LoadMachines"/>
+			<method name="SaveMachines"/>
+		</type>
+		<type fullname="RegulerItemScript">
+			<method name="buyItem"/>
+			<method name="decreaseAmount"/>
+			<method name="increaseAmount"/>
+		</type>
+		<type fullname="ShopUI">
+			<method name="goToCategory"/>
+			<method name="goToCategory"/>
+			<method name="goToCategory"/>
+			<method name="goToCategory"/>
+		</type>
+		<type fullname="UiController">
+			<method name="countCoin"/>
+		</type>
+	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
 		<type fullname="UnityEngine.Rendering.UI.DebugUIHandlerButton">
 			<method name="OnAction"/>
@@ -23,6 +57,14 @@
 			<method name="OnDecrement"/>
 			<method name="OnIncrement"/>
 			<method name="OnIncrement"/>
+		</type>
+	</assembly>
+	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 		</type>
 	</assembly>
 </linker>

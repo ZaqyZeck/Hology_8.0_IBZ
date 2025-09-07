@@ -9,6 +9,9 @@ public class GeneratorData : Data
     public float[] location_z = new float[3];
     public bool[] havefuel = new bool[3];
 
+    // new data
+    public int[] machineLevel = new int[3];
+
     public GeneratorData(GeneratorScript[] generatorScripts)
     {
         int i = 0;
@@ -19,6 +22,7 @@ public class GeneratorData : Data
             location_y[i] = generator.location.y; 
             location_z[i] = generator.location.z;
             havefuel[i] = generator.havefuel;
+            machineLevel[i] = generator.machineLevel;
             i++;
         }
     }

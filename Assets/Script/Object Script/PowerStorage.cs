@@ -14,7 +14,8 @@ public class PowerStorage : MonoBehaviour
 
     public void getGenerator()
     {
-        generators = FindObjectsByType<GeneratorScript>(FindObjectsSortMode.None);
+        //generators = FindObjectsByType<GeneratorScript>(FindObjectsSortMode.None);
+        generators = GetComponentsInChildren<GeneratorScript>();
     }
 
     public void GetEnergy()
@@ -94,6 +95,18 @@ public class PowerStorage : MonoBehaviour
 
             int @idType = generatorData.id[index];
             PlaceMentSystem.PlaceStructureByLocation(location, idType);
+
+            int @machineLevel = generatorData.machineLevel[index];
+
+            getGenerator();
+
+            foreach (GeneratorScript generatorScript in generators)
+            {
+                if (generatorScript.haveLoaded) continue;
+                generatorScript.machineLevel = machineLevel;
+                generatorScript.LoadLevel();
+                generatorScript.haveLoaded = true;
+            }
         }
     }
 
