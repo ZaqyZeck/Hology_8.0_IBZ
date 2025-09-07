@@ -19,6 +19,9 @@ public class PlantsData : Data
 
     public int[] extraWater = new int[36];
 
+    public int[] plantLevel = new int[36];
+    //public int[] plantFarmType = new int[36];
+
     public PlantsData(List<PlantScript> plants)
     {
         int i = 0;
@@ -40,6 +43,8 @@ public class PlantsData : Data
             currentPhase[index] = plant._currentPhase;
 
             extraWater[index] = plant.extraWater;
+
+            plantLevel[index] = plant.plantLevel;
 
             notNull[index] = true;
             i++;

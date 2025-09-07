@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\Save System\Data.cs" />
     <Compile Include="Assets\Script\Object Script\WaterTank.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlaceMentSystem.cs" />
+    <Compile Include="Assets\Script\Save System\FarmUpgradeData.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachinePlacement.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\QuestSystem.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonStorage.cs" />
@@ -86,6 +87,7 @@
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectDatabaseSO.cs" />
     <Compile Include="Assets\Script\Button Script\PlacePlantButton.cs" />
     <Compile Include="Assets\Script\Object Script\PlantSystem.cs" />
+    <Compile Include="Assets\Script\Object Script\Upgrade Farm\FarmUpgrade.cs" />
     <Compile Include="Assets\Script\Button Script\PlaceMachine.cs" />
     <Compile Include="Assets\Script\UI Script\BaseBuildingScript.cs" />
     <Compile Include="Assets\Script\Save System\PlantsData.cs" />

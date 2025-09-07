@@ -15,6 +15,11 @@ public class LandLot : MonoBehaviour
 
     [SerializeField] private ObjectDatabaseSO _database;
 
+
+    // new upgrade data
+
+    public string farmType;
+    public int farmLevel;
     private void Awake()
     {
         rotationControl = FindAnyObjectByType<RotationControl>();
@@ -57,10 +62,11 @@ public class LandLot : MonoBehaviour
 
         PlantScript plantScript = _plant.GetComponent<PlantScript>();
         plantScript._lot = GetComponent<LandLot>();
+        plantScript.LoadUpgradeFarm(farmLevel, farmType);
         plantScript.load();
     }
 
-    public PlantScript LoadPlantBy(int _id)
+    public PlantScript LoadPlantBy(int _id, int _farmLevel)
     {
         //Debug.Log(_inventory.inventory[_id].name);
         if (_plant != null)
@@ -77,6 +83,7 @@ public class LandLot : MonoBehaviour
 
         PlantScript plantScript = _plant.GetComponent<PlantScript>();
         plantScript._lot = GetComponent<LandLot>();
+        plantScript.LoadUpgradeFarm(_farmLevel, farmType);
         plantScript.load();
         //_inventory.subtractOneTo(_id);
         _havePlant = true;

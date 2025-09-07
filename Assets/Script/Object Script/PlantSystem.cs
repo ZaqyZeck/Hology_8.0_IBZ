@@ -25,7 +25,9 @@ public class PlantSystem : MonoBehaviour
     new int[] { 250,  upgradeCost[0] },
     new int[] { 600,  upgradeCost[1] },
     new int[] { 1000, upgradeCost[2] }
-};
+    };
+
+    [SerializeField] FarmUpgrade[] farmUpgrades;
 
     private void Awake()
     {
@@ -152,7 +154,7 @@ public class PlantSystem : MonoBehaviour
             if (!plantsData.notNull[plantLotId]) continue;
             Debug.Log(LandLots[plantLotId].name + " and " + plantsData.typeId[plantLotId]);
             LandLot lot = LandLots[plantLotId];
-            PlantScript plantScript = lot.LoadPlantBy(plantsData.typeId[plantLotId]);
+            PlantScript plantScript = lot.LoadPlantBy(plantsData.typeId[plantLotId], plantsData.plantLevel[plantLotId]);
 
             plantScript._ID = plantsData.typeId[plantLotId];
             plantScript._LotID = plantsData.lotId[plantLotId];
@@ -166,6 +168,28 @@ public class PlantSystem : MonoBehaviour
             plantScript.extraWater = plantsData.extraWater[plantLotId];
 
             plantScript.load();
+        }
+    }
+
+    public void SaveFarmUpgradeData()
+    {
+        int[] farmLevels = new int[4];
+
+        for (int i = 0; i < 4; i++)
+        {
+            farmLevels[i] = farmUpgrades[i].farmLevel;
+        }
+        MainSaveSystem.SaveFarmUpgradeData(farmLevels);
+    }
+
+    public void LoadFarmUpgradeData()
+    {
+        FarmUpgradeData upgradeData = MainSaveSystem.LoadFarmUpgrade();
+
+        for (int i = 0;i < 4; i++)
+        {
+            farmUpgrades[i].farmLevel = upgradeData.farmLevel[i];
+            farmUpgrades[i].LoadUpgradeLandLot();
         }
     }
 }

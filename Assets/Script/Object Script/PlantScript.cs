@@ -23,7 +23,12 @@ public class PlantScript : MonoBehaviour
     public float waterNeeded;
     
     public int tallPhase, middlePhase;
-    
+
+    // new upgrade data
+
+    public int plantLevel;
+    public string plantFarmType;
+
 
     [SerializeField] private GameObject _buttonObject;
     private PlaceMentSystem _ps;
@@ -60,6 +65,37 @@ public class PlantScript : MonoBehaviour
         if (_age == _maxAge) harvestable = true;
         _LotID = _lot.lotId;
     }
+
+    public void LoadUpgradeFarm(int farmLevel, string farmType)
+    {
+        plantLevel = farmLevel;
+        plantFarmType = farmType;
+
+        if (farmType == "vertical")
+        {
+            if(farmLevel == 1)
+            {
+                _yieldsAmount += 1;
+            }
+            else if(farmLevel == 2)
+            {
+                _yieldsAmount += 2;
+                waterNeeded += waterNeeded / 10;
+            }
+            else if(farmLevel == 3)
+            {
+                _yieldsAmount += 3;
+                waterNeeded += waterNeeded / 20;
+            }
+        }
+        else
+        {
+            if (farmLevel == 2)
+            {
+                waterNeeded -= waterNeeded / 10;
+            }
+        }
+    }
     void OnMouseOver()
     {
         // Check if the right mouse button is clicked while the cursor is over this object
@@ -82,6 +118,17 @@ public class PlantScript : MonoBehaviour
 
     public void GrowThePlant()
     {
+        if (plantFarmType == "horizontal")
+        {
+            if(plantLevel == 1)
+            {
+                _bonus += 2;
+            }
+            else if (plantLevel == 2)
+            {
+                _bonus += 3;
+            }
+        }
         if (waterGot / waterNeeded < 0.3)
         {
             _ps.RemoveStrcture(_ID);
@@ -90,6 +137,7 @@ public class PlantScript : MonoBehaviour
         }
         if (fertilized) _bonus += 6;
 
+        
         if (waterGot / waterNeeded <= 0.5)
         {
             _age += (_bonus + 6) / 2;

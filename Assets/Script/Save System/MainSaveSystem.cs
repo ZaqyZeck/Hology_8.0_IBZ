@@ -165,4 +165,36 @@ public static class MainSaveSystem
             return null;
         }
     }
+
+    public static void SaveFarmUpgradeData(int[] farmLevels)
+    {
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + "/FarmUpgrade.dt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        FarmUpgradeData farmUpgradeData = new FarmUpgradeData(farmLevels);
+
+        formatter.Serialize(stream, farmUpgradeData);
+        stream.Close();
+    }
+
+    public static FarmUpgradeData LoadFarmUpgrade()
+    {
+        string path = Application.persistentDataPath + "/FarmUpgrade.dt";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            FarmUpgradeData FarmUpgradeData = formatter.Deserialize(stream) as FarmUpgradeData;
+
+            stream.Close();
+            return FarmUpgradeData;
+        }
+        else
+        {
+            Debug.LogError("not found in " + path);
+            return null;
+        }
+    }
 }
