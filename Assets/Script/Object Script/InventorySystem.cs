@@ -9,6 +9,11 @@ public class InventorySystem : MonoBehaviour
     public List<InventoryObject> inventory = new();
     
 
+    public void SubtractCoins(int amount)
+    {
+        coins -= amount;
+    }
+
     public InventoryObject GetInventoryObjectBy(int id)
     {
         foreach (InventoryObject obj in inventory)

@@ -3,6 +3,8 @@ using UnityEngine;
 public static class ButtonStorage
 {
     public static GameObject selectedButton;
+    //public static GameObject selectedItemUI;
+    //[SerializeField] static GameObject ShopItemUIParent;
 
     public static void changeButton(GameObject button)
     {
@@ -15,4 +17,9 @@ public static class ButtonStorage
         selectedButton = button;
         selectedButton.SetActive(true);
     }
+
+    //public static void ChangeItemUI(GameObject itemUI)
+    //{
+
+    //}
 }

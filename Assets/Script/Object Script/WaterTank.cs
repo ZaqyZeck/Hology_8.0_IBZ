@@ -11,7 +11,7 @@ public class WaterTank : MonoBehaviour
         {
             ButtonStorage.changeButton(WaterTankUI);
             WaterTankUI.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
-            plantSystem.updateWaterCounter();
+            plantSystem.UpdateWaterCounter();
             Debug.Log("terpencet");
         }
     }

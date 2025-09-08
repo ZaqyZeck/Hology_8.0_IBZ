@@ -41,7 +41,11 @@ public class PlantSystem : MonoBehaviour
 
     public void WaterAll()
     {
-        if (_plantList == null || _plantList.Length == 0) return;
+        if (_plantList == null || _plantList.Length == 0)
+        {
+            UpdateWaterCounter();
+            return;
+        }
 
         // Sort tanaman dulu sesuai prioritas
         var sortedPlants = _plantList
@@ -79,6 +83,8 @@ public class PlantSystem : MonoBehaviour
                 break;
             }
         }
+
+        UpdateWaterCounter();
     }
 
     public void ResetAll()
@@ -98,7 +104,7 @@ public class PlantSystem : MonoBehaviour
         }
     }
 
-    public void updateWaterCounter()
+    public void UpdateWaterCounter()
     {
         waterCounter.text = $"Water Storage\n{_water} / {_maxWater}";
     }
@@ -112,7 +118,7 @@ public class PlantSystem : MonoBehaviour
         waterTankLevel++;
         _maxWater = waterStorage[waterTankLevel - 1][0];
         
-        updateWaterCounter();
+        UpdateWaterCounter();
         if(waterTankLevel >= 3)
         {
             upgradeButton.SetActive(false);
@@ -130,7 +136,7 @@ public class PlantSystem : MonoBehaviour
         waterTankLevel = data.waterTankLevel;
         if (waterTankLevel == 0) return;
         _maxWater = waterStorage[waterTankLevel - 1][0];
-        updateWaterCounter();
+        UpdateWaterCounter();
     }
 
 
