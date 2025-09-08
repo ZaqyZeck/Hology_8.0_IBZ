@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private QuestSystem questSystem;
 
     [SerializeField] private UiController ui;
+
+    private void Start()
+    {
+        loadAllData();
+    }
+
     public void skipDays()
     {
         questSystem.autoComplete();
