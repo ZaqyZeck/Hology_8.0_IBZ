@@ -24,6 +24,8 @@ public class PlaceMentSystem : MonoBehaviour
     private GameObject _previewObject;
     private InventorySystem _inventory;
 
+    [SerializeField] private GameObject shopUI;
+
     public bool isBuilding = false;
     //private List<GameObject> _placedGameObject = new();
     private void Start()
@@ -58,10 +60,16 @@ public class PlaceMentSystem : MonoBehaviour
 
     public void StartPlacement(int ID)
     {
-        if (_rotation._isRotating || _inventory.inventory[ID + 1].amount <= 0)
+        if (_rotation._isRotating || _inventory.inventory[ID].price > _inventory.coins)
         {
             return;
         }
+        //Debug.Log(_inventory.inventory[ID].price);
+        shopUI.SetActive(false);
+        //if (_inventory.inventory[ID].price > _inventory.coins)
+        //{
+        //    return;
+        //}
         StopPlacement();
         _selectedObjectIndex = _database._objectsData.FindIndex(data => data.ID == ID);
         if (_selectedObjectIndex < 0)
@@ -87,7 +95,7 @@ public class PlaceMentSystem : MonoBehaviour
         }
 
         Vector3 euler = _previewObject.transform.rotation.eulerAngles;
-        _previewObject.transform.rotation = Quaternion.Euler(euler.x, _rotation._currentAngle, euler.z);
+        if (_selectedObjectIndex != 6   && _selectedObjectIndex != 7) _previewObject.transform.rotation = Quaternion.Euler(euler.x, _rotation._currentAngle, euler.z);
 
         _previewRenderer = _previewObject.GetComponentInChildren<Renderer>();
         _previewRenderer.sortingOrder = 1;
@@ -115,24 +123,31 @@ public class PlaceMentSystem : MonoBehaviour
         bool _placementValidity = CheckPlacementValidity(_gridPosition, _selectedObjectIndex);
         if (_placementValidity == false) return;
 
+
+        Debug.Log(_selectedObjectIndex);
         ObjectData _data = _database._objectsData[_selectedObjectIndex];
         int _inventoryIndex = _selectedObjectIndex + 1;
-        if (_inventory.inventory[_inventoryIndex + 1].amount <= 0)
-        {
-            return;
-        }
+        //if (_inventory.inventory[_inventoryIndex].amount <= 0)
+        //{
+        //    return;
+        //}
 
-        _inventory.subtractInventoryFor(_inventoryIndex, 1);
+        //_inventory.subtractInventoryFor(_inventoryIndex, 1);
 
         Vector3 _objectLocation = _grid.CellToWorld(_gridPosition) + _data.Location;
 
-        int _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID); //
+        int _objekID = 0; //
+        if(_inventoryIndex == 7 || _inventoryIndex == 8) _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, 0f, _data.Location, _data.ID);
+        else _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID);
 
         GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
         _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);
 
-        if (_inventory.inventory[_inventoryIndex + 1].amount == 0)
+        Debug.Log(_selectedObjectIndex);
+        //Debug.Log(_inventory.inventory[_inventoryIndex + 1].name);
+        if (_inventoryIndex > 5 && _inventoryIndex < 9)
         {
+            _inventory.coins -= _inventory.inventory[_inventoryIndex].price;
             StopPlacement();
         }
     }
@@ -200,7 +215,8 @@ public class PlaceMentSystem : MonoBehaviour
         Vector3Int _gridPosition = _grid.WorldToCell(_mousePosition);
 
         bool _placementValidity = CheckPlacementValidity(_gridPosition, _selectedObjectIndex);
-        _previewRenderer.material.color = _placementValidity ? Color.white : Color.red;
+        _previewRenderer.material.color = _placementValidity ? new Color(1f, 1f, 1f, 200f / 255f) : Color.red;
+
         //if (_placementValidity == false) return;
 
         _mouseIndicator.transform.position = _mousePosition;

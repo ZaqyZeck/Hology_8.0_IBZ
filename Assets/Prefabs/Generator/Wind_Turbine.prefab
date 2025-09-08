@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 8559644961685614859}
   m_Layer: 0
   m_Name: Wind_Turbine
-  m_TagString: Object2D
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -402,14 +402,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7943962074975089485}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.9238796, z: -0, w: -0.38268325}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 865165297341768699}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 225, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3466523413596653368
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -488,6 +488,7 @@ MonoBehaviour:
   upgradesPrice: 20030000dc050000
   upgradePower: 0f0000001600000023000000
   machineLevel: 0
+  haveLoaded: 0
 --- !u!65 &8559644961685614859
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -1,14 +1,15 @@
 using UnityEngine;
 
-public class FarmUpgradeData : MonoBehaviour
+[System.Serializable]
+public class FarmUpgradeData : Data
 {
     public int[] farmLevel = new int[4];
 
     public FarmUpgradeData(int[] farmLevel)
     {
-        foreach (int i in farmLevel)
+        for(int i = 0; i < farmLevel.Length; i++)
         {
-            farmLevel[i] = i;
+            this.farmLevel[i] = farmLevel[i];
         }
     }
 }

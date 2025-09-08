@@ -8,8 +8,11 @@ public static class MainSaveSystem
 {
     public static void SaveInventoryData(List<InventoryObject> inventory)
     {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/inventory.dt";
+        string path = Application.persistentDataPath + $"/inventory{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         InventoryData inventoryData = new InventoryData(inventory);
@@ -20,7 +23,10 @@ public static class MainSaveSystem
 
     public static InventoryData LoadInventory()
     {
-        string path = Application.persistentDataPath + "/inventory.dt";
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/inventory{fileNumber}.dt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -40,8 +46,11 @@ public static class MainSaveSystem
 
     public static void SavePlantsData(List<PlantScript> plants)
     {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/plants.dt";
+        string path = Application.persistentDataPath + $"/plants{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         PlantsData inventoryData = new PlantsData(plants);
@@ -52,7 +61,10 @@ public static class MainSaveSystem
 
     public static PlantsData LoadPlants()
     {
-        string path = Application.persistentDataPath + "/plants.dt";
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/plants{fileNumber}.dt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -72,8 +84,11 @@ public static class MainSaveSystem
 
     public static void SaveGeneratorsData(GeneratorScript[] generator)
     {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/generators.dt";
+        string path = Application.persistentDataPath + $"/generators{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         GeneratorData generatorData = new GeneratorData(generator);
@@ -84,7 +99,10 @@ public static class MainSaveSystem
 
     public static GeneratorData LoadGenerators()
     {
-        string path = Application.persistentDataPath + "/generators.dt";
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/generators{fileNumber}.dt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -104,8 +122,11 @@ public static class MainSaveSystem
 
     public static void SaveMachinesData(MachineScript[] machines)
     {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/machines.dt";
+        string path = Application.persistentDataPath + $"/machines{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         MachineData machineData = new MachineData(machines);
@@ -116,7 +137,10 @@ public static class MainSaveSystem
 
     public static MachineData LoadMachines()
     {
-        string path = Application.persistentDataPath + "/machines.dt";
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/machines{fileNumber}.dt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -136,8 +160,11 @@ public static class MainSaveSystem
 
     public static void SaveWaterTankData(int waterTankLevel)
     {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/WaterTank.dt";
+        string path = Application.persistentDataPath + $"/WaterTank{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         WaterTankData waterTankData = new WaterTankData(waterTankLevel);
@@ -148,7 +175,10 @@ public static class MainSaveSystem
 
     public static WaterTankData LoadWaterTank()
     {
-        string path = Application.persistentDataPath + "/WaterTank.dt";
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/WaterTank{fileNumber}.dt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();
@@ -168,8 +198,11 @@ public static class MainSaveSystem
 
     public static void SaveFarmUpgradeData(int[] farmLevels)
     {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
         BinaryFormatter formatter = new BinaryFormatter();
-        string path = Application.persistentDataPath + "/FarmUpgrade.dt";
+        string path = Application.persistentDataPath + $"/FarmUpgrade{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
         FarmUpgradeData farmUpgradeData = new FarmUpgradeData(farmLevels);
@@ -180,7 +213,10 @@ public static class MainSaveSystem
 
     public static FarmUpgradeData LoadFarmUpgrade()
     {
-        string path = Application.persistentDataPath + "/FarmUpgrade.dt";
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/FarmUpgrade{fileNumber}.dt";
         if (File.Exists(path))
         {
             BinaryFormatter formatter = new BinaryFormatter();

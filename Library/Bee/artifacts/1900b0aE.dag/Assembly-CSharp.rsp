@@ -473,6 +473,7 @@
 "Assets/Script/Save System/WaterTankData.cs"
 "Assets/Script/UI Script/BaseBuildingScript.cs"
 "Assets/Script/UI Script/ItemUI.cs"
+"Assets/Script/UI Script/MainMenuScript.cs"
 "Assets/Script/UI Script/ShopUI.cs"
 "Assets/Script/UI Script/UiController.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"

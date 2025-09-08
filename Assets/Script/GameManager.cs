@@ -35,6 +35,9 @@ public class GameManager : MonoBehaviour
         plantSystem.SaveWaterTank();
 
         plantSystem.SavePlantsData();
+
+        plantSystem.SaveFarmUpgradeData();
+
         inventory.SaveInventory();
         powerStorage.SaveAllGenerators();
         powerStorage.SaveMachines();
@@ -45,6 +48,9 @@ public class GameManager : MonoBehaviour
         plantSystem.LoadWaterTank();
 
         plantSystem.LoadPlantsData();
+
+        plantSystem.LoadFarmUpgradeData();
+
         inventory.LoadInventoryData();
         powerStorage.LoadGenerators();
         powerStorage.LoadMachines();
