@@ -3,6 +3,7 @@
 		<type fullname="CameraControl" preserve="nothing"/>
 		<type fullname="DestroyMachineButton" preserve="nothing"/>
 		<type fullname="DestroyPlant" preserve="nothing"/>
+		<type fullname="FarmUpgrade" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
 		<type fullname="GeneratorRotation" preserve="nothing"/>
 		<type fullname="GeneratorScript" preserve="nothing"/>
@@ -10,9 +11,11 @@
 		<type fullname="HarvestPlant" preserve="nothing"/>
 		<type fullname="InputManager" preserve="nothing"/>
 		<type fullname="InventorySystem" preserve="nothing"/>
+		<type fullname="ItemUI" preserve="nothing"/>
 		<type fullname="LandLot" preserve="nothing"/>
 		<type fullname="MachinePlacement" preserve="nothing"/>
 		<type fullname="MachineScript" preserve="nothing"/>
+		<type fullname="MainMenuScript" preserve="nothing"/>
 		<type fullname="ObjectDatabaseSO" preserve="nothing"/>
 		<type fullname="ObjectList" preserve="nothing"/>
 		<type fullname="PlaceMachine" preserve="nothing"/>
@@ -22,6 +25,7 @@
 		<type fullname="PlantSystem" preserve="nothing"/>
 		<type fullname="PowerStorage" preserve="nothing"/>
 		<type fullname="QuestSystem" preserve="nothing"/>
+		<type fullname="Readme" preserve="nothing"/>
 		<type fullname="RegulerItemScript" preserve="nothing"/>
 		<type fullname="RotationControl" preserve="nothing"/>
 		<type fullname="ShopSystem" preserve="nothing"/>
@@ -107,7 +111,9 @@
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TextMeshPro" preserve="nothing"/>
+		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
+		<type fullname="TMPro.TMP_InputField" preserve="nothing"/>
 		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
 		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
@@ -126,10 +132,12 @@
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
+		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
+		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Component" preserve="nothing"/>
 		<type fullname="UnityEngine.ComputeShader" preserve="nothing"/>
 		<type fullname="UnityEngine.Cubemap" preserve="nothing"/>
@@ -171,6 +179,7 @@
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
+		<type fullname="UnityEngine.UI.RectMask2D" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>

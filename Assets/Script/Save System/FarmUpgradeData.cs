@@ -7,6 +7,7 @@ public class FarmUpgradeData : Data
 
     public FarmUpgradeData(int[] farmLevel)
     {
+        if (farmLevel == null) return;
         for(int i = 0; i < farmLevel.Length; i++)
         {
             this.farmLevel[i] = farmLevel[i];

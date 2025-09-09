@@ -4,12 +4,15 @@ using UnityEngine;
 [System.Serializable]
 public class InventoryData : Data
 {
+    public long coins;
     public int[] InventoryID = new int[100];
     public int[] InventoryAmount = new int[100];
 
 
-    public InventoryData(List<InventoryObject> inventory)
+    public InventoryData(List<InventoryObject> inventory, long coin)
     {
+        if (inventory == null) return;
+        coins = coin;
         int i = 0;
         foreach (InventoryObject data in inventory)
         {
@@ -27,5 +30,10 @@ public class InventoryData : Data
             }
                 
         }
+    }
+
+    public InventoryData()
+    {
+
     }
 }

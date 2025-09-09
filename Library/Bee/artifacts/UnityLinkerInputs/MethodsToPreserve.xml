@@ -1,8 +1,15 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="FarmUpgrade">
+			<method name="UpgradeFarm"/>
+			<method name="UpgradeFarm"/>
+			<method name="UpgradeFarm"/>
+			<method name="UpgradeFarm"/>
+		</type>
 		<type fullname="GameManager">
 			<method name="loadAllData"/>
 			<method name="saveAllData"/>
+			<method name="skipDays"/>
 			<method name="skipDays"/>
 			<method name="skipDays"/>
 		</type>
@@ -10,7 +17,21 @@
 			<method name="LoadInventoryData"/>
 			<method name="SaveInventory"/>
 		</type>
+		<type fullname="ItemUI">
+			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
+		</type>
+		<type fullname="MainMenuScript">
+			<method name="PlayScene"/>
+			<method name="PlayScene"/>
+			<method name="PlayScene"/>
+		</type>
 		<type fullname="PlaceMentSystem">
+			<method name="StartPlacement"/>
+			<method name="StartPlacement"/>
+			<method name="StartPlacement"/>
 			<method name="StartPlacement"/>
 			<method name="StartPlacement"/>
 		</type>
@@ -20,7 +41,10 @@
 		</type>
 		<type fullname="RegulerItemScript">
 			<method name="buyItem"/>
+			<method name="buyItem"/>
 			<method name="decreaseAmount"/>
+			<method name="decreaseAmount"/>
+			<method name="increaseAmount"/>
 			<method name="increaseAmount"/>
 		</type>
 		<type fullname="ShopUI">
@@ -30,6 +54,7 @@
 			<method name="goToCategory"/>
 		</type>
 		<type fullname="UiController">
+			<method name="countCoin"/>
 			<method name="countCoin"/>
 		</type>
 	</assembly>
@@ -61,6 +86,8 @@
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>

@@ -14,6 +14,7 @@ public class MachineData : Data
     public int[] extraWater = new int[4];
     public MachineData(MachineScript[] machineScripts)
     {
+        if (machineScripts == null) return;
         foreach (MachineScript script in machineScripts)
         {
             int index = script.signId;

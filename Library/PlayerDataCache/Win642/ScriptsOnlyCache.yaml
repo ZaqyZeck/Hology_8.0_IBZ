@@ -1,9 +1,12 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - CameraControl
     - DestroyMachineButton
     - DestroyPlant
+    - FarmUpgrade
     - GameManager
     - GeneratorRotation
     - GeneratorScript
@@ -11,9 +14,11 @@ ScriptsOnlyBuild:
     - HarvestPlant
     - InputManager
     - InventorySystem
+    - ItemUI
     - LandLot
     - MachinePlacement
     - MachineScript
+    - MainMenuScript
     - ObjectDatabaseSO
     - ObjectList
     - PlaceMachine
@@ -23,6 +28,7 @@ ScriptsOnlyBuild:
     - PlantSystem
     - PowerStorage
     - QuestSystem
+    - Readme
     - RegulerItemScript
     - RotationControl
     - ShopSystem
@@ -116,7 +122,12 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_InputField
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
+    - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -150,7 +161,10 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
+    - UnityEngine.UI.LayoutElement
+    - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.Text
+    - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Assembly-CSharp:
     - InventoryObject
@@ -234,6 +248,11 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Character
     - TMPro.TMP_FontFeatureTable
     - TMPro.TMP_FontWeightPair
+    - TMPro.TMP_InputField/OnChangeEvent
+    - TMPro.TMP_InputField/SelectionEvent
+    - TMPro.TMP_InputField/SubmitEvent
+    - TMPro.TMP_InputField/TextSelectionEvent
+    - TMPro.TMP_InputField/TouchScreenKeyboardEvent
     - TMPro.TMP_Sprite
     - TMPro.TMP_SpriteCharacter
     - TMPro.TMP_SpriteGlyph
@@ -269,71 +288,14 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: PlaceMentSystem
-    methodName: StartPlacement
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+    fullTypeName: MainMenuScript
+    methodName: PlayScene
   - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: loadAllData
+    fullTypeName: MainMenuScript
+    methodName: PlayScene
   - assembly: Assembly-CSharp
-    fullTypeName: PowerStorage
-    methodName: SaveMachines
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: ShopUI
-    methodName: goToCategory
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: ShopUI
-    methodName: goToCategory
-  - assembly: Assembly-CSharp
-    fullTypeName: RegulerItemScript
-    methodName: increaseAmount
-  - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: skipDays
-  - assembly: Assembly-CSharp
-    fullTypeName: RegulerItemScript
-    methodName: decreaseAmount
-  - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: skipDays
-  - assembly: Assembly-CSharp
-    fullTypeName: PowerStorage
-    methodName: LoadMachines
-  - assembly: Assembly-CSharp
-    fullTypeName: GameManager
-    methodName: saveAllData
-  - assembly: Assembly-CSharp
-    fullTypeName: ShopUI
-    methodName: goToCategory
-  - assembly: Assembly-CSharp
-    fullTypeName: RegulerItemScript
-    methodName: buyItem
-  - assembly: Assembly-CSharp
-    fullTypeName: PlaceMentSystem
-    methodName: StartPlacement
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySystem
-    methodName: SaveInventory
-  - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
-  - assembly: Assembly-CSharp
-    fullTypeName: UiController
-    methodName: countCoin
-  - assembly: Assembly-CSharp
-    fullTypeName: InventorySystem
-    methodName: LoadInventoryData
-  - assembly: Assembly-CSharp
-    fullTypeName: ShopUI
-    methodName: goToCategory
+    fullTypeName: MainMenuScript
+    methodName: PlayScene
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerButton
     methodName: OnAction
@@ -376,8 +338,287 @@ ScriptsOnlyBuild:
   - assembly: Unity.RenderPipelines.Core.Runtime
     fullTypeName: UnityEngine.Rendering.UI.DebugUIHandlerPanel
     methodName: ResetDebugManager
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: decreaseAmount
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: increaseAmount
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: buyItem
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: loadAllData
+  - assembly: Assembly-CSharp
+    fullTypeName: PowerStorage
+    methodName: SaveMachines
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: Assembly-CSharp
+    fullTypeName: FarmUpgrade
+    methodName: UpgradeFarm
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemUI
+    methodName: CreateItemUI
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: skipDays
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemUI
+    methodName: CreateItemUI
+  - assembly: Assembly-CSharp
+    fullTypeName: FarmUpgrade
+    methodName: UpgradeFarm
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: skipDays
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: skipDays
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: Assembly-CSharp
+    fullTypeName: PowerStorage
+    methodName: LoadMachines
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: UiController
+    methodName: countCoin
+  - assembly: Assembly-CSharp
+    fullTypeName: GameManager
+    methodName: saveAllData
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: Assembly-CSharp
+    fullTypeName: ShopUI
+    methodName: goToCategory
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemUI
+    methodName: CreateItemUI
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: Assembly-CSharp
+    fullTypeName: FarmUpgrade
+    methodName: UpgradeFarm
+  - assembly: Assembly-CSharp
+    fullTypeName: PlaceMentSystem
+    methodName: StartPlacement
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySystem
+    methodName: SaveInventory
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: Assembly-CSharp
+    fullTypeName: UiController
+    methodName: countCoin
+  - assembly: Assembly-CSharp
+    fullTypeName: ItemUI
+    methodName: CreateItemUI
+  - assembly: Assembly-CSharp
+    fullTypeName: InventorySystem
+    methodName: LoadInventoryData
+  - assembly: Assembly-CSharp
+    fullTypeName: FarmUpgrade
+    methodName: UpgradeFarm
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: buyItem
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: increaseAmount
+  - assembly: Assembly-CSharp
+    fullTypeName: RegulerItemScript
+    methodName: decreaseAmount
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/Main Scene/MainMenu.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 14420}
+    - Class: 114
+      Script: {instanceID: 14594}
+    - Class: 114
+      Script: {instanceID: 14840}
+    - Class: 114
+      Script: {instanceID: 14884}
+    - Class: 114
+      Script: {instanceID: 15074}
+    - Class: 114
+      Script: {instanceID: 15222}
+    - Class: 114
+      Script: {instanceID: 15346}
+    - Class: 114
+      Script: {instanceID: 15476}
+    - Class: 114
+      Script: {instanceID: 15544}
+    - Class: 114
+      Script: {instanceID: 15684}
+    - Class: 114
+      Script: {instanceID: 15942}
+    - Class: 114
+      Script: {instanceID: 16142}
+    - Class: 114
+      Script: {instanceID: 16492}
+    - Class: 114
+      Script: {instanceID: 16550}
+    - Class: 114
+      Script: {instanceID: 16710}
+    - Class: 114
+      Script: {instanceID: 16938}
+    - Class: 114
+      Script: {instanceID: 17024}
+    - Class: 114
+      Script: {instanceID: 17062}
+    - Class: 114
+      Script: {instanceID: 17120}
+    - Class: 114
+      Script: {instanceID: 17154}
+    - Class: 114
+      Script: {instanceID: 17186}
+    - Class: 114
+      Script: {instanceID: 18050}
+    - Class: 114
+      Script: {instanceID: 18350}
+    - Class: 114
+      Script: {instanceID: 18356}
+    - Class: 114
+      Script: {instanceID: 18430}
+    - Class: 114
+      Script: {instanceID: 19064}
+    - Class: 114
+      Script: {instanceID: 19104}
+    - Class: 114
+      Script: {instanceID: 19134}
+    - Class: 114
+      Script: {instanceID: 19464}
+    - Class: 114
+      Script: {instanceID: 19524}
+    - Class: 114
+      Script: {instanceID: 19602}
+    - Class: 114
+      Script: {instanceID: 19682}
+    - Class: 114
+      Script: {instanceID: 19790}
+    - Class: 114
+      Script: {instanceID: 20390}
+    - Class: 114
+      Script: {instanceID: 20580}
+    - Class: 114
+      Script: {instanceID: 20680}
+    - Class: 114
+      Script: {instanceID: 20682}
+    - Class: 114
+      Script: {instanceID: 20926}
+    - Class: 114
+      Script: {instanceID: 21668}
+    - Class: 114
+      Script: {instanceID: 21702}
+    - Class: 114
+      Script: {instanceID: 22232}
+    - Class: 114
+      Script: {instanceID: 22258}
+    - Class: 114
+      Script: {instanceID: 23250}
+    - Class: 114
+      Script: {instanceID: 23670}
+    - Class: 114
+      Script: {instanceID: 23722}
+    - Class: 114
+      Script: {instanceID: 24014}
+    - Class: 114
+      Script: {instanceID: 24086}
+    - Class: 114
+      Script: {instanceID: 24176}
+    - Class: 114
+      Script: {instanceID: 24610}
+    - Class: 114
+      Script: {instanceID: 24718}
+    - Class: 114
+      Script: {instanceID: 24720}
+    - Class: 114
+      Script: {instanceID: 24830}
+    - Class: 114
+      Script: {instanceID: 24962}
+    - Class: 114
+      Script: {instanceID: 25048}
+    - Class: 114
+      Script: {instanceID: 25078}
+    - Class: 114
+      Script: {instanceID: 25232}
+    - Class: 114
+      Script: {instanceID: 25480}
+    - Class: 114
+      Script: {instanceID: 25562}
+    - Class: 114
+      Script: {instanceID: 25782}
+    - Class: 114
+      Script: {instanceID: 25958}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Main Scene/MainScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -396,7 +637,7 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
-    - Class: 49
+    - Class: 61
       Script: {instanceID: 0}
     - Class: 64
       Script: {instanceID: 0}
@@ -411,195 +652,111 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 14300}
+      Script: {instanceID: 14310}
     - Class: 114
-      Script: {instanceID: 14584}
+      Script: {instanceID: 14884}
     - Class: 114
-      Script: {instanceID: 14830}
+      Script: {instanceID: 15060}
     - Class: 114
-      Script: {instanceID: 14874}
+      Script: {instanceID: 15288}
     - Class: 114
-      Script: {instanceID: 15050}
+      Script: {instanceID: 15452}
     - Class: 114
-      Script: {instanceID: 15064}
+      Script: {instanceID: 15564}
     - Class: 114
-      Script: {instanceID: 15212}
+      Script: {instanceID: 15640}
     - Class: 114
-      Script: {instanceID: 15278}
+      Script: {instanceID: 15684}
     - Class: 114
-      Script: {instanceID: 15336}
+      Script: {instanceID: 15942}
     - Class: 114
-      Script: {instanceID: 15442}
+      Script: {instanceID: 16142}
     - Class: 114
-      Script: {instanceID: 15534}
+      Script: {instanceID: 16176}
     - Class: 114
-      Script: {instanceID: 15554}
+      Script: {instanceID: 16550}
     - Class: 114
-      Script: {instanceID: 15630}
+      Script: {instanceID: 16614}
     - Class: 114
-      Script: {instanceID: 15674}
+      Script: {instanceID: 16744}
     - Class: 114
-      Script: {instanceID: 15932}
+      Script: {instanceID: 17102}
     - Class: 114
-      Script: {instanceID: 16132}
+      Script: {instanceID: 17248}
     - Class: 114
-      Script: {instanceID: 16166}
+      Script: {instanceID: 17500}
     - Class: 114
-      Script: {instanceID: 16482}
+      Script: {instanceID: 18264}
     - Class: 114
-      Script: {instanceID: 16540}
+      Script: {instanceID: 18350}
     - Class: 114
-      Script: {instanceID: 16604}
+      Script: {instanceID: 18622}
     - Class: 114
-      Script: {instanceID: 16700}
+      Script: {instanceID: 18774}
     - Class: 114
-      Script: {instanceID: 16734}
+      Script: {instanceID: 19002}
     - Class: 114
-      Script: {instanceID: 16928}
+      Script: {instanceID: 19006}
     - Class: 114
-      Script: {instanceID: 17014}
+      Script: {instanceID: 19098}
     - Class: 114
-      Script: {instanceID: 17052}
+      Script: {instanceID: 19260}
     - Class: 114
-      Script: {instanceID: 17108}
+      Script: {instanceID: 19374}
     - Class: 114
-      Script: {instanceID: 17142}
+      Script: {instanceID: 19494}
     - Class: 114
-      Script: {instanceID: 17174}
+      Script: {instanceID: 19854}
     - Class: 114
-      Script: {instanceID: 17236}
+      Script: {instanceID: 19994}
     - Class: 114
-      Script: {instanceID: 17488}
+      Script: {instanceID: 20386}
     - Class: 114
-      Script: {instanceID: 18038}
+      Script: {instanceID: 20410}
     - Class: 114
-      Script: {instanceID: 18252}
+      Script: {instanceID: 20742}
     - Class: 114
-      Script: {instanceID: 18338}
+      Script: {instanceID: 20926}
     - Class: 114
-      Script: {instanceID: 18344}
+      Script: {instanceID: 21222}
     - Class: 114
-      Script: {instanceID: 18608}
+      Script: {instanceID: 21704}
     - Class: 114
-      Script: {instanceID: 18760}
+      Script: {instanceID: 22108}
     - Class: 114
-      Script: {instanceID: 18988}
+      Script: {instanceID: 22130}
     - Class: 114
-      Script: {instanceID: 18992}
+      Script: {instanceID: 22232}
     - Class: 114
-      Script: {instanceID: 19050}
+      Script: {instanceID: 22294}
     - Class: 114
-      Script: {instanceID: 19084}
+      Script: {instanceID: 22362}
     - Class: 114
-      Script: {instanceID: 19090}
+      Script: {instanceID: 22524}
     - Class: 114
-      Script: {instanceID: 19120}
+      Script: {instanceID: 22568}
     - Class: 114
-      Script: {instanceID: 19246}
+      Script: {instanceID: 22674}
     - Class: 114
-      Script: {instanceID: 19360}
+      Script: {instanceID: 23256}
     - Class: 114
-      Script: {instanceID: 19450}
+      Script: {instanceID: 24086}
     - Class: 114
-      Script: {instanceID: 19480}
+      Script: {instanceID: 24186}
     - Class: 114
-      Script: {instanceID: 19510}
+      Script: {instanceID: 24310}
     - Class: 114
-      Script: {instanceID: 19588}
+      Script: {instanceID: 24720}
     - Class: 114
-      Script: {instanceID: 19668}
+      Script: {instanceID: 24830}
     - Class: 114
-      Script: {instanceID: 19776}
+      Script: {instanceID: 24886}
     - Class: 114
-      Script: {instanceID: 19840}
+      Script: {instanceID: 25562}
     - Class: 114
-      Script: {instanceID: 19980}
+      Script: {instanceID: 25808}
     - Class: 114
-      Script: {instanceID: 20372}
-    - Class: 114
-      Script: {instanceID: 20376}
-    - Class: 114
-      Script: {instanceID: 20396}
-    - Class: 114
-      Script: {instanceID: 20566}
-    - Class: 114
-      Script: {instanceID: 20666}
-    - Class: 114
-      Script: {instanceID: 20668}
-    - Class: 114
-      Script: {instanceID: 20728}
-    - Class: 114
-      Script: {instanceID: 20912}
-    - Class: 114
-      Script: {instanceID: 21208}
-    - Class: 114
-      Script: {instanceID: 21654}
-    - Class: 114
-      Script: {instanceID: 21690}
-    - Class: 114
-      Script: {instanceID: 22094}
-    - Class: 114
-      Script: {instanceID: 22116}
-    - Class: 114
-      Script: {instanceID: 22218}
-    - Class: 114
-      Script: {instanceID: 22244}
-    - Class: 114
-      Script: {instanceID: 22280}
-    - Class: 114
-      Script: {instanceID: 22348}
-    - Class: 114
-      Script: {instanceID: 22510}
-    - Class: 114
-      Script: {instanceID: 22658}
-    - Class: 114
-      Script: {instanceID: 23234}
-    - Class: 114
-      Script: {instanceID: 23240}
-    - Class: 114
-      Script: {instanceID: 23654}
-    - Class: 114
-      Script: {instanceID: 23706}
-    - Class: 114
-      Script: {instanceID: 23998}
-    - Class: 114
-      Script: {instanceID: 24070}
-    - Class: 114
-      Script: {instanceID: 24160}
-    - Class: 114
-      Script: {instanceID: 24170}
-    - Class: 114
-      Script: {instanceID: 24592}
-    - Class: 114
-      Script: {instanceID: 24700}
-    - Class: 114
-      Script: {instanceID: 24702}
-    - Class: 114
-      Script: {instanceID: 24812}
-    - Class: 114
-      Script: {instanceID: 24868}
-    - Class: 114
-      Script: {instanceID: 24944}
-    - Class: 114
-      Script: {instanceID: 25030}
-    - Class: 114
-      Script: {instanceID: 25060}
-    - Class: 114
-      Script: {instanceID: 25214}
-    - Class: 114
-      Script: {instanceID: 25462}
-    - Class: 114
-      Script: {instanceID: 25544}
-    - Class: 114
-      Script: {instanceID: 25764}
-    - Class: 114
-      Script: {instanceID: 25790}
-    - Class: 114
-      Script: {instanceID: 25836}
-    - Class: 114
-      Script: {instanceID: 25938}
-    - Class: 114
-      Script: {instanceID: 67750}
+      Script: {instanceID: 25854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1117,6 +1274,12 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerVector3
   - hash:
       serializedVersion: 2
+      Hash: 9add8ef3e150bab8093325055348e8d0
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: FarmUpgrade
+  - hash:
+      serializedVersion: 2
       Hash: b72839eb6e4350778dc879d98832aa2b
     assemblyName: Unity.RenderPipelines.Core.Runtime
     namespaceName: UnityEngine.Rendering.UI
@@ -1309,7 +1472,7 @@ ScriptsOnlyBuild:
     className: GridLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 9134679212682ece460b06022c8b1739
+      Hash: 83ed7ca58d754362e97239588c7122be
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlantSystem
@@ -1351,6 +1514,12 @@ ScriptsOnlyBuild:
     className: MultiplayerEventSystem
   - hash:
       serializedVersion: 2
+      Hash: 5634f7f51da65832c53069418c6ec1bc
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: MainMenuScript
+  - hash:
+      serializedVersion: 2
       Hash: 715f7928b39881049ce8c46350cb8681
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
@@ -1375,7 +1544,7 @@ ScriptsOnlyBuild:
     className: InputActionAssetEditor
   - hash:
       serializedVersion: 2
-      Hash: 4c3c962d60be8e42ffbd06c4577eb10b
+      Hash: 4d20e7d5aa8c95c8aa5965fb5bfcfbe0
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: CameraControl
@@ -1627,7 +1796,7 @@ ScriptsOnlyBuild:
     className: ForwardRendererData
   - hash:
       serializedVersion: 2
-      Hash: 8786487f69bf64be3207f68b098500b1
+      Hash: ecdc35601f860b8036c3a142f0e23990
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: ShopSystem
@@ -1675,7 +1844,7 @@ ScriptsOnlyBuild:
     className: DebugUIHandlerPanel
   - hash:
       serializedVersion: 2
-      Hash: 80d68ddf837d05ef3f11d4f842ccee57
+      Hash: bd0a70484235912b976311de8d7cf18e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: RegulerItemScript
@@ -1861,7 +2030,7 @@ ScriptsOnlyBuild:
     className: VolumeProfile
   - hash:
       serializedVersion: 2
-      Hash: fa4c3438b4907ec3997e15ed8ab30c09
+      Hash: 0420a93526094bfc3b3e46aaee9a39e4
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlantScript
@@ -1945,7 +2114,13 @@ ScriptsOnlyBuild:
     className: InputActionsEditorWindow
   - hash:
       serializedVersion: 2
-      Hash: 87ba6163a37d6faf58309bdb2fc39575
+      Hash: 745678f114262e5aea2b3802a15fe11d
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: ItemUI
+  - hash:
+      serializedVersion: 2
+      Hash: 43acd774958b5d9b2a64079ef0c4b498
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: LandLot
@@ -2005,7 +2180,7 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
-      Hash: 782610496d5d2d02e211344f72805e51
+      Hash: 815abca862d20016bbbe507f62c2a2ac
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlaceMentSystem
@@ -2165,6 +2340,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: CoroutineRunner
+  - hash:
+      serializedVersion: 2
+      Hash: e294147da8a6ab1b008212306d31bf52
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UpgradeGeneratorButton
   - hash:
       serializedVersion: 2
       Hash: 51603d25dc8c39903df98901361f0b73
@@ -2483,13 +2664,8 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass
     namespaceName: AirFishLab.ScrollingList
     className: ListBank
-  - hash:
-      serializedVersion: 2
-      Hash: e294147da8a6ab1b008212306d31bf52
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UpgradeGeneratorButton
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/Main Scene/MainMenu.unity
+  - Assets/Scenes/Main Scene/MainScene.unity
   playerPath: C:/Users/Zaqy Ulunnuha/My Games/Game Build/Hology_8.0_IBZ.exe

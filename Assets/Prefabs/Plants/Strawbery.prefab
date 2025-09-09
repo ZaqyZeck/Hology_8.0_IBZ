@@ -500,12 +500,14 @@ MonoBehaviour:
   _currentPhase: 0
   extraWater: 0
   _yieldsId: 12
-  _yieldsAmount: 5
+  _yieldsAmount: 15
   _maxAge: 36
   harvestable: 0
   waterNeeded: 100
   tallPhase: 5
   middlePhase: 3
+  plantLevel: 0
+  plantFarmType: 
   _buttonObject: {fileID: 6535573061296581895}
   _lot: {fileID: 0}
   phaseSprite:

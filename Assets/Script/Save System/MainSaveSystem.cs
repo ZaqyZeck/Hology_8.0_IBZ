@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 public static class MainSaveSystem
 {
-    public static void SaveInventoryData(List<InventoryObject> inventory)
+    public static void SaveInventoryData(List<InventoryObject> inventory, long coin)
     {
         int fileNumber = 0;
         if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
@@ -15,7 +15,7 @@ public static class MainSaveSystem
         string path = Application.persistentDataPath + $"/inventory{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        InventoryData inventoryData = new InventoryData(inventory);
+        InventoryData inventoryData = new InventoryData(inventory, coin);
 
         formatter.Serialize(stream, inventoryData);
         stream.Close();
@@ -226,6 +226,44 @@ public static class MainSaveSystem
 
             stream.Close();
             return FarmUpgradeData;
+        }
+        else
+        {
+            Debug.LogError("not found in " + path);
+            return null;
+        }
+    }
+
+    public static void SaveGameData(int day)
+    {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + $"/game{fileNumber}.dt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        GameData gameData = new GameData(day);
+
+        formatter.Serialize(stream, gameData);
+        stream.Close();
+    }
+
+    public static GameData LoadGameData()
+    {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/game{fileNumber}.dt";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            GameData gameData = formatter.Deserialize(stream) as GameData;
+
+            stream.Close();
+            return gameData;
         }
         else
         {

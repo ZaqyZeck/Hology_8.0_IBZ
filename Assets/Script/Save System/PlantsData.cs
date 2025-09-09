@@ -24,6 +24,7 @@ public class PlantsData : Data
 
     public PlantsData(List<PlantScript> plants)
     {
+        if(plants == null) return;
         int i = 0;
         foreach (PlantScript plant in plants)
         {

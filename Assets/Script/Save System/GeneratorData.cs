@@ -14,6 +14,7 @@ public class GeneratorData : Data
 
     public GeneratorData(GeneratorScript[] generatorScripts)
     {
+        if (generatorScripts == null) return;
         int i = 0;
         foreach (GeneratorScript generator in generatorScripts)
         {

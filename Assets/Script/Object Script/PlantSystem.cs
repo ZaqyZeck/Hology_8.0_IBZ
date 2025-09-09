@@ -195,7 +195,6 @@ public class PlantSystem : MonoBehaviour
 
         for (int i = 0;i < 4; i++)
         {
-            Debug.Log(upgradeData.farmLevel[i] + ", " + i);
             farmUpgrades[i].farmLevel = upgradeData.farmLevel[i];
             farmUpgrades[i].LoadUpgradeLandLot();
         }

@@ -76,7 +76,7 @@ public class InventorySystem : MonoBehaviour
 
     public void SaveInventory()
     {
-        MainSaveSystem.SaveInventoryData(inventory);
+        MainSaveSystem.SaveInventoryData(inventory, coins);
     }
     public void LoadInventoryData()
     {
