@@ -511,11 +511,11 @@ MonoBehaviour:
   _buttonObject: {fileID: 6535573061296581895}
   _lot: {fileID: 0}
   phaseSprite:
-  - {fileID: 1343016452, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: -1301878412, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: 335211257, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: 1524185803, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: 1144647703, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: 1708902712, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
+  - {fileID: 1708902712, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
+  - {fileID: 1762002863, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
+  - {fileID: 1762002863, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
+  - {fileID: -870413633, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
 --- !u!65 &5441509234009999339
 BoxCollider:
   m_ObjectHideFlags: 0

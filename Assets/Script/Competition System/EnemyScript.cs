@@ -13,7 +13,7 @@ public class EnemyScript : MonoBehaviour
     public EnemyStats minStats = new EnemyStats();
     public EnemyStats maxStats = new EnemyStats();
 
-    public int enemyEncounter = 1;
+    public int enemyEncounter = 0;
 
     [SerializeField] private Text kubisCounter, tomatCounter, timunCounter, strawberiCounter;
     [SerializeField] private InventorySystem inventorySystem;
@@ -100,6 +100,24 @@ public class EnemyScript : MonoBehaviour
 
         inventorySystem.coins += sellAmount + 500;
     }
+
+    public void SaveEnemyData()
+    {
+        MainSaveSystem.SaveEnemyData(yieldsTotal_Array, enemyEncounter);
+    }
+
+    public void LoadEnemyData()
+    {
+        EnemyData enemyData = MainSaveSystem.LoadEnemyeData();
+        if (enemyData.yieldsTotal_Array == null)
+        {
+            Debug.Log("null bang enemy data");
+            return;
+        }
+
+        yieldsTotal_Array = enemyData.yieldsTotal_Array;
+        enemyEncounter = enemyData.enemyEncounter;
+    }
 }
 
 [System.Serializable]
@@ -110,3 +128,4 @@ public class EnemyStats
     public int[] timunStats = new int[61];
     public int[] strawberiStats = new int[61];
 }
+

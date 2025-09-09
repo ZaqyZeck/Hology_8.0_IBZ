@@ -90,6 +90,8 @@ public class GameManager : MonoBehaviour
         inventory.SaveInventory();
         powerStorage.SaveAllGenerators();
         powerStorage.SaveMachines();
+
+        enemyScript.SaveEnemyData();
     }
 
     public void loadAllData()
@@ -106,6 +108,8 @@ public class GameManager : MonoBehaviour
         powerStorage.LoadGenerators();
         powerStorage.LoadMachines();
 
+        enemyScript.LoadEnemyData();
+
         ui.countDate(day);
     }
 
@@ -118,6 +122,7 @@ public class GameManager : MonoBehaviour
         MainSaveSystem.SaveInventoryData(null, 0);
         MainSaveSystem.SaveMachinesData(null);
         MainSaveSystem.SavePlantsData(null);
+        MainSaveSystem.SaveEnemyData(null, 0);
     }
 
     public void GameOver()

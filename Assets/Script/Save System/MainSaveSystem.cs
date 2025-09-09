@@ -271,4 +271,42 @@ public static class MainSaveSystem
             return null;
         }
     }
+
+    public static void SaveEnemyData(int[] yields_array, int enemyEncounter)
+    {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        string path = Application.persistentDataPath + $"/enemy{fileNumber}.dt";
+        FileStream stream = new FileStream(path, FileMode.Create);
+
+        EnemyData enemyData = new EnemyData(yields_array, enemyEncounter);
+
+        formatter.Serialize(stream, enemyData);
+        stream.Close();
+    }
+
+    public static EnemyData LoadEnemyeData()
+    {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/enemy{fileNumber}.dt";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(path, FileMode.Open);
+
+            EnemyData enemyData = formatter.Deserialize(stream) as EnemyData;
+
+            stream.Close();
+            return enemyData;
+        }
+        else
+        {
+            Debug.LogError("not found in " + path);
+            return null;
+        }
+    }
 }

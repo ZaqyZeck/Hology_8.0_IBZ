@@ -6,15 +6,20 @@ public class UiController : MonoBehaviour
 {
     [SerializeField] private Text turnCounter;
     [SerializeField] private Text dayCounter;
-    [SerializeField] private Text coinCounter;
+    [SerializeField] private Text[] coinCounter;
     [SerializeField] private InventorySystem inventory;
 
     private DateTime startDate = new DateTime(2025, 1, 1);
     // Hari ke-0 = 1 Jan 2025 (bisa ubah tahunnya sesuai kebutuhan)
 
+    private void Update()
+    {
+        coinCounter[1].text = $"Money : {inventory.coins} G";
+    }
+
     public void countCoin()
     {
-        coinCounter.text = $"Money : {inventory.coins} G";
+        coinCounter[0].text = $"Money : {inventory.coins} G";
     }
     public void countTurn(int day)
     {

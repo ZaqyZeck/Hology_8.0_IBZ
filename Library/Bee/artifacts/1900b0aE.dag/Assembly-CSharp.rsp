@@ -464,6 +464,7 @@
 "Assets/Script/Quest & NPC Script/RegulerItemScript.cs"
 "Assets/Script/Quest & NPC Script/ShopSystem.cs"
 "Assets/Script/Save System/Data.cs"
+"Assets/Script/Save System/EnemyData.cs"
 "Assets/Script/Save System/FarmUpgradeData.cs"
 "Assets/Script/Save System/GameData.cs"
 "Assets/Script/Save System/GeneratorData.cs"

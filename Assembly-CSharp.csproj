@@ -85,6 +85,7 @@
     <Compile Include="Assets\Script\Button Script\DestroyPlant.cs" />
     <Compile Include="Assets\Script\Competition System\EnemyScript.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachineScript.cs" />
+    <Compile Include="Assets\Script\Save System\EnemyData.cs" />
     <Compile Include="Assets\Script\Object Script\LandLot.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\UltraVioletMachine.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectDatabaseSO.cs" />
