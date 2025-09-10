@@ -119,7 +119,7 @@ public class GameManager : MonoBehaviour
         MainSaveSystem.SaveGameData(0);
         MainSaveSystem.SaveWaterTankData(0);
         MainSaveSystem.SaveGeneratorsData(null);
-        MainSaveSystem.SaveInventoryData(null, 0);
+        MainSaveSystem.SaveInventoryData(null, 300);
         MainSaveSystem.SaveMachinesData(null);
         MainSaveSystem.SavePlantsData(null);
         MainSaveSystem.SaveEnemyData(null, 0);

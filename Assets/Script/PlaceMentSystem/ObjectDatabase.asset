@@ -16,7 +16,7 @@ MonoBehaviour:
   - <Name>k__BackingField: Plant Pot
     <ID>k__BackingField: 1
     <Size>k__BackingField: {x: 1, y: 1}
-    <Location>k__BackingField: {x: 0.5, y: 0.5, z: 0.5}
+    <Location>k__BackingField: {x: 0.5, y: 0, z: 0.5}
     <Prefab>k__BackingField: {fileID: 2152834547085221925, guid: 17b2578af92599a45bac0b03f79ae528, type: 3}
   - <Name>k__BackingField: Tomato
     <ID>k__BackingField: 2

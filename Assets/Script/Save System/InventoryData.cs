@@ -11,8 +11,9 @@ public class InventoryData : Data
 
     public InventoryData(List<InventoryObject> inventory, long coin)
     {
-        if (inventory == null) return;
         coins = coin;
+        if (inventory == null) return;
+        
         int i = 0;
         foreach (InventoryObject data in inventory)
         {

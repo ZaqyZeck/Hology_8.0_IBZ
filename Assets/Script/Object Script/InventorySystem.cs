@@ -86,6 +86,8 @@ public class InventorySystem : MonoBehaviour
             Debug.LogError("Tidak ada data");
             return;
         }
+        coins = inventoryData.coins;
+        Debug.Log(inventoryData.coins);
         foreach (InventoryObject inventory in inventory)
         {
             if (inventory.ID != inventoryData.InventoryID[inventory.ID])
@@ -95,6 +97,8 @@ public class InventorySystem : MonoBehaviour
             }
             inventory.amount = inventoryData.InventoryAmount[inventory.ID];
         }
+
+        
     }
 }
 

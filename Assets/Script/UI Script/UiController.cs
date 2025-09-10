@@ -7,6 +7,7 @@ public class UiController : MonoBehaviour
     [SerializeField] private Text turnCounter;
     [SerializeField] private Text dayCounter;
     [SerializeField] private Text[] coinCounter;
+    [SerializeField] private Text[] storageCounter;
     [SerializeField] private InventorySystem inventory;
 
     private DateTime startDate = new DateTime(2025, 1, 1);
@@ -15,11 +16,28 @@ public class UiController : MonoBehaviour
     private void Update()
     {
         coinCounter[1].text = $"Money : {inventory.coins} G";
+        coinCounter[0].text = $"Money : {inventory.coins} G";
     }
 
     public void countCoin()
     {
-        coinCounter[0].text = $"Money : {inventory.coins} G";
+        //coinCounter[0].text = $"Money : {inventory.coins} G";
+    }
+
+    public void countStorageAmount()
+    {
+        // seed counter
+        storageCounter[0].text = inventory.inventory[1].amount.ToString();
+        storageCounter[1].text = inventory.inventory[2].amount.ToString();
+        storageCounter[2].text = inventory.inventory[4].amount.ToString();
+        storageCounter[3].text = inventory.inventory[5].amount.ToString();
+        // yield counter
+
+        storageCounter[4].text = inventory.inventory[9].amount.ToString();
+        storageCounter[5].text = inventory.inventory[10].amount.ToString();
+        storageCounter[6].text = inventory.inventory[11].amount.ToString();
+        storageCounter[7].text = inventory.inventory[12].amount.ToString();
+
     }
     public void countTurn(int day)
     {
