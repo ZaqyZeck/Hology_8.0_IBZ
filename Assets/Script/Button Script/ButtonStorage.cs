@@ -25,8 +25,8 @@ public static class ButtonStorage
         selectedButton.SetActive(true);
     }
 
-    //public static void ChangeItemUI(GameObject itemUI)
-    //{
-
-    //}
+    public static GameObject getCurrentButton()
+    {
+        return selectedButton;
+    }
 }

@@ -474,6 +474,8 @@
 "Assets/Script/Save System/MainSaveSystem.cs"
 "Assets/Script/Save System/PlantsData.cs"
 "Assets/Script/Save System/WaterTankData.cs"
+"Assets/Script/Tutorial system/DirectionArrowMovement.cs"
+"Assets/Script/Tutorial system/TutorialSystem.cs"
 "Assets/Script/UI Script/BaseBuildingScript.cs"
 "Assets/Script/UI Script/ItemUI.cs"
 "Assets/Script/UI Script/MainMenuScript.cs"

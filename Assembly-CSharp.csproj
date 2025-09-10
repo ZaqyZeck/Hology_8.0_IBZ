@@ -61,6 +61,7 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\6000.0.49f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Script\Tutorial system\DirectionArrowMovement.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\ShopSystem.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlacementState.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\GridData.cs" />
@@ -116,6 +117,7 @@
     <Compile Include="Assets\Script\Save System\MachineData.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonScript.cs" />
     <Compile Include="Assets\Script\Object Script\Land.cs" />
+    <Compile Include="Assets\Script\Tutorial system\TutorialSystem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

@@ -9,14 +9,25 @@ public class UiController : MonoBehaviour
     [SerializeField] private Text[] coinCounter;
     [SerializeField] private Text[] storageCounter;
     [SerializeField] private InventorySystem inventory;
+    [SerializeField] private GameObject skipButton;
+    [SerializeField] private TutorialSystem tutorialSystem;
 
     private DateTime startDate = new DateTime(2025, 1, 1);
+
+
     // Hari ke-0 = 1 Jan 2025 (bisa ubah tahunnya sesuai kebutuhan)
 
     private void Update()
     {
         coinCounter[1].text = $"Money : {inventory.coins} G";
         coinCounter[0].text = $"Money : {inventory.coins} G";
+
+        //if (tutorialSystem.alur[4])
+        //{
+        //    skipButton.SetActive(true);
+        //}
+
+        //if(ButtonStorage.getCurrentButton() != null) Debug.Log(ButtonStorage.getCurrentButton().name);
     }
 
     public void countCoin()
