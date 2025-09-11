@@ -80,7 +80,25 @@ public class TutorialSystem : MonoBehaviour
         }
         if (alurTutorial.alur[9])
         {
+            skipDayButton.SetActive(true);
             this.enabled = false;
+        }
+    }
+
+    public void SaveTutorialData()
+    {
+        MainSaveSystem.SaveTutorialData(alurTutorial.alur);
+    }
+
+    public void LoadTutorialData()
+    {
+        var data = MainSaveSystem.LoadTutorialData();
+        if (data != null)
+        {
+            for (int i = 0; data.alur.Length > i && i < alurTutorial.alur.Length; i++)
+            {
+                alurTutorial.alur[i] = data.alur[i];
+            }
         }
     }
 }

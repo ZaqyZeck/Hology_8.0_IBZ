@@ -64,6 +64,13 @@ public class PlantScript : MonoBehaviour
         if (_ID != 1) return;
         if (!alurTutorial.alur[6] && alurTutorial.alur[5])
         {
+            if (ButtonStorage.getCurrentButton() == null)
+            {
+                directionArrow.SetActive(true);
+                return;
+                
+            }
+                
             if (ButtonStorage.getCurrentButton().name == "Button" && ButtonStorage.getCurrentButton().activeSelf) directionArrow.SetActive(false);
             else directionArrow.SetActive(true);
         }

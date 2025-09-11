@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private GameObject loseUI;
     [SerializeField] private GameObject skipDayButton;
+
+    [SerializeField] private TutorialSystem tutorialSystem;
     bool gameOver;
     private void Start()
     {
@@ -101,6 +103,8 @@ public class GameManager : MonoBehaviour
         powerStorage.SaveMachines();
 
         enemyScript.SaveEnemyData();
+
+        tutorialSystem.SaveTutorialData();
     }
 
     public void loadAllData()
@@ -118,8 +122,11 @@ public class GameManager : MonoBehaviour
         powerStorage.LoadMachines();
 
         enemyScript.LoadEnemyData();
+        
+        tutorialSystem.LoadTutorialData();
 
         ui.countDate(day);
+        
     }
 
     public void DeleteAllData()
@@ -132,6 +139,7 @@ public class GameManager : MonoBehaviour
         MainSaveSystem.SaveMachinesData(null);
         MainSaveSystem.SavePlantsData(null);
         MainSaveSystem.SaveEnemyData(null, 0);
+        MainSaveSystem.SaveTutorialData(null);
     }
 
     public void GameOver()

@@ -309,4 +309,43 @@ public static class MainSaveSystem
             return null;
         }
     }
+
+    public static void SaveTutorialData(bool[] alur)
+    {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/tutorial{fileNumber}.dt";
+
+        TutorialData tutorialData = new TutorialData(alur);
+
+        BinaryFormatter formatter = new BinaryFormatter();
+        using (FileStream stream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))
+        {
+            formatter.Serialize(stream, tutorialData);
+        }
+    }
+
+
+    public static TutorialData LoadTutorialData()
+    {
+        int fileNumber = 0;
+        if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
+
+        string path = Application.persistentDataPath + $"/tutorial{fileNumber}.dt";
+        if (File.Exists(path))
+        {
+            BinaryFormatter formatter = new BinaryFormatter();
+            using (FileStream stream = new FileStream(path, FileMode.Open, FileAccess.Read, FileShare.Read))
+            {
+                return formatter.Deserialize(stream) as TutorialData;
+            }
+        }
+        else
+        {
+            Debug.LogError("not found in " + path);
+            return null;
+        }
+    }
+
 }
