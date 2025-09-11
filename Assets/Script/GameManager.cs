@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EnemyScript enemyScript;
 
     [SerializeField] private GameObject loseUI;
-
+    [SerializeField] private GameObject skipDayButton;
     bool gameOver;
     private void Start()
     {
@@ -28,6 +28,8 @@ public class GameManager : MonoBehaviour
         questSystem.CekQuest();
 
         day += 6;
+
+        powerStorage.GiveEnergyToWaterTank();
 
         plantSystem.GetAllPlant();
         plantSystem.ResetAll();
@@ -50,6 +52,13 @@ public class GameManager : MonoBehaviour
     {
         switch (day)
         {
+            case 6:
+                alurTutorial.alur[5] = true;
+                skipDayButton.SetActive(false);
+                break;
+            case 12:
+                alurTutorial.alur[9] = true;
+                break;
             case 90:
                 enemyScript.FinalDay(); 
                 break;
@@ -119,7 +128,7 @@ public class GameManager : MonoBehaviour
         MainSaveSystem.SaveGameData(0);
         MainSaveSystem.SaveWaterTankData(0);
         MainSaveSystem.SaveGeneratorsData(null);
-        MainSaveSystem.SaveInventoryData(null, 300);
+        MainSaveSystem.SaveInventoryData(null, 450);
         MainSaveSystem.SaveMachinesData(null);
         MainSaveSystem.SavePlantsData(null);
         MainSaveSystem.SaveEnemyData(null, 0);

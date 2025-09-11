@@ -429,7 +429,9 @@
 "Assets/Script/Button Script/ButtonStorage.cs"
 "Assets/Script/Button Script/DestroyMachineButton.cs"
 "Assets/Script/Button Script/DestroyPlant.cs"
+"Assets/Script/Button Script/FueledGenerator.cs"
 "Assets/Script/Button Script/HarvestPlant.cs"
+"Assets/Script/Button Script/OpenShopButton.cs"
 "Assets/Script/Button Script/PlaceMachine.cs"
 "Assets/Script/Button Script/PlacePlantButton.cs"
 "Assets/Script/Button Script/UpgradeGeneratorButton.cs"
@@ -480,6 +482,7 @@
 "Assets/Script/UI Script/ItemUI.cs"
 "Assets/Script/UI Script/MainMenuScript.cs"
 "Assets/Script/UI Script/ShopUI.cs"
+"Assets/Script/UI Script/TutorialSlideUI.cs"
 "Assets/Script/UI Script/UiController.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
 -langversion:9.0

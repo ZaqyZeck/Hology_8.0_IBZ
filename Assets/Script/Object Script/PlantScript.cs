@@ -40,6 +40,8 @@ public class PlantScript : MonoBehaviour
     private RotationControl rotationControl;
     private BoxCollider _collider;
 
+
+    [SerializeField] GameObject directionArrow;
     private void Awake()
     {
         _ps = FindAnyObjectByType<PlaceMentSystem>();
@@ -55,6 +57,16 @@ public class PlantScript : MonoBehaviour
         //if (_age == _maxAge) harvestable = true;
         //_LotID = _lot.lotId;
         //load();
+    }
+
+    private void Update()
+    {
+        if (_ID != 1) return;
+        if (!alurTutorial.alur[6] && alurTutorial.alur[5])
+        {
+            if (ButtonStorage.getCurrentButton().name == "Button" && ButtonStorage.getCurrentButton().activeSelf) directionArrow.SetActive(false);
+            else directionArrow.SetActive(true);
+        }
     }
 
     public void load()
@@ -182,6 +194,12 @@ public class PlantScript : MonoBehaviour
     {
         _inventory.inventory[_yieldsId].amount += _yieldsAmount + _bonusYield;
         _lot.RemovePlant();
+
+        if(!alurTutorial.alur[6] && alurTutorial.alur[5])
+        {
+            alurTutorial.alur[6] = true;
+            directionArrow.SetActive(false);
+        }
     }
 
     public void FertilizesPlant()

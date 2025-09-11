@@ -17,7 +17,7 @@ public class FarmUpgrade : MonoBehaviour
     private LandLot[] landLot;
     public void UpgradeFarm()
     {
-        if (farmLevel >= upgradePrice.Length) return;
+        if (farmLevel >= upgradePrice.Length || !alurTutorial.alur[3]) return;
         if (upgradePrice[farmLevel] > inventorySystem.coins) return;
 
         inventorySystem.coins -= upgradePrice[farmLevel];

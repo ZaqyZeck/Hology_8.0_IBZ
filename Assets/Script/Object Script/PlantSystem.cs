@@ -29,6 +29,8 @@ public class PlantSystem : MonoBehaviour
 
     [SerializeField] FarmUpgrade[] farmUpgrades;
 
+    public float energyGet;
+
     private void Awake()
     {
         //_inventory = FindAnyObjectByType<InventorySystem>();
@@ -92,6 +94,13 @@ public class PlantSystem : MonoBehaviour
         foreach (var plant in _plantList)
         {
             plant.WaterReset();
+        }
+
+        if (true)
+        {
+            _water = energyGet * 20;
+            if (_water > _maxWater) _water = _maxWater;
+            return;
         }
         _water = _maxWater;
     }

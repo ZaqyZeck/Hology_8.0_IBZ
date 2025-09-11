@@ -45,11 +45,19 @@ public class RegulerItemScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     }
     public void buyItem()
     {
+        if (!alurTutorial.alur[8])
+        {
+            alurTutorial.alur[8] = true;
+        }
         shopSystem.BuyRegulerItemBy(itemID, amount);
     }
 
     public void sellItem()
     {
+        if (!alurTutorial.alur[7])
+        {
+            alurTutorial.alur[7] = true;
+        }
         shopSystem.SellRegulerItemBy(itemID, amount);
     }
 

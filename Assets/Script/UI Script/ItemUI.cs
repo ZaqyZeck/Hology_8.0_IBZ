@@ -16,7 +16,7 @@ public class ItemUI : MonoBehaviour
 
     public void CreateItemUI()
     {
-        if (SelectedItemUI != null) return;
+        if (SelectedItemUI != null || !alurTutorial.alur[2]) return;
 
         //GameObject[] UiChild = UiParent.GetComponentsInChildren<GameObject>();
 

@@ -12,7 +12,6 @@ public class PlacePlantButton : ButtonScript
     {
         _landLot = gameObject.GetComponentInParent<LandLot>();
         _rotationControl = FindAnyObjectByType<RotationControl>();
-        //Debug.Log("bitu");
     }
     public void OnMouseOver()
     {
@@ -36,6 +35,5 @@ public class PlacePlantButton : ButtonScript
             if (kubisTutorial == null) return;
             kubisTutorial.SetActive(false);
         }
-        
     }
 }

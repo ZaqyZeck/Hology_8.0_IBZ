@@ -5,6 +5,8 @@ public class HarvestPlant : ButtonScript
     private PlantScript _plant;
     private PlaceMentSystem _ps;
 
+    [SerializeField] GameObject directionUI;
+
     private void Awake()
     {
         _plant = GetComponentInParent<PlantScript>();
@@ -15,6 +17,18 @@ public class HarvestPlant : ButtonScript
         if (Input.GetMouseButtonDown(0) && !_ps.isBuilding && _plant.harvestable)
         {
             _plant.HarvestPlant();
+            if (alurTutorial.alur[5] && !alurTutorial.alur[6])
+            {
+                alurTutorial.alur[6] = true;
+                directionUI.SetActive(false);
+            }
+                
         }
+    }
+
+    private void OnEnable()
+    {
+        if(alurTutorial.alur[5] && !alurTutorial.alur[6]) directionUI.SetActive(true);
+        else directionUI.SetActive(false);
     }
 }

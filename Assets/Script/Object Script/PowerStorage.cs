@@ -7,6 +7,8 @@ public class PowerStorage : MonoBehaviour
     public int totalPower;
     private PlaceMentSystem PlaceMentSystem;
     public MachinePlacement[] machinePlacements;
+
+    [SerializeField] private PlantSystem plantSystem;
     private void Awake()
     {
         PlaceMentSystem = FindAnyObjectByType<PlaceMentSystem>();
@@ -30,6 +32,7 @@ public class PowerStorage : MonoBehaviour
             }
                 
             totalPower += generator.GeneratePower();
+            generator.havefuel = false;
         }
     }
 
@@ -38,10 +41,28 @@ public class PowerStorage : MonoBehaviour
         machines = FindObjectsByType<MachineScript>(FindObjectsSortMode.None);
     }
 
-    public void GiveEnergy()
+    public void GiveEnergyToWaterTank()
     {
         GetEnergy();
+        float waterPower = plantSystem._maxWater / 20;
+        if (totalPower < waterPower)
+        {
+            plantSystem.energyGet = totalPower;
+            totalPower = 0;
+        }
+        else
+        {
+            plantSystem.energyGet = waterPower;
+            totalPower -= (int)waterPower;
+        }
+    }
+
+    public void GiveEnergy()
+    {
+        
         GetMachines();
+            
+
         foreach (MachineScript machine in machines)
         {
             int powerneeded = machine.powerNeed;

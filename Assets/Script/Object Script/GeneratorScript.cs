@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class GeneratorScript : MonoBehaviour
 {
@@ -22,6 +23,8 @@ public class GeneratorScript : MonoBehaviour
 
     public bool haveLoaded;
 
+    [SerializeField] GameObject directionArrow;
+
     private void Awake()
     {
         _originalScale = transform.localScale;
@@ -39,27 +42,48 @@ public class GeneratorScript : MonoBehaviour
 
     public int GeneratePower()
     {
-        GW_system.lowerTheLevelBy(globalWarm);
+        if (havefuel) GW_system.lowerTheLevelBy(globalWarm);
         return producePower;
     }
 
-    
-
     private void Update()
     {
+        
+        if (alurTutorial.alur[2] && !alurTutorial.alur[3])
+        {
+            GameObject currentButton = ButtonStorage.getCurrentButton();
+            if (currentButton != null)
+            {
+                if (currentButton.name == "Generator Button" && currentButton.activeSelf)
+                {
+                    directionArrow.SetActive(false);
+                }
+                else
+                {
+                    directionArrow.SetActive(true);
+                } 
+            }
+             
+            
+        }
         if (type == "Diesel")
         {
-            // membuat mesin bergerak
-            float frequency = 3f; // makin besar makin cepat
-            float amplitude = 0.1f; // makin besar makin terlihat goyang
+            if (havefuel)
+            {
+                // membuat mesin bergerak
+                float frequency = 3f; // makin besar makin cepat
+                float amplitude = 0.1f; // makin besar makin terlihat goyang
 
-            float scaleY = _originalScale.y + Mathf.Sin(Time.time * frequency) * amplitude;
+                float scaleY = _originalScale.y + Mathf.Sin(Time.time * frequency) * amplitude;
 
-            transform.localScale = new Vector3(
-                _originalScale.x,
-                scaleY,
-                _originalScale.z
-            );
+                transform.localScale = new Vector3(
+                    _originalScale.x,
+                    scaleY,
+                    _originalScale.z
+                );
+            }
+            else transform.localScale = _originalScale;
+            
         }
         return;
         if(type == "Wind")
@@ -93,6 +117,12 @@ public class GeneratorScript : MonoBehaviour
         LoadLevel();
     }
 
+    public void FueledGenerator()
+    {
+        if (inventorySystem.coins < 20 || havefuel) return;
+        inventorySystem.coins -= 20;
+        havefuel = true;
+    }
     public void LoadLevel()
     {
         producePower = upgradePower[machineLevel];
