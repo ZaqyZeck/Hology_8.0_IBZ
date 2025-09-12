@@ -19,8 +19,8 @@ public class UiController : MonoBehaviour
 
     private void Update()
     {
-        coinCounter[1].text = $"Money : {inventory.coins} G";
-        coinCounter[0].text = $"Money : {inventory.coins} G";
+        coinCounter[1].text = $"{inventory.coins} G";
+        coinCounter[0].text = $"{inventory.coins} G";
 
         //if (tutorialSystem.alur[4])
         //{

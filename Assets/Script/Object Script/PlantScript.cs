@@ -41,7 +41,7 @@ public class PlantScript : MonoBehaviour
     private BoxCollider _collider;
 
 
-    [SerializeField] GameObject directionArrow;
+    [SerializeField] GameObject directionArrow, havestButton;
 
     [SerializeField] Sprite[] verticalSprites, horizontalSprites;
     private void Awake()
@@ -189,6 +189,7 @@ public class PlantScript : MonoBehaviour
         {
             _age = _maxAge;
             harvestable = true;
+            havestButton.SetActive(true);
         }
 
         _bonus = 0;

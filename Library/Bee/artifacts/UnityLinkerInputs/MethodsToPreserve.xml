@@ -1,5 +1,8 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
+		<type fullname="EnemyScript">
+			<method name="DuelPlayer"/>
+		</type>
 		<type fullname="FarmUpgrade">
 			<method name="UpgradeFarm"/>
 			<method name="UpgradeFarm"/>
@@ -7,9 +10,7 @@
 			<method name="UpgradeFarm"/>
 		</type>
 		<type fullname="GameManager">
-			<method name="loadAllData"/>
-			<method name="saveAllData"/>
-			<method name="skipDays"/>
+			<method name="DeleteAllData"/>
 			<method name="skipDays"/>
 			<method name="skipDays"/>
 		</type>
@@ -22,8 +23,13 @@
 			<method name="CreateItemUI"/>
 			<method name="CreateItemUI"/>
 			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
+			<method name="CreateItemUI"/>
 		</type>
 		<type fullname="MainMenuScript">
+			<method name="goToMainMenu"/>
 			<method name="PlayScene"/>
 			<method name="PlayScene"/>
 			<method name="PlayScene"/>
@@ -44,8 +50,11 @@
 			<method name="buyItem"/>
 			<method name="decreaseAmount"/>
 			<method name="decreaseAmount"/>
+			<method name="decreaseAmount"/>
 			<method name="increaseAmount"/>
 			<method name="increaseAmount"/>
+			<method name="increaseAmount"/>
+			<method name="sellItem"/>
 		</type>
 		<type fullname="ShopUI">
 			<method name="goToCategory"/>
@@ -53,9 +62,14 @@
 			<method name="goToCategory"/>
 			<method name="goToCategory"/>
 		</type>
+		<type fullname="TutorialSlideUI">
+			<method name="NextSlide"/>
+			<method name="PreviousSlide"/>
+		</type>
 		<type fullname="UiController">
 			<method name="countCoin"/>
 			<method name="countCoin"/>
+			<method name="countStorageAmount"/>
 		</type>
 	</assembly>
 	<assembly fullname="Unity.RenderPipelines.Core.Runtime" ignoreIfMissing="1">
@@ -86,6 +100,17 @@
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>

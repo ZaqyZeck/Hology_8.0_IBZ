@@ -59,6 +59,16 @@
       "source": "registry",
       "testable": false
     },
+    "com.unity.ide.vscode@1.2.0": {
+      "name": "com.unity.ide.vscode",
+      "displayName": "Visual Studio Code Editor",
+      "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.ide.vscode@35692973aa9e",
+      "fingerprint": "35692973aa9e370b4477026bbb4fa3b5eddd633e",
+      "editorCompatibility": "2019.2.0a12",
+      "version": "1.2.0",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.inputsystem@1.14.0": {
       "name": "com.unity.inputsystem",
       "displayName": "Input System",
@@ -79,11 +89,31 @@
       "source": "builtin",
       "testable": false
     },
+    "com.unity.postprocessing@3.4.0": {
+      "name": "com.unity.postprocessing",
+      "displayName": "Post Processing",
+      "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.postprocessing@026b2a0827a4",
+      "fingerprint": "026b2a0827a438e3079df62a60ca03d54961393d",
+      "editorCompatibility": "2019.4.19f1",
+      "version": "3.4.0",
+      "source": "registry",
+      "testable": false
+    },
     "com.unity.render-pipelines.universal@17.0.4": {
       "name": "com.unity.render-pipelines.universal",
       "displayName": "Universal Render Pipeline",
       "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.render-pipelines.universal@fd2e729c5297",
       "fingerprint": "fd2e729c5297808e0bb36ad6aea234a60d0618df",
+      "editorCompatibility": "6000.0.0a1",
+      "version": "17.0.4",
+      "source": "builtin",
+      "testable": false
+    },
+    "com.unity.shadergraph@17.0.4": {
+      "name": "com.unity.shadergraph",
+      "displayName": "Shader Graph",
+      "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.shadergraph@3b066f00f1c5",
+      "fingerprint": "3b066f00f1c5c6be49b1ca9105960ce9af0052bf",
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.4",
       "source": "builtin",
@@ -421,14 +451,14 @@
       "source": "builtin",
       "testable": false
     },
-    "com.unity.shadergraph@17.0.4": {
-      "name": "com.unity.shadergraph",
-      "displayName": "Shader Graph",
-      "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.shadergraph@3b066f00f1c5",
-      "fingerprint": "3b066f00f1c5c6be49b1ca9105960ce9af0052bf",
-      "editorCompatibility": "6000.0.0a1",
-      "version": "17.0.4",
-      "source": "builtin",
+    "com.unity.searcher@4.9.3": {
+      "name": "com.unity.searcher",
+      "displayName": "Searcher",
+      "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.searcher@1e17ce91558d",
+      "fingerprint": "1e17ce91558d1d9127554adc03d275f39a7466a2",
+      "editorCompatibility": "2019.1.0a1",
+      "version": "4.9.3",
+      "source": "registry",
       "testable": false
     },
     "com.unity.render-pipelines.universal-config@17.0.3": {
@@ -439,16 +469,6 @@
       "editorCompatibility": "6000.0.0a1",
       "version": "17.0.3",
       "source": "builtin",
-      "testable": false
-    },
-    "com.unity.searcher@4.9.3": {
-      "name": "com.unity.searcher",
-      "displayName": "Searcher",
-      "resolvedPath": "C:\\Users\\Zaqy Ulunnuha\\My Games\\Hology_8.0_IBZ\\Library\\PackageCache\\com.unity.searcher@1e17ce91558d",
-      "fingerprint": "1e17ce91558d1d9127554adc03d275f39a7466a2",
-      "editorCompatibility": "2019.1.0a1",
-      "version": "4.9.3",
-      "source": "registry",
       "testable": false
     },
     "com.unity.burst@1.8.21": {

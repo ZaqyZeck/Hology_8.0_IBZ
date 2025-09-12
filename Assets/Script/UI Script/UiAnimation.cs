@@ -3,6 +3,8 @@ using System.Collections;
 
 public class UiAnimation : MonoBehaviour
 {
+    public int indexAnimation;
+
     [Header("Movement Settings")]
     public Vector3 startingPosition;
     public Vector3 targetPosition;
@@ -25,6 +27,27 @@ public class UiAnimation : MonoBehaviour
 
         // Set posisi awal
         transform.localPosition = startingPosition;
+    }
+
+    private void OnEnable()
+    {
+        //transform.localPosition = startingPosition;
+        switch (indexAnimation)
+        {
+            case 1: 
+                MoveToTarget();
+                break;
+            case 2:
+                MoveToTarget();
+                MoveToStart();
+                break;
+            case 3:
+                StartBlink();
+                break;
+            case 4:
+                FadeIn(); 
+                break;
+        }
     }
 
     // ---------------- MOVE ----------------

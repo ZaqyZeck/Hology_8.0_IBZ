@@ -250,7 +250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5862977212589712092
 Transform:
   m_ObjectHideFlags: 0
@@ -518,6 +518,7 @@ MonoBehaviour:
   - {fileID: 1762002863, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
   - {fileID: -870413633, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
   directionArrow: {fileID: 0}
+  havestButton: {fileID: 3631482663963221105}
   verticalSprites:
   - {fileID: -1281550989, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
   - {fileID: -1281550989, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}

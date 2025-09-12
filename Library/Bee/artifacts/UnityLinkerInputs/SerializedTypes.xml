@@ -1,5 +1,6 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="EnemyStats" preserve="nothing" serialized="true"/>
 		<type fullname="InventoryObject" preserve="nothing" serialized="true"/>
 		<type fullname="ObjectData" preserve="nothing" serialized="true"/>
 		<type fullname="Quest" preserve="nothing" serialized="true"/>
