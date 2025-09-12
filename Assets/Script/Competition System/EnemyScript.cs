@@ -41,9 +41,19 @@ public class EnemyScript : MonoBehaviour
         yieldsTotal_Array[2] += timunYield;
         yieldsTotal_Array[3] += strawberiYield;
 
-        kubisCounter.text     = $"Kubis           :  {yieldsTotal_Array[0]}";
-        tomatCounter.text     = $"Tomat         :  {yieldsTotal_Array[1]}";
-        timunCounter.text     = $"Timun        :  {yieldsTotal_Array[2]}";
+        //kubisCounter.text     = $"Kubis           :  {yieldsTotal_Array[0]}";
+        //tomatCounter.text     = $"Tomat         :  {yieldsTotal_Array[1]}";
+        //timunCounter.text     = $"Timun        :  {yieldsTotal_Array[2]}";
+        //strawberiCounter.text = $"Strawberi  :  {yieldsTotal_Array[3]}";
+
+        LoadEnemyStock();
+    }
+
+    public void LoadEnemyStock()
+    {
+        kubisCounter.text = $"Kubis           :  {yieldsTotal_Array[0]}";
+        tomatCounter.text = $"Tomat         :  {yieldsTotal_Array[1]}";
+        timunCounter.text = $"Timun        :  {yieldsTotal_Array[2]}";
         strawberiCounter.text = $"Strawberi  :  {yieldsTotal_Array[3]}";
     }
 
@@ -68,9 +78,10 @@ public class EnemyScript : MonoBehaviour
         {
             yieldsTotal_Array[i] = 0;
         }
+        LoadEnemyStock();
     }
 
-    public void FinalDay()
+    public void DuelPlayer()
     {
         bool playerWon = 
         (

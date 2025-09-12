@@ -148,6 +148,7 @@ public class PlaceMentSystem : MonoBehaviour
         if (_inventoryIndex > 5 && _inventoryIndex < 9)
         {
             if (!alurTutorial.alur[2]) alurTutorial.alur[2] = true;
+            if (!alurTutorial.alur[3] && _inventoryIndex > 6 && _inventoryIndex < 9) alurTutorial.alur[3] = true;
             _inventory.coins -= _inventory.inventory[_inventoryIndex].price;
             StopPlacement();
         }

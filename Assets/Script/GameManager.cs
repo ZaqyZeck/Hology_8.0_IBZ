@@ -15,9 +15,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] private EnemyScript enemyScript;
 
     [SerializeField] private GameObject loseUI;
-    [SerializeField] private GameObject skipDayButton;
+    [SerializeField] private GameObject skipDayButton, duelButton;
 
     [SerializeField] private TutorialSystem tutorialSystem;
+
+    [SerializeField] private GlobarWarmingSystem globarWarmingSystem;
+    //int GW_level;  
     bool gameOver;
     private void Start()
     {
@@ -62,28 +65,33 @@ public class GameManager : MonoBehaviour
                 alurTutorial.alur[9] = true;
                 break;
             case 90:
-                enemyScript.FinalDay(); 
+                skipDayButton.SetActive(false);
+                duelButton.SetActive(true);
+                //enemyScript.FinalDay(); 
                 break;
             case 96:
                 enemyScript.ChangeEnemy();
                 break;
-            case 180: 
-                enemyScript.FinalDay();
+            case 180:
+                skipDayButton.SetActive(false);
+                duelButton.SetActive(true);
                 break;
             case 186:
                 enemyScript.ChangeEnemy();
                 break;
             case 270:
-                enemyScript.FinalDay();
+                skipDayButton.SetActive(false);
+                duelButton.SetActive(true);
                 break;
             case 276:
                 enemyScript.ChangeEnemy();
                 break;
             case 360:
-                enemyScript.FinalDay();
+                skipDayButton.SetActive(false);
+                duelButton.SetActive(true);
                 break;
             case 366:
-                // Game Ending
+                GoToEnding();
                 break;
         }
     }
@@ -122,17 +130,17 @@ public class GameManager : MonoBehaviour
         powerStorage.LoadMachines();
 
         enemyScript.LoadEnemyData();
-        
+
         tutorialSystem.LoadTutorialData();
 
         ui.countDate(day);
-        
+
     }
 
     public void DeleteAllData()
     {
         MainSaveSystem.SaveFarmUpgradeData(null);
-        MainSaveSystem.SaveGameData(0);
+        MainSaveSystem.SaveGameData(0, globarWarmingSystem.startingLevel);
         MainSaveSystem.SaveWaterTankData(0);
         MainSaveSystem.SaveGeneratorsData(null);
         MainSaveSystem.SaveInventoryData(null, 450);
@@ -152,17 +160,37 @@ public class GameManager : MonoBehaviour
 
     void SaveGameData()
     {
-        MainSaveSystem.SaveGameData(day);
+        MainSaveSystem.SaveGameData(day, globarWarmingSystem.currentLevel);
     }
 
     void LoadGameData()
     {
         GameData gameData = MainSaveSystem.LoadGameData();
-        if (gameData != null ) day = gameData.day;
+        if (gameData != null)
+        {
+            day = gameData.day;
+            globarWarmingSystem.currentLevel = gameData.GW_level;
+            globarWarmingSystem.loadGWLevelUI();
+        }
+
     }
 
     public void LoadMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void GoToEnding()
+    {
+        DeleteAllData();
+        if (globarWarmingSystem.currentLevel < 1)
+        {
+            SceneManager.LoadScene("Ending3");
+        }
+        else if (globarWarmingSystem.currentLevel >= 400)
+        {
+            SceneManager.LoadScene("Ending1");
+        }
+        else SceneManager.LoadScene("Ending2");
     }
 }

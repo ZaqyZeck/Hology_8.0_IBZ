@@ -28,6 +28,7 @@ public class HarvestPlant : ButtonScript
 
     private void OnEnable()
     {
+        if (directionUI == null) return;
         if(alurTutorial.alur[5] && !alurTutorial.alur[6]) directionUI.SetActive(true);
         else directionUI.SetActive(false);
     }

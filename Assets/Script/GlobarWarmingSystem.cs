@@ -15,6 +15,11 @@ public class GlobarWarmingSystem : MonoBehaviour
     public void lowerTheLevelBy(int subtract)
     {
         currentLevel -= subtract;
+        loadGWLevelUI();
+    } 
+
+    public void loadGWLevelUI()
+    {
         levelBarForeground.fillAmount = (float)currentLevel / (float)startingLevel;
     } 
 }

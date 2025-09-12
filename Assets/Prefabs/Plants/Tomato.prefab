@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4538033205048983974
 Transform:
   m_ObjectHideFlags: 0
@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6792fecfff8b934c80c8099653e9124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionUI: {fileID: 0}
 --- !u!135 &638734487249991445
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -467,7 +468,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1728202257, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  m_Sprite: {fileID: 606069331, guid: 9913f52bf947312479eeeb31528402f5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -511,10 +512,21 @@ MonoBehaviour:
   _buttonObject: {fileID: 6535573061296581895}
   _lot: {fileID: 0}
   phaseSprite:
-  - {fileID: -1728202257, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: -1917925887, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: -109818123, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
-  - {fileID: 1298219327, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  - {fileID: 606069331, guid: 9913f52bf947312479eeeb31528402f5, type: 3}
+  - {fileID: -437225618, guid: 9913f52bf947312479eeeb31528402f5, type: 3}
+  - {fileID: -437225618, guid: 9913f52bf947312479eeeb31528402f5, type: 3}
+  - {fileID: -1622667080, guid: 9913f52bf947312479eeeb31528402f5, type: 3}
+  directionArrow: {fileID: 0}
+  verticalSprites:
+  - {fileID: 1879817881, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  - {fileID: 2126471407, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  - {fileID: 2126471407, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  - {fileID: 2033851787, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  horizontalSprites:
+  - {fileID: 1879817881, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  - {fileID: 2126471407, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  - {fileID: 2126471407, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
+  - {fileID: 2033851787, guid: d33cf7448909aed42bbc77c69abfef3f, type: 3}
 --- !u!65 &5441509234009999339
 BoxCollider:
   m_ObjectHideFlags: 0

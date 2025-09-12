@@ -234,7 +234,7 @@ public static class MainSaveSystem
         }
     }
 
-    public static void SaveGameData(int day)
+    public static void SaveGameData(int day, int GW_level)
     {
         int fileNumber = 0;
         if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
@@ -243,7 +243,7 @@ public static class MainSaveSystem
         string path = Application.persistentDataPath + $"/game{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        GameData gameData = new GameData(day);
+        GameData gameData = new GameData(day, GW_level);
 
         formatter.Serialize(stream, gameData);
         stream.Close();

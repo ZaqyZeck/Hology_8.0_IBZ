@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4538033205048983974
 Transform:
   m_ObjectHideFlags: 0
@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6792fecfff8b934c80c8099653e9124, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  directionUI: {fileID: 0}
 --- !u!135 &638734487249991445
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -516,6 +517,19 @@ MonoBehaviour:
   - {fileID: 1762002863, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
   - {fileID: 1762002863, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
   - {fileID: -870413633, guid: 0d3b5e869466ecb43bc9675f1e4a2336, type: 3}
+  directionArrow: {fileID: 0}
+  verticalSprites:
+  - {fileID: -1281550989, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
+  - {fileID: -1281550989, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
+  - {fileID: 1569024511, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
+  - {fileID: 1569024511, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
+  - {fileID: 2077759975, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
+  horizontalSprites:
+  - {fileID: -883859346, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}
+  - {fileID: -883859346, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}
+  - {fileID: 1654210277, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}
+  - {fileID: 1654210277, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}
+  - {fileID: -1507981216, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}
 --- !u!65 &5441509234009999339
 BoxCollider:
   m_ObjectHideFlags: 0

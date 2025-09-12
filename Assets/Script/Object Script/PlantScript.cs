@@ -42,6 +42,8 @@ public class PlantScript : MonoBehaviour
 
 
     [SerializeField] GameObject directionArrow;
+
+    [SerializeField] Sprite[] verticalSprites, horizontalSprites;
     private void Awake()
     {
         _ps = FindAnyObjectByType<PlaceMentSystem>();
@@ -92,6 +94,14 @@ public class PlantScript : MonoBehaviour
 
         if (farmType == "vertical")
         {
+            if(farmLevel > 0)
+            {
+                for(int i = 0; i < phaseSprite.Length; i++)
+                {
+                    phaseSprite[i] = verticalSprites[i];
+                }
+               
+            }
             if(farmLevel == 1)
             {
                 _yieldsAmount += 1;
@@ -109,6 +119,15 @@ public class PlantScript : MonoBehaviour
         }
         else
         {
+            if (farmLevel > 0)
+            {
+                for (int i = 0; i < phaseSprite.Length; i++)
+                {
+                    phaseSprite[i] = horizontalSprites[i];
+                }
+                gameObject.transform.localScale = new Vector3(0.5f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                _buttonObject.gameObject.transform.localScale = new Vector3(2f, _buttonObject.gameObject.transform.localScale.y, _buttonObject.gameObject.transform.localScale.z);
+            }
             if (farmLevel == 2)
             {
                 waterNeeded -= waterNeeded / 10;
