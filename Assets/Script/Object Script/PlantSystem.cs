@@ -193,7 +193,7 @@ public class PlantSystem : MonoBehaviour
         for (int i = 0; i < 4; i++)
         {
             farmLevels[i] = farmUpgrades[i].farmLevel;
-            Debug.Log(farmLevels[i]);
+            //Debug.Log(farmLevels[i]);
         }
         MainSaveSystem.SaveFarmUpgradeData(farmLevels);
     }

@@ -520,11 +520,11 @@ MonoBehaviour:
   directionArrow: {fileID: 0}
   havestButton: {fileID: 3631482663963221105}
   verticalSprites:
-  - {fileID: -1281550989, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
-  - {fileID: -1281550989, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
-  - {fileID: 1569024511, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
-  - {fileID: 1569024511, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
-  - {fileID: 2077759975, guid: 25a8989be7db28a4689b2bf78ca416aa, type: 3}
+  - {fileID: -1862869624, guid: 46a21530674d0f549be11f16623827e6, type: 3}
+  - {fileID: -1862869624, guid: 46a21530674d0f549be11f16623827e6, type: 3}
+  - {fileID: 2110940739, guid: 46a21530674d0f549be11f16623827e6, type: 3}
+  - {fileID: 2110940739, guid: 46a21530674d0f549be11f16623827e6, type: 3}
+  - {fileID: -1620307754, guid: 46a21530674d0f549be11f16623827e6, type: 3}
   horizontalSprites:
   - {fileID: -883859346, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}
   - {fileID: -883859346, guid: 6a299efd7b16adf4089d32ac8877cf60, type: 3}

@@ -26,7 +26,7 @@ public class UiAnimation : MonoBehaviour
             canvasGroup = gameObject.AddComponent<CanvasGroup>();
 
         // Set posisi awal
-        transform.localPosition = startingPosition;
+        //transform.position = startingPosition;
     }
 
     private void OnEnable()

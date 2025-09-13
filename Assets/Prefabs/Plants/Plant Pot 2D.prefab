@@ -376,8 +376,8 @@ MonoBehaviour:
   directionArrow: {fileID: 3783575705268100208}
   havestButton: {fileID: 352406629816822317}
   verticalSprites:
-  - {fileID: 446812910, guid: 691f095bfbaac32429c5f19e3d6b26b5, type: 3}
-  - {fileID: -2034457001, guid: 691f095bfbaac32429c5f19e3d6b26b5, type: 3}
+  - {fileID: -391432078, guid: d67fa1f2ed4440848b6f584b1cb2bfcf, type: 3}
+  - {fileID: 2008491017, guid: d67fa1f2ed4440848b6f584b1cb2bfcf, type: 3}
   horizontalSprites:
   - {fileID: -1726525010, guid: c84f3973c2344ff4cb48a58bb4ed6c86, type: 3}
   - {fileID: 2080014243, guid: c84f3973c2344ff4cb48a58bb4ed6c86, type: 3}

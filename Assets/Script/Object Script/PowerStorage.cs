@@ -4,7 +4,7 @@ public class PowerStorage : MonoBehaviour
 {
     public GeneratorScript[] generators;
     public MachineScript[] machines;
-    public int totalPower;
+    public int totalPower, maxPower;
     private PlaceMentSystem PlaceMentSystem;
     public MachinePlacement[] machinePlacements;
 
@@ -24,16 +24,25 @@ public class PowerStorage : MonoBehaviour
     {
         getGenerator();
         totalPower = 0;
+
+        if (generators == null)
+        {
+            Debug.LogError("awbdhgawjd");
+            return;
+        }
+
         foreach (GeneratorScript generator in generators)
         {
             if (generator.gameObject.name.Contains("Preview"))
             {
                 continue;
             }
-                
             totalPower += generator.GeneratePower();
             generator.havefuel = false;
         }
+
+        maxPower = totalPower;
+
     }
 
     public void GetMachines()
