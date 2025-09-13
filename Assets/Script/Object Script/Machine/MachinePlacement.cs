@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using UnityEngine;
 
 public class MachinePlacement : MonoBehaviour
@@ -12,6 +13,8 @@ public class MachinePlacement : MonoBehaviour
     public GameObject plantGrid;
 
     [SerializeField] private InventorySystem inventory;
+
+    int sellValue = 0;
     //private Collider signCollider;
 
     private void Awake()
@@ -36,7 +39,9 @@ public class MachinePlacement : MonoBehaviour
 
                 //machineButton.SetActive(!machineButton.activeSelf);
                 ButtonStorage.changeButton(machineButton);
-                machineButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z); 
+                machineButton.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
+                if (machine.upgradeLevel >= 2) upgradeButton.SetActive(false);
+                else upgradeButton.SetActive(true);
             }
          }
     }
@@ -48,6 +53,11 @@ public class MachinePlacement : MonoBehaviour
         //machine = Instantiate(machine_prefabs[prefab_index]);
         //machine.transform.SetParent(gameObject.transform);
         //MachineScript machineScript = new();
+
+        if (inventory.coins < 400) return;
+
+        inventory.coins -= 400;
+        sellValue += 300;
         MachineScript machineScript = new();
         if (prefab_index == 0)
         {
@@ -73,13 +83,16 @@ public class MachinePlacement : MonoBehaviour
     {
         if(machine == null)
         {
-            Debug.Log("lkhjeda");
+            //Debug.Log("lkhjeda");
             return;
         }
         Destroy(plantGrid.GetComponent<MachineScript>());
         machine = null;
         haveMachine = false;
         machineButton.SetActive(false);
+
+        inventory.coins += sellValue;
+        sellValue = 0;
     }
 
     public void upgradeMachine()
@@ -91,6 +104,8 @@ public class MachinePlacement : MonoBehaviour
 
         inventory.coins -= price;
         machine.UpgradeMachine();
+
+        sellValue += 700;
 
         if (machine.upgradeLevel >= 2) upgradeButton.SetActive(false);
         ButtonStorage.changeButton(machineButton);

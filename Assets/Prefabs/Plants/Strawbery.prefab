@@ -522,13 +522,13 @@ MonoBehaviour:
   directionArrow: {fileID: 0}
   havestButton: {fileID: 3631482663963221105}
   verticalSprites:
-  - {fileID: -2096287676, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
-  - {fileID: 1253280615, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
-  - {fileID: 1253280615, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
-  - {fileID: -1063132147, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
-  - {fileID: -1063132147, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
-  - {fileID: 1879442151, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
-  - {fileID: -1075910209, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
+  - {fileID: -1952896227, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
+  - {fileID: -1753394800, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
+  - {fileID: -1753394800, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
+  - {fileID: 1946823207, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
+  - {fileID: 1946823207, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
+  - {fileID: 2073607483, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
+  - {fileID: 990217614, guid: fd6bb3b6fc0c7614fb478ac62969c0ba, type: 3}
   horizontalSprites:
   - {fileID: -2096287676, guid: da97275a8e7105445b486c9151efa3f6, type: 3}
   - {fileID: 1253280615, guid: da97275a8e7105445b486c9151efa3f6, type: 3}

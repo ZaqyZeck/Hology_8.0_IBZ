@@ -29,28 +29,72 @@ public class GameManager : MonoBehaviour
 
     public void skipDays()
     {
-        questSystem.autoComplete();
-        questSystem.CekQuest();
+        try { questSystem.autoComplete(); }
+        catch (System.Exception e) { Debug.LogError("autoComplete Error: " + e.Message); }
 
-        day += 6;
+        try { questSystem.CekQuest(); }
+        catch (System.Exception e) { Debug.LogError("CekQuest Error: " + e.Message); }
 
-        powerStorage.GiveEnergyToWaterTank();
+        try { day += 6; }
+        catch (System.Exception e) { Debug.LogError("day increment Error: " + e.Message); }
 
-        plantSystem.GetAllPlant();
-        plantSystem.ResetAll();
-        plantSystem.WaterAll();
-        plantSystem.GrowAll();
+        try { powerStorage.GiveEnergyToWaterTank(); }
+        catch (System.Exception e) { Debug.LogError("GiveEnergyToWaterTank Error: " + e.Message); }
 
-        powerStorage.GiveEnergy();
-        powerStorage.BuffAllPlant();
+        try { plantSystem.GetAllPlant(); }
+        catch (System.Exception e) { Debug.LogError("GetAllPlant Error: " + e.Message); }
 
-        // system/event  untuk enemy competition
-        enemyScript.EnemyGetYields();
-        CheckDayEvent();
+        try { plantSystem.ResetAll(); }
+        catch (System.Exception e) { Debug.LogError("ResetAll Error: " + e.Message); }
 
-        ui.countDate(day);
+        try { plantSystem.WaterAll(); }
+        catch (System.Exception e) { Debug.LogError("WaterAll Error: " + e.Message); }
 
-        if (!gameOver) saveAllData();
+        try { plantSystem.GrowAll(); }
+        catch (System.Exception e) { Debug.LogError("GrowAll Error: " + e.Message); }
+
+        try { powerStorage.GiveEnergy(); }
+        catch (System.Exception e) { Debug.LogError("GiveEnergy Error: " + e.Message); }
+
+        try { powerStorage.BuffAllPlant(); }
+        catch (System.Exception e) { Debug.LogError("BuffAllPlant Error: " + e.Message); }
+
+        // system/event untuk enemy competition
+        try { enemyScript.EnemyGetYields(); }
+        catch (System.Exception e) { Debug.LogError("EnemyGetYields Error: " + e.Message); }
+
+        try { CheckDayEvent(); }
+        catch (System.Exception e) { Debug.LogError("CheckDayEvent Error: " + e.Message); }
+
+        try { ui.countDate(day); }
+        catch (System.Exception e) { Debug.LogError("countDate Error: " + e.Message); }
+
+        try { if (!gameOver) saveAllData(); }
+        catch (System.Exception e) { Debug.LogError("saveAllData Error: " + e.Message); }
+
+
+        //questSystem.autoComplete();
+        //questSystem.CekQuest();
+
+        //day += 6;
+
+        //powerStorage.GiveEnergyToWaterTank();
+
+        //plantSystem.GetAllPlant();
+        //plantSystem.ResetAll();
+        //plantSystem.WaterAll();
+        //plantSystem.GrowAll();
+
+        //powerStorage.GiveEnergy();
+        //powerStorage.BuffAllPlant();
+
+        //// system/event  untuk enemy competition
+        //enemyScript.EnemyGetYields();
+        //CheckDayEvent();
+
+        //ui.countDate(day);
+
+        //if (!gameOver) saveAllData();
     }
 
     void CheckDayEvent()
@@ -98,56 +142,112 @@ public class GameManager : MonoBehaviour
 
     public void saveAllData()
     {
-        SaveGameData();
+        try { SaveGameData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGameData Error: " + e.Message); }
 
-        plantSystem.SaveWaterTank();
+        try { plantSystem.SaveWaterTank(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveWaterTank Error: " + e.Message); }
 
-        plantSystem.SavePlantsData();
+        try { plantSystem.SavePlantsData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SavePlantsData Error: " + e.Message); }
 
-        plantSystem.SaveFarmUpgradeData();
+        try { plantSystem.SaveFarmUpgradeData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveFarmUpgradeData Error: " + e.Message); }
 
-        inventory.SaveInventory();
-        powerStorage.SaveAllGenerators();
-        powerStorage.SaveMachines();
+        try { inventory.SaveInventory(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventory Error: " + e.Message); }
 
-        enemyScript.SaveEnemyData();
+        try { powerStorage.SaveAllGenerators(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveAllGenerators Error: " + e.Message); }
 
-        tutorialSystem.SaveTutorialData();
+        try { powerStorage.SaveMachines(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveMachines Error: " + e.Message); }
+
+        try { enemyScript.SaveEnemyData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveEnemyData Error: " + e.Message); }
+
+        try { tutorialSystem.SaveTutorialData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveTutorialData Error: " + e.Message); }
+
+        //SaveGameData();
+
+        //plantSystem.SaveWaterTank();
+
+        //plantSystem.SavePlantsData();
+
+        //plantSystem.SaveFarmUpgradeData();
+
+        //inventory.SaveInventory();
+        //powerStorage.SaveAllGenerators();
+        //powerStorage.SaveMachines();
+
+        //enemyScript.SaveEnemyData();
+
+        //tutorialSystem.SaveTutorialData();
     }
 
     public void loadAllData()
     {
-        LoadGameData();
+        try { LoadGameData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadGameData Error: " + e.Message); }
 
-        plantSystem.LoadWaterTank();
+        try { plantSystem.LoadWaterTank(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadWaterTank Error: " + e.Message); }
 
-        plantSystem.LoadPlantsData();
+        try { plantSystem.LoadPlantsData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadPlantsData Error: " + e.Message); }
 
-        plantSystem.LoadFarmUpgradeData();
+        try { plantSystem.LoadFarmUpgradeData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadFarmUpgradeData Error: " + e.Message); }
 
-        inventory.LoadInventoryData();
-        powerStorage.LoadGenerators();
-        powerStorage.LoadMachines();
+        try { inventory.LoadInventoryData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadInventoryData Error: " + e.Message); }
 
-        enemyScript.LoadEnemyData();
+        try { powerStorage.LoadGenerators(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadGenerators Error: " + e.Message); }
 
-        tutorialSystem.LoadTutorialData();
+        try { powerStorage.LoadMachines(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadMachines Error: " + e.Message); }
 
-        ui.countDate(day);
+        try { enemyScript.LoadEnemyData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadEnemyData Error: " + e.Message); }
+
+        try { tutorialSystem.LoadTutorialData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("LoadTutorialData Error: " + e.Message); }
+
+        try { ui.countDate(day); } catch (System.Exception e) { UnityEngine.Debug.LogError("countDate Error: " + e.Message); }
+
+        //LoadGameData();
+
+        //plantSystem.LoadWaterTank();
+
+        //plantSystem.LoadPlantsData();
+
+        //plantSystem.LoadFarmUpgradeData();
+
+        //inventory.LoadInventoryData();
+        //powerStorage.LoadGenerators();
+        //powerStorage.LoadMachines();
+
+        //enemyScript.LoadEnemyData();
+
+        //tutorialSystem.LoadTutorialData();
+
+        //ui.countDate(day);
 
     }
 
     public void DeleteAllData()
     {
-        MainSaveSystem.SaveFarmUpgradeData(null);
-        MainSaveSystem.SaveGameData(0, globarWarmingSystem.startingLevel);
-        MainSaveSystem.SaveWaterTankData(0);
-        MainSaveSystem.SaveGeneratorsData(null);
-        MainSaveSystem.SaveInventoryData(null, 450);
-        MainSaveSystem.SaveMachinesData(null);
-        MainSaveSystem.SavePlantsData(null);
-        MainSaveSystem.SaveEnemyData(null, 0);
-        MainSaveSystem.SaveTutorialData(null);
+        try { MainSaveSystem.SaveFarmUpgradeData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveFarmUpgradeData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveGameData(0, globarWarmingSystem.startingLevel); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGameData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveWaterTankData(0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveWaterTankData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveGeneratorsData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGeneratorsData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveInventoryData(null, 9999); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventoryData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveMachinesData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveMachinesData Error: " + e.Message); }
+
+        try { MainSaveSystem.SavePlantsData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SavePlantsData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveEnemyData(null, 0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveEnemyData Error: " + e.Message); }
+
+        try { MainSaveSystem.SaveTutorialData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveTutorialData Error: " + e.Message); }
+
+        //MainSaveSystem.SaveFarmUpgradeData(null);
+        //MainSaveSystem.SaveGameData(0, globarWarmingSystem.startingLevel);
+        //MainSaveSystem.SaveWaterTankData(0);
+        //MainSaveSystem.SaveGeneratorsData(null);
+        //MainSaveSystem.SaveInventoryData(null, 450);
+        //MainSaveSystem.SaveMachinesData(null);
+        //MainSaveSystem.SavePlantsData(null);
+        //MainSaveSystem.SaveEnemyData(null, 0);
+        //MainSaveSystem.SaveTutorialData(null);
     }
 
     public void GameOver()

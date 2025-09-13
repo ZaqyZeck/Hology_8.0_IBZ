@@ -12,12 +12,12 @@ public class TutorialSystem : MonoBehaviour
     private void Update()
     {
         // ccek alur
-        for(int i = 0; i < alurTutorial.alur.Length; i++)
-        {
-            if (alurTutorial.alur[i]) continue;
-            Debug.Log($"alur ke: {i}");
-            break;
-        }
+        //for(int i = 0; i < alurTutorial.alur.Length; i++)
+        //{
+        //    if (alurTutorial.alur[i]) continue;
+        //    Debug.Log($"alur ke: {i}");
+        //    break;
+        //}
 
         GameObject currentBotton = ButtonStorage.getCurrentButton();
         if (!alurTutorial.alur[0])

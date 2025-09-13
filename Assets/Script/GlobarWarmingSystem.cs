@@ -5,7 +5,11 @@ public class GlobarWarmingSystem : MonoBehaviour
     public int startingLevel = 300;
     public int currentLevel;
 
-    [SerializeField] private UnityEngine.UI.Image levelBarForeground;
+    public int maxPower, currentPower;
+    
+    public int maxWater, currentWater;
+
+    [SerializeField] private UnityEngine.UI.Image levelBarForeground, powerBarForeground, waterBarForeground;
     //[SerializeField] private AnimationCurve curve;
 
     private void Awake()
@@ -22,4 +26,6 @@ public class GlobarWarmingSystem : MonoBehaviour
     {
         levelBarForeground.fillAmount = (float)currentLevel / (float)startingLevel;
     } 
+
+
 }

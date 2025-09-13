@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 
 public class GeneratorScript : MonoBehaviour
 {
-    public int id;
+    public int id, placementId = -1;
     public Vector3 location;
     public bool havefuel;
 
@@ -17,6 +17,7 @@ public class GeneratorScript : MonoBehaviour
     private RotationControl rotationControl;
     private InventorySystem inventorySystem;
     [SerializeField] private int[] upgradesPrice, upgradePower;
+    [SerializeField] private GameObject[] bilahWindTurbine;
 
     // new data
     public int machineLevel;
@@ -24,6 +25,7 @@ public class GeneratorScript : MonoBehaviour
     public bool haveLoaded;
 
     [SerializeField] GameObject directionArrow;
+    private PlaceMentSystem placeMentSystem;
 
     private void Awake()
     {
@@ -31,6 +33,7 @@ public class GeneratorScript : MonoBehaviour
         GW_system = FindAnyObjectByType<GlobarWarmingSystem>();
         rotationControl = FindAnyObjectByType<RotationControl>();
         inventorySystem = FindAnyObjectByType<InventorySystem>();
+        placeMentSystem = FindAnyObjectByType<PlaceMentSystem>();
         //location = transform.localPosition;
 
     }
@@ -85,13 +88,19 @@ public class GeneratorScript : MonoBehaviour
             else transform.localScale = _originalScale;
             
         }
-        return;
         if(type == "Wind")
         {
-            // aku mau object berputar dengan arah z dan titik pivot ada di tengah object, jadi kaya kincir angin;
-            Vector3 center = GetComponent<Renderer>().bounds.center;
-
-            transform.RotateAround(center, Vector3.forward, 100f * Time.deltaTime);
+            if (bilahWindTurbine != null && bilahWindTurbine.Length > 0)
+            {
+                foreach (GameObject bilah in bilahWindTurbine)
+                {
+                    if (bilah != null)
+                    {
+                        // rotasi searah jarum jam (clockwise) di sumbu Z
+                        bilah.transform.Rotate(0f, 0f, -200f * Time.deltaTime);
+                    }
+                }
+            }
         }
     }
 
@@ -101,6 +110,12 @@ public class GeneratorScript : MonoBehaviour
         {
             ButtonStorage.changeButton(machineButton);
         }
+    }
+
+    public void DestroyGenerator()
+    {
+        placeMentSystem.RemoveStrcture(placementId);
+
     }
 
     public void UpgradeMachine()

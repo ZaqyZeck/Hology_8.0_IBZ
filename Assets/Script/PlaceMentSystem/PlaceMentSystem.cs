@@ -124,7 +124,7 @@ public class PlaceMentSystem : MonoBehaviour
         if (_placementValidity == false) return;
 
 
-        Debug.Log(_selectedObjectIndex);
+        //Debug.Log(_selectedObjectIndex);
         ObjectData _data = _database._objectsData[_selectedObjectIndex];
         int _inventoryIndex = _selectedObjectIndex + 1;
         //if (_inventory.inventory[_inventoryIndex].amount <= 0)
@@ -140,10 +140,10 @@ public class PlaceMentSystem : MonoBehaviour
         if(_inventoryIndex == 7 || _inventoryIndex == 8) _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, 0f, _data.Location, _data.ID);
         else _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID);
 
-        GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
+        GridData _selectedData = _furnitureData;
         _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);
 
-        Debug.Log(_selectedObjectIndex);
+        //Debug.Log(_selectedObjectIndex);
         //Debug.Log(_inventory.inventory[_inventoryIndex + 1].name);
         if (_inventoryIndex > 5 && _inventoryIndex < 9)
         {
@@ -151,6 +151,24 @@ public class PlaceMentSystem : MonoBehaviour
             if (!alurTutorial.alur[3] && _inventoryIndex > 6 && _inventoryIndex < 9) alurTutorial.alur[3] = true;
             _inventory.coins -= _inventory.inventory[_inventoryIndex].price;
             StopPlacement();
+        }
+
+        givePlacementID(_objekID);
+    }
+
+    void givePlacementID(int id)
+    {
+        GeneratorScript[] generatorScripts = FindObjectsByType<GeneratorScript>(FindObjectsSortMode.None);
+
+        foreach (GeneratorScript generatorScript in generatorScripts)
+        {
+            if (generatorScript.placementId >= 0)
+            {
+                Debug.Log(generatorScript.placementId + " cjkscjkaj");
+                continue;
+            }
+            generatorScript.placementId = id;
+            break;
         }
     }
 
@@ -196,8 +214,8 @@ public class PlaceMentSystem : MonoBehaviour
         _objectList.RemoveObjectWith(ID);
         _furnitureData.RemoveObjectWith(ID);
 
-        int _inventoryIdIndex = ID / 1000;
-        _inventory.addOneTo(_inventoryIdIndex);
+        //int _inventoryIdIndex = ID / 1000;
+        //_inventory.addOneTo(_inventoryIdIndex);
     }
 
     private bool CheckPlacementValidity(Vector3Int _gridPosition, int selectedObjectIndex)
@@ -217,7 +235,7 @@ public class PlaceMentSystem : MonoBehaviour
         Vector3Int _gridPosition = _grid.WorldToCell(_mousePosition);
 
         bool _placementValidity = CheckPlacementValidity(_gridPosition, _selectedObjectIndex);
-        _previewRenderer.material.color = _placementValidity ? new Color(1f, 1f, 1f, 200f / 255f) : Color.red;
+        _previewRenderer.material.color = _placementValidity ? new Color(1f, 1f, 1f, 150f / 255f) : Color.white;
 
         //if (_placementValidity == false) return;
 
@@ -244,5 +262,17 @@ public class PlaceMentSystem : MonoBehaviour
 
         GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
         _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);
+
+        GeneratorScript[] generatorScripts = FindObjectsByType<GeneratorScript>(FindObjectsSortMode.None);
+
+        foreach (GeneratorScript generatorScript in generatorScripts)
+        {
+            if (generatorScript.placementId >= 0)
+            {
+                continue;
+            }
+            generatorScript.placementId = _objekID;
+            break;
+        }
     }
 }

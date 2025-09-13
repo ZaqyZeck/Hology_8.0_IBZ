@@ -45,6 +45,11 @@ public class RotationControl : MonoBehaviour
 
                 _t = 0f;
                 _isRotating = true;
+
+                //if (ButtonStorage.getCurrentButton().activeSelf)
+                //{
+                //    ButtonStorage.changeButton(ButtonStorage.getCurrentButton());
+                //}
             }
 
             if (Input.GetKeyDown(KeyCode.Q))
@@ -57,6 +62,11 @@ public class RotationControl : MonoBehaviour
 
                 _t = 0f;
                 _isRotating = true;
+
+                //if (ButtonStorage.getCurrentButton().activeSelf)
+                //{
+                //    ButtonStorage.changeButton(ButtonStorage.getCurrentButton());
+                //}
             }
 
         }

@@ -82,25 +82,25 @@ public class QuestSystem : MonoBehaviour
 
     public void autoComplete()
     {
-        List<Quest> activeQuest = getActiveQuest();
-        int currentDate = gameManager.day;
-        foreach (Quest quest in activeQuest)
-        {
-            if(quest.deadline == currentDate)
-            {
-                completeQuest(quest.questId);
-            }
-        }
+        //List<Quest> activeQuest = getActiveQuest();
+        //int currentDate = gameManager.day;
+        //foreach (Quest quest in activeQuest)
+        //{
+        //    if(quest.deadline == currentDate)
+        //    {
+        //        completeQuest(quest.questId);
+        //    }
+        //}
     }
 
     public void CekQuest()
     {
-        List<Quest> failedQuest = getFailedQuest();
-        //List<Quest> activeQuest = getActiveQuest();
-        if (failedQuest.Count > 0)
-        {
-            gameManager.GameOver();
-        }
+        //List<Quest> failedQuest = getFailedQuest();
+        ////List<Quest> activeQuest = getActiveQuest();
+        //if (failedQuest.Count > 0)
+        //{
+        //    gameManager.GameOver();
+        //}
     }
 
     public Quest GetQuestBy(int id)

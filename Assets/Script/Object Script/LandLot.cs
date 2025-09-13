@@ -15,6 +15,7 @@ public class LandLot : MonoBehaviour
 
     [SerializeField] private ObjectDatabaseSO _database;
 
+    [SerializeField] private GameObject transparentBox;
 
     // new upgrade data
 
@@ -27,9 +28,9 @@ public class LandLot : MonoBehaviour
         _lotCollider = GetComponent<Collider>();
     }
 
-    private void Update()
-    {
-    }
+    //private void Update()
+    //{
+    //}
 
     void OnMouseOver()
     {
@@ -40,6 +41,19 @@ public class LandLot : MonoBehaviour
             ButtonStorage.changeButton(_buttonObject);
             _buttonObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        if (!ButtonStorage.IsPointerOverUI())
+        {
+            transparentBox.SetActive(true);
+        }
+    }
+
+    private void OnMouseExit()
+    {
+        transparentBox.SetActive(false);
     }
 
     public void PlacePlantBy(int _id)

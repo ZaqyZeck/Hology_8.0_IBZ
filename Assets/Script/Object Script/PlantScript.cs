@@ -85,6 +85,13 @@ public class PlantScript : MonoBehaviour
         _spriteRenderer.sprite = phaseSprite[_currentPhase];
         if (_age == _maxAge) harvestable = true;
         _LotID = _lot.lotId;
+
+        if (_age >= _maxAge)
+        {
+            _age = _maxAge;
+            harvestable = true;
+            havestButton.SetActive(true);
+        }
     }
 
     public void LoadUpgradeFarm(int farmLevel, string farmType)
@@ -100,7 +107,8 @@ public class PlantScript : MonoBehaviour
                 {
                     phaseSprite[i] = verticalSprites[i];
                 }
-               
+                gameObject.transform.localScale = new Vector3(0.8f, gameObject.transform.localScale.y, gameObject.transform.localScale.z);
+                _buttonObject.gameObject.transform.localScale = new Vector3(1.2f, _buttonObject.gameObject.transform.localScale.y, _buttonObject.gameObject.transform.localScale.z);
             }
             if(farmLevel == 1)
             {
