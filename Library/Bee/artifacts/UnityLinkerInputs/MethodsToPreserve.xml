@@ -42,7 +42,6 @@
 			<method name="StartPlacement"/>
 		</type>
 		<type fullname="PowerStorage">
-			<method name="LoadMachines"/>
 			<method name="SaveMachines"/>
 		</type>
 		<type fullname="RegulerItemScript">
@@ -62,11 +61,15 @@
 			<method name="goToCategory"/>
 			<method name="goToCategory"/>
 		</type>
+		<type fullname="SkipDayAnimation">
+			<method name="SkipDay"/>
+		</type>
 		<type fullname="TutorialSlideUI">
 			<method name="NextSlide"/>
 			<method name="PreviousSlide"/>
 		</type>
 		<type fullname="UiController">
+			<method name="countCoin"/>
 			<method name="countCoin"/>
 			<method name="countCoin"/>
 			<method name="countStorageAmount"/>
@@ -100,6 +103,8 @@
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>

@@ -1,6 +1,7 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
 		<type fullname="CameraControl" preserve="nothing"/>
+		<type fullname="DestroyGeneratorButton" preserve="nothing"/>
 		<type fullname="DestroyMachineButton" preserve="nothing"/>
 		<type fullname="DestroyPlant" preserve="nothing"/>
 		<type fullname="DirectionArrowMovement" preserve="nothing"/>
@@ -9,6 +10,7 @@
 		<type fullname="FarmUpgrade" preserve="nothing"/>
 		<type fullname="FueledGenerator" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
+		<type fullname="GeneratorControlButton" preserve="nothing"/>
 		<type fullname="GeneratorRotation" preserve="nothing"/>
 		<type fullname="GeneratorScript" preserve="nothing"/>
 		<type fullname="GlobarWarmingSystem" preserve="nothing"/>
@@ -23,6 +25,7 @@
 		<type fullname="ObjectDatabaseSO" preserve="nothing"/>
 		<type fullname="ObjectList" preserve="nothing"/>
 		<type fullname="OpenShopButton" preserve="nothing"/>
+		<type fullname="OpenStorageButton" preserve="nothing"/>
 		<type fullname="PlaceMachine" preserve="nothing"/>
 		<type fullname="PlaceMentSystem" preserve="nothing"/>
 		<type fullname="PlacePlantButton" preserve="nothing"/>
@@ -34,8 +37,10 @@
 		<type fullname="RotationControl" preserve="nothing"/>
 		<type fullname="ShopSystem" preserve="nothing"/>
 		<type fullname="ShopUI" preserve="nothing"/>
+		<type fullname="SkipDayAnimation" preserve="nothing"/>
 		<type fullname="TutorialSlideUI" preserve="nothing"/>
 		<type fullname="TutorialSystem" preserve="nothing"/>
+		<type fullname="UiAnimation" preserve="nothing"/>
 		<type fullname="UiController" preserve="nothing"/>
 		<type fullname="UpgradeGeneratorButton" preserve="nothing"/>
 		<type fullname="UpgradeMachineButton" preserve="nothing"/>

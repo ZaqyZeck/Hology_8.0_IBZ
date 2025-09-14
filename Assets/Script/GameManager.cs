@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -22,15 +23,31 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GlobarWarmingSystem globarWarmingSystem;
 
     [SerializeField] private Text[] turnsLeftTexts;
-    //int GW_level;  
+    
     bool gameOver;
+
+    //[Header("skip animation")]
+    [SerializeField] GameObject blackScreen, textNextTurn, challengingSprite, turnCounter;
+    //int GW_level;  
+    
     private void Start()
     {
         loadAllData();
     }
-
     public void skipDays()
     {
+        StopAllCoroutines();
+        StartCoroutine(SkipDaysCoroutine());
+    }
+
+    private IEnumerator SkipDaysCoroutine()
+    {
+        // jalankan animasi skip
+        SkipDayAnimation();
+
+        // tunggu 1 detik (biar animasi sempat kelihatan dulu)
+        yield return new WaitForSeconds(1f);
+
         try { questSystem.autoComplete(); }
         catch (System.Exception e) { Debug.LogError("autoComplete Error: " + e.Message); }
 
@@ -61,7 +78,6 @@ public class GameManager : MonoBehaviour
         try { powerStorage.BuffAllPlant(); }
         catch (System.Exception e) { Debug.LogError("BuffAllPlant Error: " + e.Message); }
 
-        // system/event untuk enemy competition
         try { enemyScript.EnemyGetYields(); }
         catch (System.Exception e) { Debug.LogError("EnemyGetYields Error: " + e.Message); }
 
@@ -75,31 +91,8 @@ public class GameManager : MonoBehaviour
 
         try { if (!gameOver) saveAllData(); }
         catch (System.Exception e) { Debug.LogError("saveAllData Error: " + e.Message); }
-
-
-        //questSystem.autoComplete();
-        //questSystem.CekQuest();
-
-        //day += 6;
-
-        //powerStorage.GiveEnergyToWaterTank();
-
-        //plantSystem.GetAllPlant();
-        //plantSystem.ResetAll();
-        //plantSystem.WaterAll();
-        //plantSystem.GrowAll();
-
-        //powerStorage.GiveEnergy();
-        //powerStorage.BuffAllPlant();
-
-        //// system/event  untuk enemy competition
-        //enemyScript.EnemyGetYields();
-        //CheckDayEvent();
-
-        //ui.countDate(day);
-
-        //if (!gameOver) saveAllData();
     }
+
 
     void CheckDayEvent()
     {
@@ -313,13 +306,98 @@ public class GameManager : MonoBehaviour
 
         foreach( Text text in turnsLeftTexts)
         {
-            text.text = $"{turnLeft} turn left";
+            text.text = $"{turnLeft} turns left";
             
         }
 
-        if (turnLeft == 15)
+        if ((turnLeft == 15 && day != 6) || day == 12)
         {
-            turnsLeftTexts[1].text = "A new enemy has arrived";
+            turnsLeftTexts[1].text = "A new enemy has arrived1";
         }
     }
+
+    public void SkipDayAnimation()
+    {
+        blackScreen.SetActive(true);
+        int turnLeft = (90 + (90 * enemyScript.enemyEncounter) - day) / 6;
+        turnCounter.SetActive(true);
+        turnCounter.GetComponent<Text>().text = $"Turn {(day + 6) / 6}";
+        if ((turnLeft == 15 && day != 0) || day == 6) challengingSprite.SetActive(true);
+        else 
+        { 
+            textNextTurn.SetActive(true);
+            //turnsLeftTexts[1].text = $"{turnLeft} turn left";
+        }
+    }
+    //public void skipDays()
+    //{
+    //    SkipDayAnimation();
+    //    try { questSystem.autoComplete(); }
+    //    catch (System.Exception e) { Debug.LogError("autoComplete Error: " + e.Message); }
+
+    //    try { questSystem.CekQuest(); }
+    //    catch (System.Exception e) { Debug.LogError("CekQuest Error: " + e.Message); }
+
+    //    try { day += 6; }
+    //    catch (System.Exception e) { Debug.LogError("day increment Error: " + e.Message); }
+
+    //    try { powerStorage.GiveEnergyToWaterTank(); }
+    //    catch (System.Exception e) { Debug.LogError("GiveEnergyToWaterTank Error: " + e.Message); }
+
+    //    try { plantSystem.GetAllPlant(); }
+    //    catch (System.Exception e) { Debug.LogError("GetAllPlant Error: " + e.Message); }
+
+    //    try { plantSystem.ResetAll(); }
+    //    catch (System.Exception e) { Debug.LogError("ResetAll Error: " + e.Message); }
+
+    //    try { plantSystem.WaterAll(); }
+    //    catch (System.Exception e) { Debug.LogError("WaterAll Error: " + e.Message); }
+
+    //    try { plantSystem.GrowAll(); }
+    //    catch (System.Exception e) { Debug.LogError("GrowAll Error: " + e.Message); }
+
+    //    try { powerStorage.GiveEnergy(); }
+    //    catch (System.Exception e) { Debug.LogError("GiveEnergy Error: " + e.Message); }
+
+    //    try { powerStorage.BuffAllPlant(); }
+    //    catch (System.Exception e) { Debug.LogError("BuffAllPlant Error: " + e.Message); }
+
+    //    // system/event untuk enemy competition
+    //    try { enemyScript.EnemyGetYields(); }
+    //    catch (System.Exception e) { Debug.LogError("EnemyGetYields Error: " + e.Message); }
+
+    //    try { CheckDayEvent(); }
+    //    catch (System.Exception e) { Debug.LogError("CheckDayEvent Error: " + e.Message); }
+
+    //    try { ui.countDate(day); }
+    //    catch (System.Exception e) { Debug.LogError("countDate Error: " + e.Message); }
+
+    //    countTurnLeft();
+
+    //    try { if (!gameOver) saveAllData(); }
+    //    catch (System.Exception e) { Debug.LogError("saveAllData Error: " + e.Message); }
+
+    //    //questSystem.autoComplete();
+    //    //questSystem.CekQuest();
+
+    //    //day += 6;
+
+    //    //powerStorage.GiveEnergyToWaterTank();
+
+    //    //plantSystem.GetAllPlant();
+    //    //plantSystem.ResetAll();
+    //    //plantSystem.WaterAll();
+    //    //plantSystem.GrowAll();
+
+    //    //powerStorage.GiveEnergy();
+    //    //powerStorage.BuffAllPlant();
+
+    //    //// system/event  untuk enemy competition
+    //    //enemyScript.EnemyGetYields();
+    //    //CheckDayEvent();
+
+    //    //ui.countDate(day);
+
+    //    //if (!gameOver) saveAllData();
+    //}
 }

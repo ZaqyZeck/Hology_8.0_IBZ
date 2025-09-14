@@ -116,6 +116,7 @@
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:TEXTCORE_TEXT_ENGINE_1_5_OR_NEWER
+-define:UNITY_POST_PROCESSING_STACK_V2
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
 -r:"C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll"
@@ -323,6 +324,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.InputSystem.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Mathematics.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Multiplayer.Center.Common.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Postprocessing.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Rendering.LightTransport.Runtime.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.RenderPipeline.Universal.ShaderLibrary.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.RenderPipelines.Core.Runtime.ref.dll"
@@ -345,16 +347,20 @@
 -analyzer:"C:/Program Files/Unity/Hub/Editor/6000.0.49f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
 "Assets/Script/Button Script/ButtonScript.cs"
 "Assets/Script/Button Script/ButtonStorage.cs"
+"Assets/Script/Button Script/DestroyGeneratorButton.cs"
 "Assets/Script/Button Script/DestroyMachineButton.cs"
 "Assets/Script/Button Script/DestroyPlant.cs"
 "Assets/Script/Button Script/FueledGenerator.cs"
+"Assets/Script/Button Script/GeneratorControlButton.cs"
 "Assets/Script/Button Script/HarvestPlant.cs"
 "Assets/Script/Button Script/OpenShopButton.cs"
+"Assets/Script/Button Script/OpenStorageButton.cs"
 "Assets/Script/Button Script/PlaceMachine.cs"
 "Assets/Script/Button Script/PlacePlantButton.cs"
 "Assets/Script/Button Script/UpgradeGeneratorButton.cs"
 "Assets/Script/Button Script/UpgradeMachineButton.cs"
 "Assets/Script/Button Script/UpgradeWaterTank.cs"
+"Assets/Script/ColliderVisualizer.cs"
 "Assets/Script/Competition System/EnemyScript.cs"
 "Assets/Script/GameManager.cs"
 "Assets/Script/GlobarWarmingSystem.cs"
@@ -405,6 +411,7 @@
 "Assets/Script/UI Script/MainMenuScript.cs"
 "Assets/Script/UI Script/ShopUI.cs"
 "Assets/Script/UI Script/TutorialSlideUI.cs"
+"Assets/Script/UI Script/UI Animation/SkipDayAnimation.cs"
 "Assets/Script/UI Script/UiAnimation.cs"
 "Assets/Script/UI Script/UiController.cs"
 "Assets/TutorialInfo/Scripts/Readme.cs"
