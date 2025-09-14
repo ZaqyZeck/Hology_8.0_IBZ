@@ -16,7 +16,7 @@ public class MachinePlacement : MonoBehaviour
 
     int sellValue = 0;
     //private Collider signCollider;
-
+    [SerializeField] GameObject transparentCube;
     private void Awake()
     {
         rotationControl = FindAnyObjectByType<RotationControl>();
@@ -44,6 +44,16 @@ public class MachinePlacement : MonoBehaviour
                 else upgradeButton.SetActive(true);
             }
          }
+    }
+
+    private void OnMouseEnter()
+    {
+        transparentCube.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        transparentCube.SetActive(false);
     }
 
     public void AddMachine(int prefab_index)

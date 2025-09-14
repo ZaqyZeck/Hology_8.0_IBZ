@@ -152,6 +152,16 @@ public class PlantScript : MonoBehaviour
         }
     }
 
+    private void OnMouseEnter()
+    {
+        _spriteRenderer.color = new Color(1f, 1f, 1f, 160f / 255f);
+    }
+
+    private void OnMouseExit()
+    {
+        _spriteRenderer.color = new Color(1f, 1f, 1f, 1f);
+    }
+
     public void WaterThePlant(float _waterAmount)
     {
         waterGot += _waterAmount;

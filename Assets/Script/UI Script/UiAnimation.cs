@@ -1,9 +1,11 @@
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections;
 
 public class UiAnimation : MonoBehaviour
 {
     public int indexAnimation;
+    public bool isMoving, isFadeIn;
+    public float waitsDuration;
 
     [Header("Movement Settings")]
     public Vector3 startingPosition;
@@ -16,7 +18,7 @@ public class UiAnimation : MonoBehaviour
 
     [Header("Fade Settings")]
     public float fadeDuration = 1f;
-    private CanvasGroup canvasGroup;
+    [SerializeField] private CanvasGroup canvasGroup;
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class UiAnimation : MonoBehaviour
 
         // Set posisi awal
         //transform.position = startingPosition;
+        startingPosition = transform.localPosition;
     }
 
     private void OnEnable()
@@ -34,7 +37,7 @@ public class UiAnimation : MonoBehaviour
         //transform.localPosition = startingPosition;
         switch (indexAnimation)
         {
-            case 1: 
+            case 1:
                 MoveToTarget();
                 break;
             case 2:
@@ -45,16 +48,64 @@ public class UiAnimation : MonoBehaviour
                 StartBlink();
                 break;
             case 4:
-                FadeIn(); 
+                FadeIn();
+                break;
+            case 5:
+                // apakah ini bagus?
+                MoveAndFadeIn();
+                break;
+            case 6:
+                MoveToTargetThenMoveAgain();
+                break;
+            case 7:
+                MoveToTargetThenFade();
+                break;
+            case 8:
+                FadeInThenWaitAndFadeOut();
                 break;
         }
     }
+
+    //private IEnumerator SequenceFadeAndMove()
+    //{
+    //    // Fade in
+    //    isMoving = true;
+    //    yield return StartCoroutine(FadeCoroutine(0f, 1f, fadeDuration));
+
+    //    isFadeIn = true;
+    //    // Move ke target
+    //    yield return StartCoroutine(MoveCoroutine(startingPosition, targetPosition, moveDuration));
+    //    isFadeIn = false;
+
+    //    // Tunggu 2 detik
+    //    yield return new WaitForSeconds(2f);
+
+    //    // Move lagi ke arah yang sama (misalnya double jarak)
+    //    //Vector3 secondTarget = targetPosition + (targetPosition - startingPosition);
+    //    //yield return StartCoroutine(MoveCoroutine(targetPosition, secondTarget, moveDuration));
+    //}
 
     // ---------------- MOVE ----------------
     public void MoveToTarget()
     {
         StopAllCoroutines();
         StartCoroutine(MoveCoroutine(startingPosition, targetPosition, moveDuration));
+    }
+
+    public void MoveToTargetThenMoveAgain()
+    {
+        StopAllCoroutines();
+        StartCoroutine(MoveToTargetThenContinue());
+    }
+
+    public IEnumerator MoveToTargetThenContinue()
+    {
+        yield return MoveCoroutine(startingPosition, targetPosition, moveDuration);
+        yield return new WaitForSeconds(1f);
+
+        Vector3 secondTarget = targetPosition + (targetPosition - startingPosition);
+        yield return MoveCoroutine(targetPosition, secondTarget, moveDuration);
+        //gameObject.SetActive(false);
     }
 
     public void MoveToStart()
@@ -152,5 +203,84 @@ public class UiAnimation : MonoBehaviour
         }
         transform.localPosition = to;
         canvasGroup.alpha = alphaTo;
+    }
+
+    // hjhjb
+
+    public void MoveToTargetThenFade()
+    {
+        StopAllCoroutines();
+        StartCoroutine(MoveToTargetThenFadeCoroutine());
+    }
+
+    private IEnumerator MoveToTargetThenFadeCoroutine()
+    {
+        yield return new WaitForSeconds(fadeDuration);
+        // --- MOVE ke target sambil FADE IN ---
+        float time = 0f;
+        while (time < moveDuration)
+        {
+            float t = time / moveDuration;
+            transform.localPosition = Vector3.Lerp(startingPosition, targetPosition, t);
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.localPosition = targetPosition;
+        canvasGroup.alpha = 1f;
+
+        // Tunggu sebentar
+        yield return new WaitForSeconds(waitsDuration);
+
+        // --- MOVE lagi ke second target sambil FADE OUT ---
+        Vector3 secondTarget = targetPosition + (targetPosition - startingPosition);
+        time = 0f;
+        while (time < moveDuration)
+        {
+            float t = time / moveDuration;
+            transform.localPosition = Vector3.Lerp(targetPosition, secondTarget, t);
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, t);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        transform.localPosition = secondTarget;
+        canvasGroup.alpha = 0f;
+        gameObject.SetActive(false);
+    }
+
+
+    // ---------------- FADE IN → WAIT → FADE OUT ----------------
+    public void FadeInThenWaitAndFadeOut()
+    {
+        StopAllCoroutines();
+        StartCoroutine(FadeInThenWaitAndFadeOutCoroutine());
+        
+    }
+
+    private IEnumerator FadeInThenWaitAndFadeOutCoroutine()
+    {
+        // Fade In
+        float time = 0f;
+        while (time < fadeDuration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(0f, 1f, time / fadeDuration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        canvasGroup.alpha = 1f;
+
+        // Tunggu 2 detik
+        yield return new WaitForSeconds(waitsDuration);
+
+        // Fade Out
+        time = 0f;
+        while (time < fadeDuration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(1f, 0f, time / fadeDuration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        canvasGroup.alpha = 0f;
+        gameObject.SetActive(false);
     }
 }

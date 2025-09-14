@@ -7,6 +7,8 @@ public class WaterTank : MonoBehaviour
     [SerializeField] private PlantSystem plantSystem;
 
     [SerializeField] private GameObject tutorilUI;
+
+    [SerializeField] GameObject transparentCube;
     public void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && !rotationControl._isRotating)
@@ -20,5 +22,15 @@ public class WaterTank : MonoBehaviour
             plantSystem.UpdateWaterCounter();
             Debug.Log("terpencet");
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        transparentCube.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        transparentCube.SetActive(false);
     }
 }

@@ -5,6 +5,7 @@ public class OpenShopButton : MonoBehaviour
     [SerializeField] private RotationControl _rotationControl;
     [SerializeField] private GameObject ShopUI;
     [SerializeField] private GameObject directionArrow;
+    [SerializeField] private GameObject transparentCube;
     public void OnMouseOver()
     {
         if (Input.GetMouseButtonDown(0) && !_rotationControl._isRotating && !ButtonStorage.IsPointerOverUI())
@@ -23,5 +24,15 @@ public class OpenShopButton : MonoBehaviour
         {
             directionArrow.SetActive(false);
         }
+    }
+
+    private void OnMouseEnter()
+    {
+        transparentCube.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        transparentCube.SetActive(false);
     }
 }

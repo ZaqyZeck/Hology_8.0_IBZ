@@ -95,6 +95,7 @@
     <Compile Include="Assets\Script\Button Script\FueledGenerator.cs" />
     <Compile Include="Assets\Script\UI Script\TutorialSlideUI.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\UltraVioletMachine.cs" />
+    <Compile Include="Assets\Script\Button Script\OpenStorageButton.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\ObjectDatabaseSO.cs" />
     <Compile Include="Assets\Script\Button Script\PlacePlantButton.cs" />
     <Compile Include="Assets\Script\Object Script\PlantSystem.cs" />
@@ -119,6 +120,7 @@
     <Compile Include="Assets\Script\Button Script\HarvestPlant.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\RotationControl.cs" />
     <Compile Include="Assets\Script\GlobarWarmingSystem.cs" />
+    <Compile Include="Assets\Script\UI Script\UI Animation\SkipDayAnimation.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\CameraControl.cs" />
     <Compile Include="Assets\Script\Save System\InventoryData.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyMachineButton.cs" />

@@ -82,7 +82,7 @@ public static class MainSaveSystem
         }
     }
 
-    public static void SaveGeneratorsData(GeneratorScript[] generator)
+    public static void SaveGeneratorsData(GeneratorScript[] generator, int powerAmount, int maxPower)
     {
         int fileNumber = 0;
         if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
@@ -91,7 +91,7 @@ public static class MainSaveSystem
         string path = Application.persistentDataPath + $"/generators{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        GeneratorData generatorData = new GeneratorData(generator);
+        GeneratorData generatorData = new GeneratorData(generator, powerAmount, maxPower);
 
         formatter.Serialize(stream, generatorData);
         stream.Close();
@@ -158,7 +158,7 @@ public static class MainSaveSystem
         }
     }
 
-    public static void SaveWaterTankData(int waterTankLevel)
+    public static void SaveWaterTankData(int waterTankLevel, int waterAmount)
     {
         int fileNumber = 0;
         if (PlayerPrefs.HasKey("fileNumber")) fileNumber = PlayerPrefs.GetInt("fileNumber");
@@ -167,7 +167,7 @@ public static class MainSaveSystem
         string path = Application.persistentDataPath + $"/WaterTank{fileNumber}.dt";
         FileStream stream = new FileStream(path, FileMode.Create);
 
-        WaterTankData waterTankData = new WaterTankData(waterTankLevel);
+        WaterTankData waterTankData = new WaterTankData(waterTankLevel, waterAmount);
 
         formatter.Serialize(stream, waterTankData);
         stream.Close();

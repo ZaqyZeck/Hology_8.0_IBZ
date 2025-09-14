@@ -27,6 +27,8 @@ public class GeneratorScript : MonoBehaviour
     [SerializeField] GameObject directionArrow;
     private PlaceMentSystem placeMentSystem;
 
+    [SerializeField] GameObject transparentCube;
+
     private void Awake()
     {
         _originalScale = transform.localScale;
@@ -45,7 +47,9 @@ public class GeneratorScript : MonoBehaviour
 
     public int GeneratePower()
     {
+        if (!havefuel && type == "Diesel") return 0;
         if (havefuel) GW_system.lowerTheLevelBy(globalWarm);
+        
         return producePower;
     }
 
@@ -110,6 +114,12 @@ public class GeneratorScript : MonoBehaviour
         {
             ButtonStorage.changeButton(machineButton);
         }
+        transparentCube.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        transparentCube.SetActive(false);
     }
 
     public void DestroyGenerator()

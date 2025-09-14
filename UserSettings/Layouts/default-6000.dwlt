@@ -274,8 +274,8 @@ MonoBehaviour:
     y: 0
     width: 362.40002
     height: 716.8
-  m_MinSize: {x: 276, y: 76}
-  m_MaxSize: {x: 4001, y: 4026}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -422,23 +422,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 10ad0000
-      m_LastClickedID: 44304
-      m_ExpandedIDs: 2cc9feff50c9feffdeccfeffc459ffffd0f0fffff2faffff9eac000010ad0000e0ae000054af000032b1000008b3000048b3000036b4000058b70000
+      m_SelectedIDs: f035fdff
+      m_LastClickedID: -182800
+      m_ExpandedIDs: 7843feff04f0ffffd2f3fffff2faffffe2ac0000e2ae00005aaf000066af000072b0000082b0000008b10000d4b200001ab3000062b3000014b4000050b4000032b500001eb70000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: GW bar
-        m_OriginalName: GW bar
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -78626
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 4
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 8}
@@ -1042,9 +1042,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 290.70337, y: 507.2913, z: 1014.7822}
+    m_Target: {x: 1062.0256, y: 430.24036, z: -928.50684}
     speed: 2
-    m_Value: {x: 290.70337, y: 507.2913, z: 1014.7822}
+    m_Value: {x: 1062.0256, y: 430.24036, z: -928.50684}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1090,13 +1090,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0029706124, y: -0.077375546, z: -0.00044254455, w: -0.9977477}
+    m_Target: {x: -0.028146137, y: -0.020883335, z: -0.003583212, w: 1.000228}
     speed: 2
-    m_Value: {x: 0.0029683919, y: -0.07731771, z: -0.00044221376, w: -0.99700195}
+    m_Value: {x: -0.02812228, y: -0.020865634, z: -0.0035801749, w: 0.9993803}
   m_Size:
-    m_Target: 583.45953
+    m_Target: 0.8660254
     speed: 2
-    m_Value: 583.45953
+    m_Value: 0.8660254
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1683,7 +1683,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/ZaqyArt/UI
+    - Assets/Script/UI Script/UI Animation
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1693,16 +1693,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/ZaqyArt/UI
+  - Assets/Script/UI Script/UI Animation
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Zaqy Ulunnuha\My Games\Hology_8.0_IBZ
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 377.2}
-    m_SelectedIDs: bebf0000
-    m_LastClickedID: 49086
-    m_ExpandedIDs: 000000004cbd00004ebd000050bd000052bd000054bd000056bd000058bd00005abd0000a6bf000000ca9a3b
+    scrollPos: {x: 0, y: 185.20001}
+    m_SelectedIDs: 208e0800
+    m_LastClickedID: 560672
+    m_ExpandedIDs: 0000000086bd000088bd00008abd00008cbd00008ebd000090bd000092bd000094bd0000c2bf00000ed9000018d90000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1731,7 +1731,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004cbd00004ebd000050bd000052bd000054bd000056bd000058bd00005abd0000
+    m_ExpandedIDs: 0000000086bd000088bd00008abd00008cbd00008ebd000090bd000092bd000094bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1760,7 +1760,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000f2ce0000a8aa0000f8a70000eaae0000e4720100e672010082ab0000d2af0100deab0000beb90000d8b200008eb20000227f01009eac0000aeac0000e6b3000002af000064b00000c8b10000cab1000068bd000032f60000b4b00000d2150100c0b00000c013020006b80000fa1f0200deb200008aba00008eba00008cba00008ab30000a8530200f0bc00004ebe000054be000052be0000741b0100dae10000d8af0100d6af0100e83e04005aa304003c5509003a5509003455090038550900325509003e55090036550900445509004255090078b8000066bb00006abb000068bb00007412040054ba00007812040000000000cc3a0400
+    m_ExpandedInstanceIDs: c6230000f2ce0000a8aa0000f8a70000eaae0000e4720100e672010082ab0000d2af0100deab0000beb90000d8b200008eb20000227f01009eac0000aeac0000e6b3000002af000064b00000c8b10000cab1000068bd000032f60000b4b00000d2150100c0b00000c013020006b80000fa1f0200deb200008aba00008eba00008cba00008ab30000a8530200f0bc00004ebe000054be000052be0000741b0100dae10000d8af0100d6af0100e83e04005aa304003c5509003a5509003455090038550900325509003e55090036550900445509004255090078b8000066bb00006abb000068bb00007412040054ba00007812040000000000cc3a0400ca310200
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1868,7 +1868,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 218.79999
+  m_LastVerticalScrollValue: 270
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:

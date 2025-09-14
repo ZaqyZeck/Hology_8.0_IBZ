@@ -20,6 +20,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TutorialSystem tutorialSystem;
 
     [SerializeField] private GlobarWarmingSystem globarWarmingSystem;
+
+    [SerializeField] private Text[] turnsLeftTexts;
     //int GW_level;  
     bool gameOver;
     private void Start()
@@ -68,6 +70,8 @@ public class GameManager : MonoBehaviour
 
         try { ui.countDate(day); }
         catch (System.Exception e) { Debug.LogError("countDate Error: " + e.Message); }
+
+        countTurnLeft();
 
         try { if (!gameOver) saveAllData(); }
         catch (System.Exception e) { Debug.LogError("saveAllData Error: " + e.Message); }
@@ -160,6 +164,7 @@ public class GameManager : MonoBehaviour
 
         try { tutorialSystem.SaveTutorialData(); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveTutorialData Error: " + e.Message); }
 
+        globarWarmingSystem.loadGWLevelUI();
         //SaveGameData();
 
         //plantSystem.SaveWaterTank();
@@ -199,6 +204,9 @@ public class GameManager : MonoBehaviour
 
         try { ui.countDate(day); } catch (System.Exception e) { UnityEngine.Debug.LogError("countDate Error: " + e.Message); }
 
+        countTurnLeft();
+
+        globarWarmingSystem.loadGWLevelUI();
         //LoadGameData();
 
         //plantSystem.LoadWaterTank();
@@ -225,9 +233,9 @@ public class GameManager : MonoBehaviour
 
         try { MainSaveSystem.SaveGameData(0, globarWarmingSystem.startingLevel); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGameData Error: " + e.Message); }
 
-        try { MainSaveSystem.SaveWaterTankData(0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveWaterTankData Error: " + e.Message); }
+        try { MainSaveSystem.SaveWaterTankData(0, 0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveWaterTankData Error: " + e.Message); }
 
-        try { MainSaveSystem.SaveGeneratorsData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGeneratorsData Error: " + e.Message); }
+        try { MainSaveSystem.SaveGeneratorsData(null, 0, 0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGeneratorsData Error: " + e.Message); }
 
         try { MainSaveSystem.SaveInventoryData(null, 9999); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventoryData Error: " + e.Message); }
 
@@ -292,5 +300,26 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Ending1");
         }
         else SceneManager.LoadScene("Ending2");
+    }
+
+    public void countTurnLeft()
+    {
+        int turnLeft;
+        if (day < 12)
+        {
+            return;
+        }
+        turnLeft = (90 + (90 * enemyScript.enemyEncounter) - day) / 6;
+
+        foreach( Text text in turnsLeftTexts)
+        {
+            text.text = $"{turnLeft} turn left";
+            
+        }
+
+        if (turnLeft == 15)
+        {
+            turnsLeftTexts[1].text = "A new enemy has arrived";
+        }
     }
 }

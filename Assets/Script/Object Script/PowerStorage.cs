@@ -43,6 +43,9 @@ public class PowerStorage : MonoBehaviour
 
         maxPower = totalPower;
 
+        return;
+        Debug.Log("apakah energy yg tersisa mau disimpan selama energy tambahan tidak melebihi maxPower?");
+
     }
 
     public void GetMachines()
@@ -56,12 +59,12 @@ public class PowerStorage : MonoBehaviour
         float waterPower = plantSystem._maxWater / 20;
         if (totalPower < waterPower)
         {
-            plantSystem.energyGet = totalPower;
+            plantSystem.energyGet += totalPower;
             totalPower = 0;
         }
         else
         {
-            plantSystem.energyGet = waterPower;
+            plantSystem.energyGet += waterPower;
             totalPower -= (int)waterPower;
         }
     }
@@ -108,12 +111,15 @@ public class PowerStorage : MonoBehaviour
         {
             generator.setGeneratorLocation();
         }
-        MainSaveSystem.SaveGeneratorsData(generators);
+        MainSaveSystem.SaveGeneratorsData(generators, totalPower, maxPower);
     }
 
     public void LoadGenerators()
     {
         GeneratorData generatorData = MainSaveSystem.LoadGenerators();
+
+        totalPower = generatorData.powerAmounr;
+        maxPower = generatorData.maxPower;
         for(int index = 0; index < generatorData.id.Length; index++) 
         {
             if (generatorData.id[index] == 0) continue;

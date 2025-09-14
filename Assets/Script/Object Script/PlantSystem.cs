@@ -98,11 +98,12 @@ public class PlantSystem : MonoBehaviour
 
         if (true)
         {
-            _water = energyGet * 20;
+            _water += energyGet * 20;
+            energyGet = 0;
             if (_water > _maxWater) _water = _maxWater;
             return;
         }
-        _water = _maxWater;
+        //_water = _maxWater;
     }
 
     public void GrowAll()
@@ -136,7 +137,7 @@ public class PlantSystem : MonoBehaviour
 
     public void SaveWaterTank()
     {
-        MainSaveSystem.SaveWaterTankData(waterTankLevel);
+        MainSaveSystem.SaveWaterTankData(waterTankLevel,(int) _water);
     }
 
     public void LoadWaterTank()
@@ -145,6 +146,7 @@ public class PlantSystem : MonoBehaviour
         waterTankLevel = data.waterTankLevel;
         if (waterTankLevel == 0) return;
         _maxWater = waterStorage[waterTankLevel - 1][0];
+        _water = data.waterAmount;
         UpdateWaterCounter();
     }
 

@@ -9,13 +9,17 @@ public class GeneratorData : Data
     public float[] location_z = new float[3];
     public bool[] havefuel = new bool[3];
 
+    public int powerAmounr = 0, maxPower;
+
     // new data
     public int[] machineLevel = new int[3];
 
-    public GeneratorData(GeneratorScript[] generatorScripts)
+    public GeneratorData(GeneratorScript[] generatorScripts, int powerAmounr, int maxPower)
     {
         if (generatorScripts == null) return;
         int i = 0;
+        this.powerAmounr = powerAmounr;
+        this.maxPower = maxPower;
         foreach (GeneratorScript generator in generatorScripts)
         {
             id[i] = generator.id - 1;
