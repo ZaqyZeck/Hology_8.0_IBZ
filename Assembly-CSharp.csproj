@@ -86,6 +86,7 @@
     <Compile Include="Assets\Script\Button Script\OpenShopButton.cs" />
     <Compile Include="Assets\Script\Save System\WaterTankData.cs" />
     <Compile Include="Assets\Script\Save System\MainSaveSystem.cs" />
+    <Compile Include="Assets\Script\UI Script\EnemyDuelSpriteControl.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\RegulerItemScript.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyPlant.cs" />

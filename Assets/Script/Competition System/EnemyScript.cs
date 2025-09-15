@@ -1,3 +1,4 @@
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,9 +17,14 @@ public class EnemyScript : MonoBehaviour
     public int enemyEncounter = 0;
 
     [SerializeField] private Text kubisCounter, tomatCounter, timunCounter, strawberiCounter;
+    [SerializeField] private Text[] duelYieldCounters, playerYieldCounters;
     [SerializeField] private InventorySystem inventorySystem;
 
     InventoryObject kubisInventory, tomatInventory, timunInventory, strawberiInventory;
+
+    [SerializeField] private GameObject DuelPanel;
+
+    public int durationCounterDuel;
 
     private void Awake()
     {
@@ -81,6 +87,11 @@ public class EnemyScript : MonoBehaviour
         LoadEnemyStock();
     }
 
+    public void StartDuel()
+    {
+        StartCoroutine(CountYieldDuel());
+    }
+
     public void DuelPlayer()
     {
         bool playerWon = 
@@ -110,7 +121,64 @@ public class EnemyScript : MonoBehaviour
         strawberiInventory.amount = 0;
 
         inventorySystem.coins += sellAmount + 500;
+
+        for (int i = 0; i < duelYieldCounters.Length; i++)
+        {
+            duelYieldCounters[i].text = $"??? :";
+            playerYieldCounters[i].text = $": ???";
+        }
+        DuelPanel.SetActive(false);
     }
+
+    private IEnumerator CountYieldDuel()
+    {
+        float time = 0f;
+
+        // Enemy
+        int[] startValuesEnemy = new int[yieldsTotal_Array.Length]; // awal 0
+        int[] targetValuesEnemy = yieldsTotal_Array;                // tujuan akhir
+
+        // Player
+        int[] startValuesPlayer = new int[4]; // awal 0
+        int[] targetValuesPlayer =
+        {
+        inventorySystem.inventory[9].amount,
+        inventorySystem.inventory[10].amount,
+        inventorySystem.inventory[11].amount,
+        inventorySystem.inventory[12].amount
+    };
+
+        while (time < durationCounterDuel)
+        {
+            time += Time.deltaTime;
+            float t = Mathf.Clamp01(time / durationCounterDuel); // progress 0 → 1
+
+            for (int i = 0; i < duelYieldCounters.Length; i++)
+            {
+                // Enemy counter
+                int enemyValue = Mathf.RoundToInt(Mathf.Lerp(startValuesEnemy[i], targetValuesEnemy[i], t));
+                duelYieldCounters[i].text = $"{enemyValue} :";
+
+                // Player counter
+                int playerValue = Mathf.RoundToInt(Mathf.Lerp(startValuesPlayer[i], targetValuesPlayer[i], t));
+                playerYieldCounters[i].text = $": {playerValue}";
+            }
+
+            yield return null;
+        }
+
+        // Pastikan nilai akhir benar
+        for (int i = 0; i < duelYieldCounters.Length; i++)
+        {
+            duelYieldCounters[i].text = $"{targetValuesEnemy[i]} :";
+            playerYieldCounters[i].text = $": {targetValuesPlayer[i]}";
+        }
+
+        yield return new WaitForSeconds(0.5f);
+
+        DuelPlayer();
+    }
+
 
     public void SaveEnemyData()
     {

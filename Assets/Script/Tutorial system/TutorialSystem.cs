@@ -8,6 +8,7 @@ public class TutorialSystem : MonoBehaviour
 
     [SerializeField] private GameObject ShopUI;
     [SerializeField] private GameObject skipDayButton, tutorialSlideButton;
+    [SerializeField] private GameManager gameManager;
 
     private void Update()
     {
@@ -76,11 +77,20 @@ public class TutorialSystem : MonoBehaviour
         }
         else if(alurTutorial.alur[6] && alurTutorial.alur[7] && alurTutorial.alur[8] && !alurTutorial.alur[9] && !skipDayButton.activeSelf)
         {
+
             skipDayButton.SetActive(true);
+            if(gameManager.day % 90 == 0)
+            {
+                skipDayButton.SetActive(false);
+            }
         }
         if (alurTutorial.alur[9])
         {
             skipDayButton.SetActive(true);
+            if (gameManager.day % 90 == 0)
+            {
+                skipDayButton.SetActive(false);
+            }
             this.enabled = false;
         }
     }

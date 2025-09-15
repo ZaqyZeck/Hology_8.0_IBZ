@@ -33,6 +33,12 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         loadAllData();
+        if (day % 90 == 0 && day != 0)
+        {
+            CheckDayEvent();
+            skipDayButton.SetActive(false);
+            duelButton.SetActive(true);
+        }
     }
     public void skipDays()
     {
@@ -230,7 +236,7 @@ public class GameManager : MonoBehaviour
 
         try { MainSaveSystem.SaveGeneratorsData(null, 0, 0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGeneratorsData Error: " + e.Message); }
 
-        try { MainSaveSystem.SaveInventoryData(null, 9999); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventoryData Error: " + e.Message); }
+        try { MainSaveSystem.SaveInventoryData(null, 450); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventoryData Error: " + e.Message); }
 
         try { MainSaveSystem.SaveMachinesData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveMachinesData Error: " + e.Message); }
 
@@ -328,6 +334,11 @@ public class GameManager : MonoBehaviour
             textNextTurn.SetActive(true);
             //turnsLeftTexts[1].text = $"{turnLeft} turn left";
         }
+    }
+
+    public void GoToDay(int targetDay)
+    {
+        day = targetDay;
     }
     //public void skipDays()
     //{

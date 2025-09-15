@@ -491,6 +491,7 @@
 "Assets/Script/UI Script/BaseBuildingScript.cs"
 "Assets/Script/UI Script/ChallengingUI.cs"
 "Assets/Script/UI Script/EndingUI/EndingAnimationScript.cs"
+"Assets/Script/UI Script/EnemyDuelSpriteControl.cs"
 "Assets/Script/UI Script/EnemyUIController.cs"
 "Assets/Script/UI Script/ItemUI.cs"
 "Assets/Script/UI Script/MainMenuScript.cs"
