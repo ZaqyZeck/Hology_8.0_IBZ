@@ -72,6 +72,7 @@
     <Compile Include="Assets\Script\UI Script\ChallengingUI.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\PlaceMentSystem.cs" />
     <Compile Include="Assets\Script\Save System\FarmUpgradeData.cs" />
+    <Compile Include="Assets\Script\Button Script\ButtonHover.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachinePlacement.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\QuestSystem.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonStorage.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Assets\Script\Save System\PlantsData.cs" />
     <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
     <Compile Include="Assets\Script\GameManager.cs" />
+    <Compile Include="Assets\Script\UI Script\UI Animation\challengerArrivedSprite.cs" />
     <Compile Include="Assets\Script\Button Script\GeneratorControlButton.cs" />
     <Compile Include="Assets\Script\Save System\TutorialData.cs" />
     <Compile Include="Assets\Script\Button Script\UpgradeGeneratorButton.cs" />

@@ -322,7 +322,7 @@ public class GameManager : MonoBehaviour
         int turnLeft = (90 + (90 * enemyScript.enemyEncounter) - day) / 6;
         turnCounter.SetActive(true);
         turnCounter.GetComponent<Text>().text = $"Turn {(day + 6) / 6}";
-        if ((turnLeft == 15 && day != 0) || day == 6) challengingSprite.SetActive(true);
+        if (day == 90|| day == 6 || day == 180 || day == 270) challengingSprite.SetActive(true);
         else 
         { 
             textNextTurn.SetActive(true);

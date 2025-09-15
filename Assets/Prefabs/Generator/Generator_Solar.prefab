@@ -191,6 +191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generatorFuelTutorial: {fileID: 2737171930829645358}
   generatorScript: {fileID: 2388695057312443613}
+  textButton: {fileID: 0}
 --- !u!135 &3620353238665269688
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -229,7 +230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7897144799041572851
 RectTransform:
   m_ObjectHideFlags: 0
@@ -237,13 +238,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2670876278356654363}
-  m_LocalRotation: {x: 0.13052616, y: -0.0000000019449913, z: -3.6228286e-18, w: 0.9914449}
+  m_LocalRotation: {x: 0, y: 0.9914449, z: -0.13052616, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721753517402075170}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1}
@@ -578,6 +579,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generatorScript: {fileID: 2388695057312443613}
+  textButton: {fileID: 2670876278356654363}
 --- !u!135 &7345267566214000762
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -758,7 +760,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3030479458692715327
 RectTransform:
   m_ObjectHideFlags: 0
@@ -766,13 +768,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7519534350359281933}
-  m_LocalRotation: {x: 0.13052616, y: -0.0000000019449913, z: -3.6228286e-18, w: 0.9914449}
+  m_LocalRotation: {x: 0, y: 0.9914449, z: -0.13052616, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1872560050259409364}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 15, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1}
@@ -1069,6 +1071,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1872560050259409364}
   - component: {fileID: 2704868131263424080}
+  - component: {fileID: 6327270553130747537}
   - component: {fileID: 4059470798380239826}
   m_Layer: 0
   m_Name: Destroy Machine
@@ -1148,6 +1151,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6327270553130747537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8400101119900287591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b983518c5cfe1c49bc2922feebbe5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  generatorScript: {fileID: 2388695057312443613}
+  textButton: {fileID: 7519534350359281933}
 --- !u!135 &4059470798380239826
 SphereCollider:
   m_ObjectHideFlags: 0

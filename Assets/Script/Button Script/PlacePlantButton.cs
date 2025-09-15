@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class PlacePlantButton : ButtonScript
@@ -5,6 +6,9 @@ public class PlacePlantButton : ButtonScript
     public int _plantId;
     private LandLot _landLot;
     private RotationControl _rotationControl;
+    private InventorySystem _inventorySystem;
+
+    [SerializeField] private TextMeshPro amountItem;
 
     [SerializeField] private GameObject kubisTutorial;
 
@@ -12,6 +16,7 @@ public class PlacePlantButton : ButtonScript
     {
         _landLot = gameObject.GetComponentInParent<LandLot>();
         _rotationControl = FindAnyObjectByType<RotationControl>();
+        _inventorySystem = FindAnyObjectByType<InventorySystem>();
     }
     public void OnMouseOver()
     {
@@ -25,6 +30,7 @@ public class PlacePlantButton : ButtonScript
 
     private void OnEnable()
     {
+        amountItem.text = _inventorySystem.inventory[_plantId].amount.ToString();
         if (!alurTutorial.alur[0])
         {
             if (kubisTutorial == null) return;

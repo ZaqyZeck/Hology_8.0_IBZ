@@ -3,6 +3,17 @@ using UnityEngine;
 public class UpgradeGeneratorButton : MonoBehaviour
 {
     [SerializeField] private GeneratorScript generatorScript;
+    [SerializeField] private GameObject textButton;
+
+    private void OnMouseEnter()
+    {
+        textButton.SetActive(true);
+    }
+
+    private void OnMouseExit()
+    {
+        textButton.SetActive(false);
+    }
 
     public void OnMouseOver()
     {

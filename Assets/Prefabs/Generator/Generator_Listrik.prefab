@@ -213,6 +213,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   generatorFuelTutorial: {fileID: 2737171930829645358}
   generatorScript: {fileID: 2388695057312443613}
+  textButton: {fileID: 6257677520956978739}
 --- !u!135 &3620353238665269688
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -424,6 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generatorScript: {fileID: 2388695057312443613}
+  textButton: {fileID: 3126014143112025515}
 --- !u!135 &7345267566214000762
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -462,7 +464,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1424699552407283038
 RectTransform:
   m_ObjectHideFlags: 0
@@ -470,13 +472,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3126014143112025515}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 721753517402075170}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.116, y: 1.207}
@@ -646,7 +648,7 @@ Transform:
   m_GameObject: {fileID: 4334051458485976349}
   serializedVersion: 2
   m_LocalRotation: {x: -0.0000000037252903, y: -0, z: 0.000000007450581, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4070709, z: 0}
+  m_LocalPosition: {x: 0, y: 0.79, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -672,7 +674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &4178039956835856397
 RectTransform:
   m_ObjectHideFlags: 0
@@ -680,13 +682,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5795989772227838479}
-  m_LocalRotation: {x: 0.0000000037252903, y: -2.7755576e-17, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: -0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1872560050259409364}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 1}
@@ -848,7 +850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2582710339099801423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -856,13 +858,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6257677520956978739}
-  m_LocalRotation: {x: 0.0000000037252903, y: -2.7755576e-17, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4115181512990776098}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0.99999976}
@@ -1272,6 +1274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   generatorScript: {fileID: 2388695057312443613}
+  textButton: {fileID: 5795989772227838479}
 --- !u!1001 &8352253739142150873
 PrefabInstance:
   m_ObjectHideFlags: 0
