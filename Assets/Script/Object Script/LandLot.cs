@@ -21,6 +21,8 @@ public class LandLot : MonoBehaviour
 
     public string farmType;
     public int farmLevel;
+
+    [SerializeField] SoundManager soundManager;
     private void Awake()
     {
         rotationControl = FindAnyObjectByType<RotationControl>();
@@ -78,6 +80,8 @@ public class LandLot : MonoBehaviour
         plantScript._lot = GetComponent<LandLot>();
         plantScript.LoadUpgradeFarm(farmLevel, farmType);
         plantScript.load();
+
+        soundManager.PlaySFX(soundManager.placeplant);
     }
 
     public PlantScript LoadPlantBy(int _id, int _farmLevel)
@@ -111,6 +115,8 @@ public class LandLot : MonoBehaviour
         _havePlant = false;
         _lotCollider.enabled = true;
         Destroy(_plant);
+
+        soundManager.PlaySFX(soundManager.cutPlant);
     }
 
     public void FindIdInDB(int _id)

@@ -25,6 +25,7 @@ public class PlaceMachine : ButtonScript
         if (Input.GetMouseButtonDown(0))
         {
             machinePlacement.AddMachine(_machineId);
+            if (machinePlacement.haveMachine) textButton.SetActive(false);
             Debug.Log("terpencet");
         }
     }

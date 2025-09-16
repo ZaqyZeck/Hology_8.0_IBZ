@@ -44,6 +44,8 @@ public class PlantScript : MonoBehaviour
     [SerializeField] GameObject directionArrow, havestButton;
 
     [SerializeField] Sprite[] verticalSprites, horizontalSprites;
+
+    [SerializeField] SoundManager soundManager;
     private void Awake()
     {
         _ps = FindAnyObjectByType<PlaceMentSystem>();
@@ -53,6 +55,7 @@ public class PlantScript : MonoBehaviour
         rotationControl = FindAnyObjectByType<RotationControl>();
         gameObject.transform.rotation = Quaternion.Euler(gameObject.transform.rotation.x, rotationControl._currentAngle, gameObject.transform.rotation.z);
         _collider = GetComponent<BoxCollider>();
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
         //_lot = GetComponentInParent<LandLot>();
 
         //_spriteRenderer.sprite = phaseSprite[_currentPhase];
@@ -239,6 +242,8 @@ public class PlantScript : MonoBehaviour
     {
         _inventory.inventory[_yieldsId].amount += _yieldsAmount + _bonusYield;
         _lot.RemovePlant();
+        soundManager.PlaySFX(soundManager.harvestPlant);
+        
 
         if(!alurTutorial.alur[6] && alurTutorial.alur[5])
         {

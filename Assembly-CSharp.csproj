@@ -87,12 +87,15 @@
     <Compile Include="Assets\Script\Save System\WaterTankData.cs" />
     <Compile Include="Assets\Script\Save System\MainSaveSystem.cs" />
     <Compile Include="Assets\Script\UI Script\EnemyDuelSpriteControl.cs" />
+    <Compile Include="Assets\Script\UI Script\EnemyPanelController.cs" />
     <Compile Include="Assets\Script\PlaceMentSystem\InputManager.cs" />
     <Compile Include="Assets\Script\Quest &amp; NPC Script\RegulerItemScript.cs" />
+    <Compile Include="Assets\Script\UI Script\MainMenuHoverButton.cs" />
     <Compile Include="Assets\Script\Button Script\DestroyPlant.cs" />
     <Compile Include="Assets\Script\Competition System\EnemyScript.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\MachineScript.cs" />
     <Compile Include="Assets\Script\Save System\EnemyData.cs" />
+    <Compile Include="Assets\Script\SoundManager.cs" />
     <Compile Include="Assets\Script\Object Script\LandLot.cs" />
     <Compile Include="Assets\Script\Button Script\FueledGenerator.cs" />
     <Compile Include="Assets\Script\UI Script\TutorialSlideUI.cs" />
@@ -129,6 +132,7 @@
     <Compile Include="Assets\Script\Button Script\DestroyMachineButton.cs" />
     <Compile Include="Assets\Script\ColliderVisualizer.cs" />
     <Compile Include="Assets\Script\Object Script\PowerStorage.cs" />
+    <Compile Include="Assets\Script\UI Script\PauseHoverButton.cs" />
     <Compile Include="Assets\Script\Object Script\Machine\ElectricTractorMachine.cs" />
     <Compile Include="Assets\Script\Save System\MachineData.cs" />
     <Compile Include="Assets\Script\Button Script\ButtonScript.cs" />

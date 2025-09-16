@@ -236,7 +236,7 @@ public class GameManager : MonoBehaviour
 
         try { MainSaveSystem.SaveGeneratorsData(null, 0, 0); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveGeneratorsData Error: " + e.Message); }
 
-        try { MainSaveSystem.SaveInventoryData(null, 450); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventoryData Error: " + e.Message); }
+        try { MainSaveSystem.SaveInventoryData(null, 500); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveInventoryData Error: " + e.Message); }
 
         try { MainSaveSystem.SaveMachinesData(null); } catch (System.Exception e) { UnityEngine.Debug.LogError("SaveMachinesData Error: " + e.Message); }
 

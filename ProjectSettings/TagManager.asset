@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Object2D
   - Generator
+  - SoundManager
   layers:
   - Default
   - TransparentFX

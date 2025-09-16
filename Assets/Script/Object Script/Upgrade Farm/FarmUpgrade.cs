@@ -29,7 +29,7 @@ public class FarmUpgrade : MonoBehaviour
 
     public void LoadUpgradeLandLot()
     {
-        if (farmLevel < upgradePrice.Length) priceUiCounter.text = $"G {upgradePrice[farmLevel]}";
+        if (farmLevel < upgradePrice.Length) priceUiCounter.text = $"{upgradePrice[farmLevel]} G";
         else priceUiCounter.text = "MAX";
         landLot = GetComponentsInChildren<LandLot>();
         foreach (LandLot lot in landLot)

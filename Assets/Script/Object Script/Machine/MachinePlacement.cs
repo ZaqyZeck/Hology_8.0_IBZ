@@ -101,7 +101,7 @@ public class MachinePlacement : MonoBehaviour
         haveMachine = false;
         machineButton.SetActive(false);
 
-        inventory.coins += sellValue;
+        inventory.coins += sellValue / 2;
         sellValue = 0;
     }
 

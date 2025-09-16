@@ -19,6 +19,17 @@ public class TutorialSystem : MonoBehaviour
         //    Debug.Log($"alur ke: {i}");
         //    break;
         //}
+        if (gameManager.day > 6)
+        {
+            for (int i = 0; i < alurTutorial.alur.Length; i++)
+            {
+                alurTutorial.alur[i] = true;
+            }
+
+            tutorialSlideButton.SetActive(true);
+            this.enabled = false;
+        }
+
 
         GameObject currentBotton = ButtonStorage.getCurrentButton();
         if (!alurTutorial.alur[0])

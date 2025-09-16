@@ -153,4 +153,14 @@ public class GeneratorScript : MonoBehaviour
         producePower = upgradePower[machineLevel];
         if (machineLevel >= 2) upgradeButton.SetActive(false);
     }
+
+    public int getUpgradePrice(int index)
+    {
+        if (index > 1)
+        {
+            return 0;
+        }
+
+        return upgradesPrice[index];
+    }
 }

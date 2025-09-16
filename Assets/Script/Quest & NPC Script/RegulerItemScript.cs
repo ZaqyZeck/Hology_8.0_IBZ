@@ -41,7 +41,7 @@ public class RegulerItemScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     }
     public void LoadPrice()
     {
-        priceCounter.text = $"Price: \n {price * amount}";
+        priceCounter.text = $"{price * amount} G";
     }
     public void buyItem()
     {
@@ -63,16 +63,16 @@ public class RegulerItemScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     public void increaseAmount()
     {
-        if (amount >= 10) return;
         amount++;
+        if (amount >= 21) amount = 0;
         LoadPrice();
         amountCounter.text = amount.ToString();
     }
 
     public void decreaseAmount()
     {
-        if (amount <= 0) return;
         amount--;
+        if (amount < 1) amount = 20;
         LoadPrice();
         amountCounter.text = amount.ToString();
     }
