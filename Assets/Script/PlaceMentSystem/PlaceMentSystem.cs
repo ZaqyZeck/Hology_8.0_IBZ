@@ -30,6 +30,8 @@ public class PlaceMentSystem : MonoBehaviour
 
     public bool isBuilding = false;
     //private List<GameObject> _placedGameObject = new();
+
+    [SerializeField] GameObject normalInstruction, buildingInstruction;
     private void Start()
     {
         StopPlacement();
@@ -56,6 +58,9 @@ public class PlaceMentSystem : MonoBehaviour
         _inputManager.OnClicked -= PlaceStructure;
         _inputManager.OnExit -= StopPlacement;
         isBuilding = false;
+
+        normalInstruction.SetActive(true);
+        buildingInstruction.SetActive(false);
         //_inputManager.OnRightClicked -= RemoveStrcture;
     }
 
@@ -110,6 +115,9 @@ public class PlaceMentSystem : MonoBehaviour
         //{
         //    _mouseIndicator.transform.localPosition = new Vector3(2f, 0f, 2f); 
         //}
+
+        normalInstruction.SetActive(false);
+        buildingInstruction.SetActive(true);
     }
 
     private void PlaceStructure()
@@ -257,11 +265,13 @@ public class PlaceMentSystem : MonoBehaviour
         Debug.Log($"posisi input : {location} dan posisi grid : {_gridPosition}");
 
         ObjectData _data = _database._objectsData[id];
-        Debug.Log(_data.Name);
+        Debug.Log(_data.Name + id);
 
         Vector3 _objectLocation = _grid.CellToWorld(_gridPosition) + _data.Location;
 
-        int _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID); //
+        int _objekID = 0; //
+        if (id == 6 || id == 7) _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, 0f, _data.Location, _data.ID);
+        else _objekID = _objectList.PlaceObject(_data.Prefab, _objectLocation, _rotation._currentAngle, _data.Location, _data.ID);
 
         GridData _selectedData = _data.ID == 0 ? _floorData : _furnitureData;
         _selectedData.AddObjectAt(_gridPosition, _data.Size, _objekID);

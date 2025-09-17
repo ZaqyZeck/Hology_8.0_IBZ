@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     bool gameOver;
 
     //[Header("skip animation")]
-    [SerializeField] GameObject blackScreen, textNextTurn, challengingSprite, turnCounter;
+    [SerializeField] GameObject blackScreen, textNextTurn, challengingSprite, turnCounter, CompetitionUI, EnemyUI;
     //int GW_level;  
     
     private void Start()
@@ -111,6 +111,8 @@ public class GameManager : MonoBehaviour
                 break;
             case 12:
                 alurTutorial.alur[9] = true;
+                CompetitionUI.SetActive(true);
+                EnemyUI.SetActive(true);
                 break;
             case 90:
                 skipDayButton.SetActive(false);
@@ -119,6 +121,8 @@ public class GameManager : MonoBehaviour
                 break;
             case 96:
                 enemyScript.ChangeEnemy();
+                CompetitionUI.SetActive(true);
+                EnemyUI.SetActive(true);
                 break;
             case 180:
                 skipDayButton.SetActive(false);

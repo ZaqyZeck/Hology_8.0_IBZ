@@ -16,6 +16,7 @@ ScriptsOnlyBuild:
     - FueledGenerator
     - GameManager
     - GeneratorControlButton
+    - GeneratorPowerUI
     - GeneratorRotation
     - GeneratorScript
     - GlobarWarmingSystem
@@ -40,6 +41,7 @@ ScriptsOnlyBuild:
     - PlantSystem
     - PowerStorage
     - QuestSystem
+    - RedBlackHoverButton
     - RegulerItemScript
     - RotationControl
     - ShopSystem
@@ -137,9 +139,6 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
-    - TMPro.TMP_Settings
-    - TMPro.TMP_SpriteAsset
-    - TMPro.TMP_StyleSheet
     - TMPro.TextMeshPro
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -288,15 +287,24 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.SpriteState
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuScript
+    methodName: DeleteAllData
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
-    methodName: DeleteAllData
-  - assembly: Assembly-CSharp
-    fullTypeName: MainMenuScript
     methodName: PlayScene
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
     methodName: PlayScene
@@ -315,6 +323,12 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
     methodName: ExitGame
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: Assembly-CSharp
     fullTypeName: MainMenuScript
     methodName: PlayScene
@@ -1165,6 +1179,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 26350}
     - Class: 114
       Script: {instanceID: 26398}
+    - Class: 114
+      Script: {instanceID: 99810}
+    - Class: 114
+      Script: {instanceID: 127824}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2752,7 +2770,7 @@ ScriptsOnlyBuild:
     className: UIFoldout
   - hash:
       serializedVersion: 2
-      Hash: e6593aef0e1ebe7c44df49931ae72800
+      Hash: e338cbaaeea2bbc8eaac755305d5238b
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: PlaceMentSystem
@@ -2920,7 +2938,7 @@ ScriptsOnlyBuild:
     className: CoroutineRunner
   - hash:
       serializedVersion: 2
-      Hash: 720eaebcf59e49a3aa89408cff29f217
+      Hash: de32010b3bd8716fa959dfdbf25e2959
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UpgradeGeneratorButton
@@ -3308,6 +3326,18 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp-firstpass
     namespaceName: AirFishLab.ScrollingList
     className: ListBank
+  - hash:
+      serializedVersion: 2
+      Hash: 78eaaf2e68fedd45928b3b0daed7f968
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: RedBlackHoverButton
+  - hash:
+      serializedVersion: 2
+      Hash: 32bbca1e7ef9844dfd5b0170aab63a2b
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: GeneratorPowerUI
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main Scene/MainMenu.unity
@@ -3315,4 +3345,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Main Scene/Ending3.unity
   - Assets/Scenes/Main Scene/Ending2.unity
   - Assets/Scenes/Main Scene/Ending1.unity
-  playerPath: C:/Users/Zaqy Ulunnuha/My Games/Game Build Tes 2/Hology_8.0_IBZ.exe
+  playerPath: C:/Users/Zaqy Ulunnuha/My Games/Game Build Test Video/Hology_8.0_IBZ.exe

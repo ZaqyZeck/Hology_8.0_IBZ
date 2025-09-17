@@ -16,6 +16,7 @@
 		<type fullname="FueledGenerator" preserve="nothing"/>
 		<type fullname="GameManager" preserve="nothing"/>
 		<type fullname="GeneratorControlButton" preserve="nothing"/>
+		<type fullname="GeneratorPowerUI" preserve="nothing"/>
 		<type fullname="GeneratorRotation" preserve="nothing"/>
 		<type fullname="GeneratorScript" preserve="nothing"/>
 		<type fullname="GlobarWarmingSystem" preserve="nothing"/>
@@ -40,6 +41,7 @@
 		<type fullname="PlantSystem" preserve="nothing"/>
 		<type fullname="PowerStorage" preserve="nothing"/>
 		<type fullname="QuestSystem" preserve="nothing"/>
+		<type fullname="RedBlackHoverButton" preserve="nothing"/>
 		<type fullname="RegulerItemScript" preserve="nothing"/>
 		<type fullname="RotationControl" preserve="nothing"/>
 		<type fullname="ShopSystem" preserve="nothing"/>

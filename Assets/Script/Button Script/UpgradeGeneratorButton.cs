@@ -7,6 +7,8 @@ public class UpgradeGeneratorButton : MonoBehaviour
     [SerializeField] private GameObject textButton;
     [SerializeField] private TextMeshPro UiText;
 
+    [SerializeField] private GeneratorPowerUI powerUI;
+
     private void OnMouseEnter()
     {
         textButton.SetActive(true);
@@ -26,6 +28,7 @@ public class UpgradeGeneratorButton : MonoBehaviour
             generatorScript.UpgradeMachine();
             //if(generatorScript.machineLevel >= 2) gameObject.SetActive(false);
             int price =generatorScript.getUpgradePrice(generatorScript.machineLevel);
+            powerUI.UpdatePowerUI();
 
             UiText.text = $"Upgrade\n{price} G";
         }

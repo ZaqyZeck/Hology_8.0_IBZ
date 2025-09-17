@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoundManager : MonoBehaviour
 {
@@ -23,27 +24,30 @@ public class SoundManager : MonoBehaviour
 
     private AudioClip[] musicPlaylist;
     private int currentTrack = 0;
+
+    [Header("Slider UI setiap Scene")]
+    public Slider musicVolumeSlider;
+    public Slider sfxVolumeSlider;
     void Start()
     {
-        if (Music1 != null)
-        {
-            // isi playlist musik
-            musicPlaylist = new AudioClip[] { Music1, Music2 };
+        // Load volume dari PlayerPrefs
+        musicVolume = PlayerPrefs.GetFloat("musicVolume", 1f);
+        sfxVolume = PlayerPrefs.GetFloat("sfxVolume", 1f);
 
-            // mulai dari lagu random
+        if (musicVolumeSlider != null) musicVolumeSlider.value = musicVolume;
+        if (sfxVolumeSlider != null) sfxVolumeSlider.value = sfxVolume;
+
+        if (Music1 != null && Music2 != null)
+        {
+            musicPlaylist = new AudioClip[] { Music1, Music2 };
             currentTrack = Random.Range(0, musicPlaylist.Length);
             PlayNextMusic();
         }
-        //else
-        //{
-            
-        //}
     }
 
     void Update()
     {
-        // cek apakah musik sudah selesai, kalau selesai ganti ke track berikutnya
-        if (!musicSource.isPlaying)
+        if (musicSource != null && !musicSource.isPlaying)
         {
             PlayNextMusic();
         }
@@ -51,23 +55,45 @@ public class SoundManager : MonoBehaviour
 
     private void PlayNextMusic()
     {
-        // set clip & play
+        if (musicPlaylist == null || musicPlaylist.Length == 0) return;
+
         musicSource.clip = musicPlaylist[currentTrack];
         musicSource.volume = musicVolume;
+        musicSource.loop = false; // biar bisa ganti track
         musicSource.Play();
 
-        // geser ke lagu berikutnya (looping)
         currentTrack = (currentTrack + 1) % musicPlaylist.Length;
     }
 
     public void PlaySFX(AudioClip SFX)
     {
-        //SFX.volume = sfxVolume;
-        sfxSource.PlayOneShot(SFX, sfxVolume);
+        if (sfxSource != null && SFX != null)
+            sfxSource.PlayOneShot(SFX, sfxVolume);
     }
 
     public void PlayUiClicked()
     {
-        sfxSource.PlayOneShot(uiClicked, sfxVolume);
+        PlaySFX(uiClicked);
+    }
+
+    public void ChangeMusicVolume()
+    {
+        if (musicVolumeSlider == null) return;
+        musicVolume = musicVolumeSlider.value;
+        if (musicSource != null) musicSource.volume = musicVolume;
+
+        PlayerPrefs.SetFloat("musicVolume", musicVolume);
+        PlayerPrefs.Save();
+    }
+
+    public void ChangeSFXVolume()
+    {
+        if (sfxVolumeSlider == null) return;
+        sfxVolume = sfxVolumeSlider.value;
+
+        if (sfxSource != null) sfxSource.volume = sfxVolume;
+
+        PlayerPrefs.SetFloat("sfxVolume", sfxVolume);
+        PlayerPrefs.Save();
     }
 }

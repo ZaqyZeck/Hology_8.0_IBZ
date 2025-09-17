@@ -64,7 +64,7 @@ public class RegulerItemScript : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void increaseAmount()
     {
         amount++;
-        if (amount >= 21) amount = 0;
+        if (amount >= 21) amount = 1;
         LoadPrice();
         amountCounter.text = amount.ToString();
     }
