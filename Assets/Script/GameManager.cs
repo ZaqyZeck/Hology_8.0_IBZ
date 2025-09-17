@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     }
     public void skipDays()
     {
+        if (day == 360) GoToEnding();
         StopAllCoroutines();
         StartCoroutine(SkipDaysCoroutine());
     }
@@ -259,10 +260,11 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
-        gameOver = true;
-        loseUI.SetActive(true);
+        //gameOver = true;
+        //loseUI.SetActive(true);
         DeleteAllData();
-        Debug.LogError("Game selesai");
+        SceneManager.LoadScene("Ending1");
+        //Debug.LogError("Game selesai");
     }
 
     void SaveGameData()
@@ -294,10 +296,10 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene("Ending3");
         }
-        else if (globarWarmingSystem.currentLevel >= 400)
-        {
-            SceneManager.LoadScene("Ending1");
-        }
+        //else if (globarWarmingSystem.currentLevel >= 400)
+        //{
+        //    SceneManager.LoadScene("Ending1");
+        //}
         else SceneManager.LoadScene("Ending2");
     }
 

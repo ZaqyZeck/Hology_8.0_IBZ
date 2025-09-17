@@ -30,6 +30,7 @@ public class PlantSystem : MonoBehaviour
     [SerializeField] FarmUpgrade[] farmUpgrades;
 
     public float energyGet;
+    [SerializeField] SoundManager soundManager;
 
     private void Awake()
     {
@@ -133,6 +134,8 @@ public class PlantSystem : MonoBehaviour
         {
             upgradeButton.SetActive(false);
         }
+
+        soundManager.PlaySFX(soundManager.upgrade);
     }
 
     public void SaveWaterTank()

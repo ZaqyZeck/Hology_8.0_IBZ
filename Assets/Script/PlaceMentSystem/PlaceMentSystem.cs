@@ -26,6 +26,8 @@ public class PlaceMentSystem : MonoBehaviour
 
     [SerializeField] private GameObject shopUI;
 
+    [SerializeField] private SoundManager soundManager;
+
     public bool isBuilding = false;
     //private List<GameObject> _placedGameObject = new();
     private void Start()
@@ -154,6 +156,7 @@ public class PlaceMentSystem : MonoBehaviour
         }
 
         givePlacementID(_objekID);
+        soundManager.PlaySFX(soundManager.placeGenerator);
     }
 
     void givePlacementID(int id)

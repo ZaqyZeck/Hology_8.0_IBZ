@@ -32,6 +32,7 @@ public class EndingAnimationScript : MonoBehaviour
             yield return null;
         }
 
+        yield return new WaitForSeconds(6f);
         // setelah fade in selesai, tampilkan tombol
         MainMenuButton.SetActive(true);
     }

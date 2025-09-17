@@ -20,10 +20,12 @@ public class MachineScript : MonoBehaviour
 
     public int upgradePrice = 1000;
 
-    //private void Awake()
-    //{
-    //    GetAllPlant();
-    //}
+    [SerializeField] SoundManager soundManager;
+
+    private void Awake()
+    {
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
+    }
 
     public void GetAllPlant()
     {
@@ -66,6 +68,8 @@ public class MachineScript : MonoBehaviour
     {
         upgradeLevel++;
         LoadLevel();
+
+        soundManager.PlaySFX(soundManager.upgrade);
     }
 
     public void LoadLevel()

@@ -40,4 +40,13 @@ public class ButtonHover : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         }
         else if(buttonSprites[0] != buttonSprites[2]) buttonSprites[0] = buttonSprites[2];
     }
+
+    private void OnEnable()
+    {
+        if (buttonSprites.Length == 4)
+        {
+            if (alurTutorial.alur[3] && !alurTutorial.alur[4]) buttonSprites[0] = buttonSprites[3];
+        }
+        buttonImage.sprite = buttonSprites[0];
+    }
 }

@@ -29,6 +29,8 @@ public class GeneratorScript : MonoBehaviour
 
     [SerializeField] GameObject transparentCube;
 
+    [SerializeField] SoundManager soundManager;
+
     private void Awake()
     {
         _originalScale = transform.localScale;
@@ -36,6 +38,8 @@ public class GeneratorScript : MonoBehaviour
         rotationControl = FindAnyObjectByType<RotationControl>();
         inventorySystem = FindAnyObjectByType<InventorySystem>();
         placeMentSystem = FindAnyObjectByType<PlaceMentSystem>();
+
+        soundManager = GameObject.FindGameObjectWithTag("SoundManager").GetComponent<SoundManager>();
         //location = transform.localPosition;
 
     }
@@ -140,6 +144,7 @@ public class GeneratorScript : MonoBehaviour
         machineLevel++;
 
         LoadLevel();
+        soundManager.PlaySFX(soundManager.upgrade);
     }
 
     public void FueledGenerator()

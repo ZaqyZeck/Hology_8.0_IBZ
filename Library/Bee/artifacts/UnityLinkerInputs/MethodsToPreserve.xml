@@ -1,7 +1,7 @@
 <linker>
 	<assembly fullname="Assembly-CSharp" ignoreIfMissing="1">
 		<type fullname="EnemyScript">
-			<method name="DuelPlayer"/>
+			<method name="StartDuel"/>
 		</type>
 		<type fullname="FarmUpgrade">
 			<method name="UpgradeFarm"/>
@@ -11,6 +11,10 @@
 		</type>
 		<type fullname="GameManager">
 			<method name="DeleteAllData"/>
+			<method name="GoToDay"/>
+			<method name="GoToDay"/>
+			<method name="GoToDay"/>
+			<method name="GoToDay"/>
 			<method name="skipDays"/>
 			<method name="skipDays"/>
 		</type>
@@ -29,13 +33,20 @@
 			<method name="CreateItemUI"/>
 		</type>
 		<type fullname="MainMenuScript">
+			<method name="DeleteAllData"/>
+			<method name="DeleteAllData"/>
+			<method name="DeleteAllData"/>
+			<method name="ExitGame"/>
+			<method name="goToMainMenu"/>
+			<method name="goToMainMenu"/>
+			<method name="goToMainMenu"/>
+			<method name="goToMainMenu"/>
 			<method name="goToMainMenu"/>
 			<method name="PlayScene"/>
 			<method name="PlayScene"/>
 			<method name="PlayScene"/>
 		</type>
 		<type fullname="PlaceMentSystem">
-			<method name="StartPlacement"/>
 			<method name="StartPlacement"/>
 			<method name="StartPlacement"/>
 			<method name="StartPlacement"/>
@@ -64,12 +75,17 @@
 		<type fullname="SkipDayAnimation">
 			<method name="SkipDay"/>
 		</type>
+		<type fullname="SoundManager">
+			<method name="PlayUiClicked"/>
+			<method name="PlayUiClicked"/>
+			<method name="PlayUiClicked"/>
+			<method name="PlayUiClicked"/>
+		</type>
 		<type fullname="TutorialSlideUI">
 			<method name="NextSlide"/>
 			<method name="PreviousSlide"/>
 		</type>
 		<type fullname="UiController">
-			<method name="countCoin"/>
 			<method name="countCoin"/>
 			<method name="countCoin"/>
 			<method name="countStorageAmount"/>
@@ -103,6 +119,22 @@
 	</assembly>
 	<assembly fullname="UnityEngine.CoreModule" ignoreIfMissing="1">
 		<type fullname="UnityEngine.GameObject">
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
+			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>
 			<method name="SetActive"/>

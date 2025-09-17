@@ -2084,7 +2084,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 298.30017, y: -169.46393}
+  m_AnchoredPosition: {x: 298.3, y: -169.46393}
   m_SizeDelta: {x: 596.6, y: 84.9447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &65809224
@@ -3057,7 +3057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &109112307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8030,7 +8030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &360793701
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10232,7 +10232,7 @@ MonoBehaviour:
   itemID: 11
   itemPrice: 10
   itemName: Benih Kubis
-  itemSprite: {fileID: 34965866, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  itemSprite: {fileID: -1006077836, guid: cf5be5ffba7f8344aab5a52d232b56f7, type: 3}
 --- !u!114 &469785748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13928,7 +13928,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 298.30005, y: -249.10657}
+  m_AnchoredPosition: {x: 298.3, y: -249.10657}
   m_SizeDelta: {x: 596.6, y: 84.9447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &660107021
@@ -15865,7 +15865,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 298.30017, y: -89.82131}
+  m_AnchoredPosition: {x: 298.30014, y: -89.82131}
   m_SizeDelta: {x: 596.6003, y: 84.9447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &779130157
@@ -17775,7 +17775,7 @@ MonoBehaviour:
   itemID: 10
   itemPrice: 10
   itemName: Benih Kubis
-  itemSprite: {fileID: -1828843059, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  itemSprite: {fileID: -452570803, guid: c37fd9528a7672e47bfa4d8cf649d8a8, type: 3}
 --- !u!114 &887545141
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19596,7 +19596,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &985439275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22449,7 +22449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1122817224
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24145,6 +24145,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 556506923}
     m_Modifications:
+    - target: {fileID: 3619373797805160039, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480168464747634951, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
       propertyPath: m_Name
       value: Sign Lot 2
@@ -25645,7 +25649,7 @@ MonoBehaviour:
   itemID: 9
   itemPrice: 10
   itemName: Benih Kubis
-  itemSprite: {fileID: 697922563, guid: ce57f84bdd56e9c45a03dff77d9531fa, type: 3}
+  itemSprite: {fileID: -287273545, guid: 9b7a65fe0963b4e42a30ea570ac3e635, type: 3}
 --- !u!114 &1294171855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31298,6 +31302,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1578257527}
+  - component: {fileID: 1578257531}
   - component: {fileID: 1578257530}
   - component: {fileID: 1578257529}
   - component: {fileID: 1578257528}
@@ -31315,18 +31320,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578257526}
-  m_LocalRotation: {x: -0, y: -0, z: 0.2334455, w: -0.97236997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1011279524}
   m_Father: {fileID: 1960919891}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 333}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -841, y: -521}
-  m_SizeDelta: {x: 400, y: 200}
+  m_AnchoredPosition: {x: 515, y: 464}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578257528
 MonoBehaviour:
@@ -31397,15 +31402,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 1568756306, guid: 3b79ba0c32af83d46a2327308a1db32f, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -31422,6 +31427,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1578257526}
   m_CullTransparentMesh: 1
+--- !u!114 &1578257531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1578257526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48a2266cbb9152740b31ce137a951842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonImage: {fileID: 1578257529}
+  buttonSprites:
+  - {fileID: 1568756306, guid: 3b79ba0c32af83d46a2327308a1db32f, type: 3}
+  - {fileID: -694061668, guid: 65e8ad6357c18f64a823005a2aa4b810, type: 3}
 --- !u!1 &1580538681
 GameObject:
   m_ObjectHideFlags: 0
@@ -32411,6 +32432,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 556506923}
     m_Modifications:
+    - target: {fileID: 3619373797805160039, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480168464747634951, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
       propertyPath: m_Name
       value: Sign Lot 0
@@ -32772,7 +32797,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1628183485}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2064584331}
+        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
+        m_MethodName: goToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1628183485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34141,7 +34178,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1714091463
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34583,6 +34620,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 556506923}
     m_Modifications:
+    - target: {fileID: 3619373797805160039, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5480168464747634951, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
       propertyPath: m_Name
       value: Sign Lot 1
@@ -36992,6 +37033,7 @@ MonoBehaviour:
   _selectedObjectIndex: -1
   _objectList: {fileID: 181030941}
   shopUI: {fileID: 441427136}
+  soundManager: {fileID: 1699029394}
   isBuilding: 0
 --- !u!1 &1888479455
 GameObject:
@@ -37243,7 +37285,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 298.30005, y: -328.74918}
+  m_AnchoredPosition: {x: 298.3, y: -328.74918}
   m_SizeDelta: {x: 596.6, y: 84.9447}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1894829702
@@ -39598,6 +39640,7 @@ MonoBehaviour:
   - {fileID: 429177992}
   - {fileID: 131681998}
   energyGet: 0
+  soundManager: {fileID: 1699029394}
 --- !u!1001 &2010978946
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42102,7 +42145,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2111932677
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43105,6 +43148,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 556506923}
     m_Modifications:
+    - target: {fileID: 3619373797805160039, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4660533534032717282, guid: f1bb108d90b96bc4ea22169bee1ca65d, type: 3}
       propertyPath: m_IsActive
       value: 0

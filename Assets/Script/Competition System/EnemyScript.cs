@@ -57,9 +57,9 @@ public class EnemyScript : MonoBehaviour
 
     public void LoadEnemyStock()
     {
-        kubisCounter.text = $"Kubis           :  {yieldsTotal_Array[0]}";
+        kubisCounter.text = $"Kubis          :  {yieldsTotal_Array[0]}";
         tomatCounter.text = $"Tomat         :  {yieldsTotal_Array[1]}";
-        timunCounter.text = $"Timun        :  {yieldsTotal_Array[2]}";
+        timunCounter.text = $"Timun         :  {yieldsTotal_Array[2]}";
         strawberiCounter.text = $"Strawberi  :  {yieldsTotal_Array[3]}";
     }
 

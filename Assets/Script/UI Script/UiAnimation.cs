@@ -63,6 +63,9 @@ public class UiAnimation : MonoBehaviour
             case 8:
                 FadeInThenWaitAndFadeOut();
                 break;
+            case 9:
+                FadeInWait();
+                break;
         }
     }
 
@@ -159,6 +162,13 @@ public class UiAnimation : MonoBehaviour
         StartCoroutine(FadeCoroutine(0f, 1f, fadeDuration));
     }
 
+    public void FadeInWait()
+    {
+        canvasGroup.alpha = 0f;
+        StopAllCoroutines();
+        StartCoroutine(FadeCoroutineWait(0f, 1f, fadeDuration));
+    }
+
     public void FadeOut()
     {
         StopAllCoroutines();
@@ -167,6 +177,20 @@ public class UiAnimation : MonoBehaviour
 
     private IEnumerator FadeCoroutine(float from, float to, float duration)
     {
+        float time = 0f;
+        while (time < duration)
+        {
+            canvasGroup.alpha = Mathf.Lerp(from, to, time / duration);
+            time += Time.deltaTime;
+            yield return null;
+        }
+        canvasGroup.alpha = to;
+    }
+
+    private IEnumerator FadeCoroutineWait(float from, float to, float duration)
+    {
+        yield return new WaitForSeconds(waitsDuration);
+        //if (waitsDuration > 6) yield return new WaitForSeconds(waitsDuration);
         float time = 0f;
         while (time < duration)
         {

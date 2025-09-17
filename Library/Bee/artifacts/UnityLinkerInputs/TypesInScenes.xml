@@ -1,10 +1,15 @@
 <linker>
 	<assembly fullname="Assembly-CSharp">
+		<type fullname="ButtonHover" preserve="nothing"/>
 		<type fullname="CameraControl" preserve="nothing"/>
+		<type fullname="challengerArrivedSprite" preserve="nothing"/>
 		<type fullname="DestroyGeneratorButton" preserve="nothing"/>
 		<type fullname="DestroyMachineButton" preserve="nothing"/>
 		<type fullname="DestroyPlant" preserve="nothing"/>
 		<type fullname="DirectionArrowMovement" preserve="nothing"/>
+		<type fullname="EndingAnimationScript" preserve="nothing"/>
+		<type fullname="EnemyDuelSpriteControl" preserve="nothing"/>
+		<type fullname="EnemyPanelController" preserve="nothing"/>
 		<type fullname="EnemyScript" preserve="nothing"/>
 		<type fullname="EnemyUIController" preserve="nothing"/>
 		<type fullname="FarmUpgrade" preserve="nothing"/>
@@ -21,11 +26,13 @@
 		<type fullname="LandLot" preserve="nothing"/>
 		<type fullname="MachinePlacement" preserve="nothing"/>
 		<type fullname="MachineScript" preserve="nothing"/>
+		<type fullname="MainMenuHoverButton" preserve="nothing"/>
 		<type fullname="MainMenuScript" preserve="nothing"/>
 		<type fullname="ObjectDatabaseSO" preserve="nothing"/>
 		<type fullname="ObjectList" preserve="nothing"/>
 		<type fullname="OpenShopButton" preserve="nothing"/>
 		<type fullname="OpenStorageButton" preserve="nothing"/>
+		<type fullname="PauseHoverButton" preserve="nothing"/>
 		<type fullname="PlaceMachine" preserve="nothing"/>
 		<type fullname="PlaceMentSystem" preserve="nothing"/>
 		<type fullname="PlacePlantButton" preserve="nothing"/>
@@ -38,6 +45,7 @@
 		<type fullname="ShopSystem" preserve="nothing"/>
 		<type fullname="ShopUI" preserve="nothing"/>
 		<type fullname="SkipDayAnimation" preserve="nothing"/>
+		<type fullname="SoundManager" preserve="nothing"/>
 		<type fullname="TutorialSlideUI" preserve="nothing"/>
 		<type fullname="TutorialSystem" preserve="nothing"/>
 		<type fullname="UiAnimation" preserve="nothing"/>
@@ -122,9 +130,7 @@
 	</assembly>
 	<assembly fullname="Unity.TextMeshPro">
 		<type fullname="TMPro.TextMeshPro" preserve="nothing"/>
-		<type fullname="TMPro.TextMeshProUGUI" preserve="nothing"/>
 		<type fullname="TMPro.TMP_FontAsset" preserve="nothing"/>
-		<type fullname="TMPro.TMP_InputField" preserve="nothing"/>
 		<type fullname="TMPro.TMP_Settings" preserve="nothing"/>
 		<type fullname="TMPro.TMP_SpriteAsset" preserve="nothing"/>
 		<type fullname="TMPro.TMP_StyleSheet" preserve="nothing"/>
@@ -139,13 +145,17 @@
 		<type fullname="UnityEditor.TagManager" preserve="nothing"/>
 		<type fullname="UnityEditor.TimeManager" preserve="nothing"/>
 		<type fullname="UnityEditor.VFXManager" preserve="nothing"/>
+		<type fullname="UnityEngine.Audio.AudioResource" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioBehaviour" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioClip" preserve="nothing"/>
 		<type fullname="UnityEngine.AudioListener" preserve="nothing"/>
+		<type fullname="UnityEngine.AudioSource" preserve="nothing"/>
 		<type fullname="UnityEngine.Behaviour" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider" preserve="nothing"/>
 		<type fullname="UnityEngine.BoxCollider2D" preserve="nothing"/>
 		<type fullname="UnityEngine.Camera" preserve="nothing"/>
 		<type fullname="UnityEngine.Canvas" preserve="nothing"/>
+		<type fullname="UnityEngine.CanvasGroup" preserve="nothing"/>
 		<type fullname="UnityEngine.CanvasRenderer" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider" preserve="nothing"/>
 		<type fullname="UnityEngine.Collider2D" preserve="nothing"/>
@@ -190,7 +200,6 @@
 		<type fullname="UnityEngine.UI.Image" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.LayoutElement" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Mask" preserve="nothing"/>
-		<type fullname="UnityEngine.UI.RectMask2D" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Scrollbar" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.ScrollRect" preserve="nothing"/>
 		<type fullname="UnityEngine.UI.Text" preserve="nothing"/>
